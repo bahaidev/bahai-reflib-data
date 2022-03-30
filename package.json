@@ -1,0 +1,55 @@
+{
+  "name": "bahai-reflib-data",
+  "version": "0.1.0",
+  "author": "Brett Zamir <brettz9@yahoo.com>",
+  "contributors": [],
+  "description": "Host information on the official Bahá'í Reference Library",
+  "license": "MIT",
+  "keywords": [],
+  "type": "module",
+  "main": "src/index.js",
+  "browserslist": [
+    "cover 100%"
+  ],
+  "scripts": {
+    "get-writings": "node src/index.js",
+    "eslint": "eslint --ext=js,cjs,mjs,md,html",
+    "lint": "npm run eslint",
+    "mocha": "mocha",
+    "test": "nyc npm run mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahaidev/bahai-reflib-data.git"
+  },
+  "bugs": {
+    "url": "https://github.com/bahaidev/bahai-reflib-data/issues"
+  },
+  "homepage": "https://github.com/bahaidev/bahai-reflib-data",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "devDependencies": {
+    "@brettz9/eslint-plugin": "^1.0.4",
+    "eslint": "^8.11.0",
+    "eslint-config-ash-nazg": "32.7.1",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-array-func": "^3.1.7",
+    "eslint-plugin-compat": "^4.0.2",
+    "eslint-plugin-eslint-comments": "^3.2.0",
+    "eslint-plugin-html": "^6.2.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsdoc": "^38.0.4",
+    "eslint-plugin-markdown": "^2.2.1",
+    "eslint-plugin-no-unsanitized": "^4.0.1",
+    "eslint-plugin-no-use-extend-native": "^0.5.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "eslint-plugin-sonarjs": "^0.12.0",
+    "eslint-plugin-unicorn": "^41.0.0"
+  },
+  "dependencies": {
+    "jsdom": "^19.0.0",
+    "node-fetch": "^3.2.3"
+  }
+}
