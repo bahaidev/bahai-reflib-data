@@ -1,109 +1,48 @@
 /* eslint no-shadow: ["error", {allow: ["$$", "parentUrl"]}] --
   Reuse for convenience */
 import {readFile, mkdir} from 'fs/promises';
-import {join, dirname} from 'path';
-import {fileURLToPath} from 'url';
+import {join} from 'path';
 import {getDomForUrl} from './fetchDom.js';
 import {keysValuesFlip, writeJSONFile} from './jsUtils.js';
+import {
+  downloadAndSaveMainCollections, downloadAndSaveCollections,
+  downloadAndSaveWorks, downloadAndSaveSections
+} from './downloadAndSave.js';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const dataDir = join(__dirname, '../src/data');
-const doubleAngleQuotes = /»/gu;
+import {
+  getMainCollections, getCollections,
+  getWorks, getSections
+} from './getData.js';
+
+import {dataDir} from './pathInfo.js';
 
 const setSiblingId = (obj, idElem) => {
-  const number = Number.parseInt(
+  const paragraphNumber = Number.parseInt(
     idElem.previousElementSibling.textContent.trim()
   );
-  if (Number.isNaN(number)) {
+  if (Number.isNaN(paragraphNumber)) {
     return obj;
   }
-  obj[idElem.id] = number;
+  obj[idElem.id] = paragraphNumber;
   return obj;
 };
 
 (async () => {
-const parentUrl = 'https://www.bahai.org/library/';
-const {$$} = await getDomForUrl(parentUrl);
+const mainCollections = process.argv.includes('mainCollections')
+  ? await downloadAndSaveMainCollections()
+  : await getMainCollections();
 
-const mainCollections = $$('h4 a, h5 a').filter((a) => {
-  return !a.textContent.includes('Help and Information');
-}).map((a) => {
-  return {
-    parentUrl,
-    url: a.href,
-    title: a.textContent.replace(doubleAngleQuotes, '').trim()
-  };
-});
+const collections = process.argv.includes('collections')
+  ? await downloadAndSaveCollections(mainCollections)
+  : await getCollections();
 
-await writeJSONFile(join(dataDir, 'mainCollections.json'), mainCollections);
+const works = process.argv.includes('works')
+  ? await downloadAndSaveWorks(collections)
+  : await getWorks();
 
-const collections = (await Promise.all(mainCollections.map(
-  async ({url: parentUrl}) => {
-    const {$$} = await getDomForUrl(parentUrl);
-
-    return $$('.topic-collection-content h2 a').map((a) => {
-      return {
-        parentUrl,
-        url: a.href,
-        title: a.textContent.replace(doubleAngleQuotes, '').trim()
-      };
-    });
-  }
-))).flat();
-
-await writeJSONFile(join(dataDir, 'collections.json'), collections);
-
-const works = (await Promise.all(collections.map(
-  async ({url: parentUrl}) => {
-    const {$$} = await getDomForUrl(parentUrl);
-
-    return $$('.topic-collection-content h4 a').map((a) => {
-      return {
-        parentUrl,
-        url: a.href,
-        title: a.textContent.replace(doubleAngleQuotes, '').trim()
-      };
-    });
-  }
-))).flat();
-
-await writeJSONFile(join(dataDir, 'works.json'), works);
-
-const sections = (await Promise.all(works.map(
-  async ({url: parentUrl}) => {
-    const {$$} = await getDomForUrl(parentUrl);
-
-    const mainSections = $$('.publication-page-contents h1 a').map((a) => {
-      return {
-        parentUrl,
-        url: a.href,
-        title: a.textContent.replace(doubleAngleQuotes, '').trim()
-      };
-    });
-
-    const subSections = $$('.publication-page-contents li a').map((a) => {
-      return {
-        parentUrl,
-        url: a.href,
-        title: a.textContent.replace(doubleAngleQuotes, '').trim()
-      };
-    });
-
-    return {
-      mainSections,
-      subSections
-    };
-  }
-))).reduce((obj, {mainSections, subSections}) => {
-  obj.mainSections.push(mainSections);
-  obj.subSections.push(subSections);
-  return obj;
-}, {
-  mainSections: [],
-  subSections: []
-});
-
-await writeJSONFile(join(dataDir, 'sections.json'), sections);
+/* const sections = */ process.argv.includes('sections')
+  ? await downloadAndSaveSections(works)
+  : await getSections();
 
 const worksToUrls = JSON.parse(
   await readFile(join(dataDir, 'works-to-urls.json'))
