@@ -139,8 +139,18 @@ async function downloadAndSaveSections (works) {
     return promiseThrottle.add(async () => {
       const {$$} = await getDomForUrl(parentUrl);
 
+      // There are some empty anchors (not sure their use as they
+      //   just seem to lead into the main part of the document), so we only
+      //   want `a[href]`
+
       const mainSections = $$(
-        '.publication-page-contents h1 a[href]'
+        '.publication-page-contents h1 a[href],' +
+
+        // Some pages like https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/
+        //   have their data in a table; there are multiple repeats (date, to,
+        //   and summary have their own copies of the link), so only choose
+        //   the first
+        '#letterstable td:first-child > a[href]'
       ).map((a) => {
         return {
           parentUrl,
