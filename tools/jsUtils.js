@@ -6,7 +6,7 @@ import {writeFile} from 'fs/promises';
  * @returns {Promise<void>}
  */
 async function writeJSONFile (path, obj) {
-  return await writeFile(path, JSON.stringify(obj, null, 2));
+  return await writeFile(path, JSON.stringify(obj, null, 2) + '\n');
 }
 
 const keysValuesFlip = (obj) => {

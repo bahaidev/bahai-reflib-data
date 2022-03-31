@@ -53,6 +53,22 @@ const collections = (await Promise.all(mainCollections.map(
 
 await writeJSONFile(join(dataDir, 'collections.json'), collections);
 
+const works = (await Promise.all(collections.map(
+  async ({url: parentUrl}) => {
+    const {$$} = await getDomForUrl(parentUrl);
+
+    return $$('.topic-collection-content h4 a').map((a) => {
+      return {
+        parentUrl,
+        url: a.href,
+        title: a.textContent.replace(doubleAngleQuotes, '').trim()
+      };
+    });
+  }
+))).flat();
+
+await writeJSONFile(join(dataDir, 'works.json'), works);
+
 const worksToUrls = JSON.parse(
   await readFile(join(dataDir, 'works-to-urls.json'))
 );
