@@ -1,5 +1,7 @@
 import {join} from 'path';
 
+import PromiseThrottle from 'promise-throttle';
+
 import {getDomForUrl} from './fetchDom.js';
 import {writeJSONFile} from './jsUtils.js';
 import {dataDir} from './pathInfo.js';
@@ -27,6 +29,9 @@ async function downloadAndSaveMainCollections () {
   const parentUrl = 'https://www.bahai.org/library/';
   const {$$} = await getDomForUrl(parentUrl);
 
+  // eslint-disable-next-line no-console -- Logging
+  console.log('Processed main URL for main collections', parentUrl);
+
   const mainCollections = $$('h4 a, h5 a').filter((a) => {
     return !a.textContent.includes('Help and Information');
   }).map((a) => {
@@ -47,19 +52,28 @@ async function downloadAndSaveMainCollections () {
  * @returns {Promise<Collection[]>}
  */
 async function downloadAndSaveCollections (mainCollections) {
-  const collections = (await Promise.all(mainCollections.map(
-    async ({url: parentUrl}) => {
-      const {$$} = await getDomForUrl(parentUrl);
+  const promiseThrottle = new PromiseThrottle({
+    requestsPerSecond: 1
+  });
 
-      return $$('.topic-collection-content h2 a').map((a) => {
-        return {
-          parentUrl,
-          url: a.href,
-          title: a.textContent.replace(doubleAngleQuotes, '').trim()
-        };
+  const collections = (await Promise.all(
+    mainCollections.map(({url: parentUrl}) => {
+      return promiseThrottle.add(async () => {
+        const {$$} = await getDomForUrl(parentUrl);
+
+        // eslint-disable-next-line no-console -- Logging
+        console.log('Processed main collection URL for collections', parentUrl);
+
+        return $$('.topic-collection-content h2 a').map((a) => {
+          return {
+            parentUrl,
+            url: a.href,
+            title: a.textContent.replace(doubleAngleQuotes, '').trim()
+          };
+        });
       });
-    }
-  ))).flat();
+    })
+  )).flat();
 
   await writeJSONFile(join(dataDir, 'collections.json'), collections);
 
@@ -75,9 +89,16 @@ async function downloadAndSaveCollections (mainCollections) {
  * @returns {Work[]}
  */
 async function downloadAndSaveWorks (collections) {
-  const works = (await Promise.all(collections.map(
-    async ({url: parentUrl}) => {
+  const promiseThrottle = new PromiseThrottle({
+    requestsPerSecond: 1
+  });
+
+  const works = (await Promise.all(collections.map(({url: parentUrl}) => {
+    return promiseThrottle.add(async () => {
       const {$$} = await getDomForUrl(parentUrl);
+
+      // eslint-disable-next-line no-console -- Logging
+      console.log('Processed collection URL for works', parentUrl);
 
       return $$('.topic-collection-content h4 a').map((a) => {
         return {
@@ -86,8 +107,8 @@ async function downloadAndSaveWorks (collections) {
           title: a.textContent.replace(doubleAngleQuotes, '').trim()
         };
       });
-    }
-  ))).flat();
+    });
+  }))).flat();
 
   await writeJSONFile(join(dataDir, 'works.json'), works);
 
@@ -103,8 +124,19 @@ async function downloadAndSaveWorks (collections) {
  * @returns {Section[]}
  */
 async function downloadAndSaveSections (works) {
-  const sections = (await Promise.all(works.map(
-    async ({url: parentUrl}) => {
+  // There are many, many more total sections so we at least need to throttle
+  //   this (though we probably should throttle all)
+  const promiseThrottle = new PromiseThrottle({
+    requestsPerSecond: 1
+  });
+
+  // NOTE: There is some redundancy here; we could cache URL for results, as
+  //  some works are duplicates in terms of being repeated in another
+  //  collection (we keep them as separate sections though as they have
+  //  different meta-data due to having different parents).
+
+  const sections = (await Promise.all(works.map(({url: parentUrl}) => {
+    return promiseThrottle.add(async () => {
       const {$$} = await getDomForUrl(parentUrl);
 
       const mainSections = $$(
@@ -128,12 +160,15 @@ async function downloadAndSaveSections (works) {
         };
       });
 
+      // eslint-disable-next-line no-console -- Logging
+      console.log('Processed work URL for sections', parentUrl);
+
       return {
         mainSections,
         subSections
       };
-    }
-  ))).reduce((obj, {mainSections, subSections}) => {
+    });
+  }))).reduce((obj, {mainSections, subSections}) => {
     obj.mainSections.push(...mainSections);
     obj.subSections.push(...subSections);
     return obj;
@@ -142,12 +177,17 @@ async function downloadAndSaveSections (works) {
     subSections: []
   });
 
-  await Promise.all(sections.mainSections.map(async (mainSection) => {
-    const {url} = mainSection;
-    const {$} = await getDomForUrl(url);
-    mainSection.id = $('.brl-tableofcontents h1 > a').href.replace(
-      idFind, idReplace
-    );
+  await Promise.all(sections.mainSections.map((mainSection) => {
+    return promiseThrottle.add(async () => {
+      const {url} = mainSection;
+      const {$} = await getDomForUrl(url);
+      mainSection.id = $('.brl-tableofcontents h1 > a').href.replace(
+        idFind, idReplace
+      );
+
+      // eslint-disable-next-line no-console -- Logging
+      console.log('Processed main section URL for ID', url);
+    });
   }));
 
   await writeJSONFile(join(dataDir, 'sections.json'), sections);
