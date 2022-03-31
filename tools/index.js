@@ -1,4 +1,5 @@
-/* eslint no-shadow: ["error", {allow: ["$$"]}] -- Reuse for convenience */
+/* eslint no-shadow: ["error", {allow: ["$$", "parentUrl"]}] --
+  Reuse for convenience */
 import {readFile, mkdir} from 'fs/promises';
 import {join, dirname} from 'path';
 import {fileURLToPath} from 'url';
@@ -7,6 +8,7 @@ import {keysValuesFlip, writeJSONFile} from './jsUtils.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dataDir = join(__dirname, '../src/data');
+const doubleAngleQuotes = /»/gu;
 
 const setSiblingId = (obj, idElem) => {
   const number = Number.parseInt(
@@ -29,11 +31,27 @@ const mainCollections = $$('h4 a, h5 a').filter((a) => {
   return {
     parentUrl,
     url: a.href,
-    title: a.textContent.replace(/»/gu, '').trim()
+    title: a.textContent.replace(doubleAngleQuotes, '').trim()
   };
 });
 
 await writeJSONFile(join(dataDir, 'mainCollections.json'), mainCollections);
+
+const collections = (await Promise.all(mainCollections.map(
+  async ({url: parentUrl}) => {
+    const {$$} = await getDomForUrl(parentUrl);
+
+    return $$('.topic-collection-content h2 a').map((a) => {
+      return {
+        parentUrl,
+        url: a.href,
+        title: a.textContent.replace(doubleAngleQuotes, '').trim()
+      };
+    });
+  }
+))).flat();
+
+await writeJSONFile(join(dataDir, 'collections.json'), collections);
 
 const worksToUrls = JSON.parse(
   await readFile(join(dataDir, 'works-to-urls.json'))
