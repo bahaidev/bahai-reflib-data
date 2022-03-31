@@ -10,6 +10,7 @@ module.exports = {
     polyfills: [
       'console',
       'JSON',
+      'Map',
       'Number.parseInt',
       'Object.entries',
       'Object.fromEntries',

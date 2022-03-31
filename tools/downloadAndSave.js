@@ -136,6 +136,13 @@ async function downloadAndSaveSections (works) {
   //  different meta-data due to having different parents).
 
   const sections = (await Promise.all(works.map(({url: parentUrl}) => {
+    // Avoid preprocessing items like Promise of World Peace which, though being
+    //   independent works, show up on a page with already processed messages;
+    //   the anchor indicates a preselected work, which in the case of works,
+    //   we don't want.
+    if (parentUrl.includes('#')) {
+      return null;
+    }
     return promiseThrottle.add(async () => {
       const {$$} = await getDomForUrl(parentUrl);
 
@@ -178,6 +185,8 @@ async function downloadAndSaveSections (works) {
         subSections
       };
     });
+  }).filter((item) => {
+    return item;
   }))).reduce((obj, {mainSections, subSections}) => {
     obj.mainSections.push(...mainSections);
     obj.subSections.push(...subSections);
@@ -187,13 +196,24 @@ async function downloadAndSaveSections (works) {
     subSections: []
   });
 
+  // May have already been visited, e.g.,
+  //  "Additional Prayers Revealed by Bahá’u’lláh" is listed once under the
+  //  "Writings of Bahá’u’lláh" section and another time under the
+  //  "Prayers of Bahá’u’lláh, the Báb, and ‘Abdu’l‑Bahá" section
+  const urlToIDMap = new Map();
   await Promise.all(sections.mainSections.map((mainSection) => {
+    const {url} = mainSection;
+    if (urlToIDMap.has(url)) {
+      mainSection.id = urlToIDMap.get(url);
+      return null;
+    }
     return promiseThrottle.add(async () => {
-      const {url} = mainSection;
       const {$} = await getDomForUrl(url);
-      mainSection.id = $('.brl-tableofcontents h1 > a').href.replace(
+      const id = $('.brl-tableofcontents h1 > a').href.replace(
         idFind, idReplace
       );
+      mainSection.id = id;
+      urlToIDMap.set(url, id);
 
       // eslint-disable-next-line no-console -- Logging
       console.log('Processed main section URL for ID', url);
