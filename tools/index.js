@@ -1,27 +1,21 @@
 import {readFile, writeFile, mkdir} from 'fs/promises';
 import {join, dirname} from 'path';
 import {fileURLToPath} from 'url';
-
-import fetch from 'node-fetch';
-import JSDOM from 'jsdom';
+import {getDomForUrl} from './fetchDom.js';
+import {keysValuesFlip} from './jsUtils.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 (async () => {
+// await getDomForUrl('https://www.bahai.org/library/');
+
 const worksToUrls = JSON.parse(
   await readFile(join(__dirname, '../src/data', 'works-to-urls.json'))
 );
 
 await Promise.all(worksToUrls.content.map(async ({url, title}) => {
-  const resp = await fetch(url);
-
-  const html = await resp.text();
+  const {$$} = await getDomForUrl(url);
   // console.log('html', html);
-
-  const {document} = new JSDOM.JSDOM(html).window;
-
-  // const $ = (s) => document.querySelector(s);
-  const $$ = (s) => [...document.querySelectorAll(s)];
 
   // There are some titles that match but they don't have pnum content, so
   //   restrict to those within paragraphs
@@ -38,10 +32,6 @@ await Promise.all(worksToUrls.content.map(async ({url, title}) => {
     obj[idElem.id] = number;
     return obj;
   }, {});
-
-  const keysValuesFlip = (obj) => {
-    return Object.fromEntries(Object.entries(obj).map((a) => a.reverse()));
-  };
 
   const dir = join(__dirname, '../src/data', title);
   await mkdir(dir, {recursive: true});
