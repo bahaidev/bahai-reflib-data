@@ -1,5 +1,16 @@
+import {writeFile} from 'fs/promises';
+
+/**
+ * @param {string} path
+ * @param {JSON} obj
+ * @returns {Promise<void>}
+ */
+async function writeJSONFile (path, obj) {
+  return await writeFile(path, JSON.stringify(obj, null, 2));
+}
+
 const keysValuesFlip = (obj) => {
   return Object.fromEntries(Object.entries(obj).map((a) => a.reverse()));
 };
 
-export {keysValuesFlip};
+export {writeJSONFile, keysValuesFlip};

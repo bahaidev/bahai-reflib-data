@@ -1,16 +1,42 @@
-import {readFile, writeFile, mkdir} from 'fs/promises';
+/* eslint no-shadow: ["error", {allow: ["$$"]}] -- Reuse for convenience */
+import {readFile, mkdir} from 'fs/promises';
 import {join, dirname} from 'path';
 import {fileURLToPath} from 'url';
 import {getDomForUrl} from './fetchDom.js';
-import {keysValuesFlip} from './jsUtils.js';
+import {keysValuesFlip, writeJSONFile} from './jsUtils.js';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
+const dataDir = join(__dirname, '../src/data');
+
+const setSiblingId = (obj, idElem) => {
+  const number = Number.parseInt(
+    idElem.previousElementSibling.textContent.trim()
+  );
+  if (Number.isNaN(number)) {
+    return obj;
+  }
+  obj[idElem.id] = number;
+  return obj;
+};
 
 (async () => {
-// await getDomForUrl('https://www.bahai.org/library/');
+const parentUrl = 'https://www.bahai.org/library/';
+const {$$} = await getDomForUrl(parentUrl);
+
+const mainCollections = $$('h4 a, h5 a').filter((a) => {
+  return !a.textContent.includes('Help and Information');
+}).map((a) => {
+  return {
+    parentUrl,
+    url: a.href,
+    title: a.textContent.replace(/»/gu, '').trim()
+  };
+});
+
+await writeJSONFile(join(dataDir, 'mainCollections.json'), mainCollections);
 
 const worksToUrls = JSON.parse(
-  await readFile(join(__dirname, '../src/data', 'works-to-urls.json'))
+  await readFile(join(dataDir, 'works-to-urls.json'))
 );
 
 await Promise.all(worksToUrls.content.map(async ({url, title}) => {
@@ -23,27 +49,18 @@ await Promise.all(worksToUrls.content.map(async ({url, title}) => {
   const idElems = $$('p > a.brl-pnum + a.brl-location');
 
   const output = idElems.reduce((obj, idElem) => {
-    const number = Number.parseInt(
-      idElem.previousElementSibling.textContent.trim()
-    );
-    if (Number.isNaN(number)) {
-      return obj;
-    }
-    obj[idElem.id] = number;
-    return obj;
+    return setSiblingId(obj, idElem);
   }, {});
 
-  const dir = join(__dirname, '../src/data', title);
-  await mkdir(dir, {recursive: true});
+  const titleDir = join(dataDir, title);
+  await mkdir(titleDir, {recursive: true});
 
   await Promise.all([
-    writeFile(
-      join(dir, 'ids-to-paragraphs.json'),
-      JSON.stringify(output, null, 2)
+    writeJSONFile(
+      join(titleDir, 'ids-to-paragraphs.json'), output
     ),
-    writeFile(
-      join(dir, 'paragraphs-to-ids.json'),
-      JSON.stringify(keysValuesFlip(output), null, 2)
+    writeJSONFile(
+      join(titleDir, 'paragraphs-to-ids.json'), keysValuesFlip(output)
     )
   ]);
 }));
