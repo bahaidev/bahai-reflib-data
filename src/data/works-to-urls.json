@@ -1,10 +1,49 @@
 {
   "header": "This file is for mapping works with their own individual paragraphs to the URLs where their contents can be found",
+  "parentCompilations": [
+    {
+      "id": "959114648",
+      "title": "The Call of the Divine Beloved",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/1",
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/"
+    }
+  ],
   "content": [
     {
+      "id": "334417601",
       "title": "Rashḥ-i-‘Amá",
       "translatedTitle": "The Clouds of the Realms Above",
       "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/3",
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/1"
+    },
+    {
+      "id": "893325872",
+      "title": "The Seven Valleys",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/4",
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/1"
+    },
+    {
+      "id": "117574345",
+      "title": "From the Letter Bá’ to the Letter Há’",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/5",
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/1"
+    },
+    {
+      "id": "879478881",
+      "title": "Three Other Tablets",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/6",
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/1"
+    },
+    {
+      "id": "545908212",
+      "title": "The Four Valleys",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/9",
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/1"
+    },
+    {
+      "id": "622376164",
+      "title": "Notes",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/10",
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/1"
     }
   ]

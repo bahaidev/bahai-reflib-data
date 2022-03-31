@@ -9,7 +9,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 
 (async () => {
 const worksToUrls = JSON.parse(
-  await readFile(join(__dirname, 'data', 'works-to-urls.json'))
+  await readFile(join(__dirname, '../src/data', 'works-to-urls.json'))
 );
 
 await Promise.all(worksToUrls.content.map(async ({url, title}) => {
@@ -29,9 +29,13 @@ await Promise.all(worksToUrls.content.map(async ({url, title}) => {
   const idElems = $$('p > a.brl-pnum + a.brl-location');
 
   const output = idElems.reduce((obj, idElem) => {
-    obj[idElem.id] = Number.parseInt(
+    const number = Number.parseInt(
       idElem.previousElementSibling.textContent.trim()
     );
+    if (Number.isNaN(number)) {
+      return obj;
+    }
+    obj[idElem.id] = number;
     return obj;
   }, {});
 
@@ -39,7 +43,7 @@ await Promise.all(worksToUrls.content.map(async ({url, title}) => {
     return Object.fromEntries(Object.entries(obj).map((a) => a.reverse()));
   };
 
-  const dir = join(__dirname, 'data', title);
+  const dir = join(__dirname, '../src/data', title);
   await mkdir(dir, {recursive: true});
 
   await Promise.all([
