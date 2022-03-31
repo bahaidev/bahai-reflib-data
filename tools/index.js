@@ -69,6 +69,42 @@ const works = (await Promise.all(collections.map(
 
 await writeJSONFile(join(dataDir, 'works.json'), works);
 
+const sections = (await Promise.all(works.map(
+  async ({url: parentUrl}) => {
+    const {$$} = await getDomForUrl(parentUrl);
+
+    const mainSections = $$('.publication-page-contents h1 a').map((a) => {
+      return {
+        parentUrl,
+        url: a.href,
+        title: a.textContent.replace(doubleAngleQuotes, '').trim()
+      };
+    });
+
+    const subSections = $$('.publication-page-contents li a').map((a) => {
+      return {
+        parentUrl,
+        url: a.href,
+        title: a.textContent.replace(doubleAngleQuotes, '').trim()
+      };
+    });
+
+    return {
+      mainSections,
+      subSections
+    };
+  }
+))).reduce((obj, {mainSections, subSections}) => {
+  obj.mainSections.push(mainSections);
+  obj.subSections.push(subSections);
+  return obj;
+}, {
+  mainSections: [],
+  subSections: []
+});
+
+await writeJSONFile(join(dataDir, 'sections.json'), sections);
+
 const worksToUrls = JSON.parse(
   await readFile(join(dataDir, 'works-to-urls.json'))
 );
