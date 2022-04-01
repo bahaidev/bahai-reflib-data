@@ -29,12 +29,13 @@ more titles with their URL metadata.***
 ## To-dos
 
 1. Put online as a **JSON service** (using, e.g., Bahaipedia and Bahai9 links)
-1. Put online as a **web app**, allowing a series of pull-downs for work, section,
-    and paragraph number to get the ID and link.
+1. Put online as a **web app**, allowing a series of pull-downs for work,
+    section, and paragraph number to get the ID and link.
 1. Utilize in restoration of **webextensions**-based Bahá'í Reference Library
     Wiki Overlay add-on
 
 ## Possible to-dos
 
 1. API to **get ID or work/section/paragraph info for URL**
-1. **RSS feed for new additions** to the library (based on a date-detected field)
+1. **RSS feed for new additions** to the library (based on a date-detected
+    field)
