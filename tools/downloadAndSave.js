@@ -62,7 +62,9 @@ async function downloadAndSaveCollections (mainCollections) {
         const {$$} = await getDomForUrl(parentUrl);
 
         // eslint-disable-next-line no-console -- Logging
-        console.log('Processed main collection URL for collections', parentUrl);
+        console.log(
+          'Processed main collection URL for collections', parentUrl
+        );
 
         return $$('.topic-collection-content h2 a').map((a) => {
           return {
@@ -136,10 +138,10 @@ async function downloadAndSaveSections (works) {
   //  different meta-data due to having different parents).
 
   const sections = (await Promise.all(works.map(({url: parentUrl}) => {
-    // Avoid preprocessing items like Promise of World Peace which, though being
-    //   independent works, show up on a page with already processed messages;
-    //   the anchor indicates a preselected work, which in the case of works,
-    //   we don't want.
+    // Avoid preprocessing items like Promise of World Peace which, though
+    //   being independent works, show up on a page with already processed
+    //   messages; the anchor indicates a preselected work, which in the case
+    //   of works, we don't want.
     if (parentUrl.includes('#')) {
       return null;
     }
@@ -203,11 +205,13 @@ async function downloadAndSaveSections (works) {
   const urlToIDMap = new Map();
   await Promise.all(sections.mainSections.map((mainSection) => {
     const {url} = mainSection;
-    if (urlToIDMap.has(url)) {
-      mainSection.id = urlToIDMap.get(url);
-      return null;
-    }
     return promiseThrottle.add(async () => {
+      // Delay this check as other promises may have since populated the value
+      if (urlToIDMap.has(url)) {
+        mainSection.id = urlToIDMap.get(url);
+        return;
+      }
+
       const {$} = await getDomForUrl(url);
       const id = $('.brl-tableofcontents h1 > a').href.replace(
         idFind, idReplace
