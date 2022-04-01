@@ -28,7 +28,8 @@ more titles with their URL metadata.***
 
 ## To-dos
 
-1. Put online as a **JSON service** (using, e.g., Bahaipedia and Bahai9 links)
+1. Put online as a **JSON service** (using, e.g., for Bahaipedia and Bahai9
+    links)
 1. Put online as a **web app**, allowing a series of pull-downs for work,
     section, and paragraph number to get the ID and link.
 1. Utilize in restoration of **webextensions**-based Bahá'í Reference Library
