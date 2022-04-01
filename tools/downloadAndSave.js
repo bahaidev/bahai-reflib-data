@@ -4,23 +4,67 @@ import PromiseThrottle from 'promise-throttle';
 
 import {getDomForUrl} from './fetchDom.js';
 import {writeJSONFile} from './jsUtils.js';
-import {dataDir} from './pathInfo.js';
+import {dataDir} from '../src/pathInfo.js';
 
+const requestsPerSecond = 0.5;
 const doubleAngleQuotes = /»/gu;
 const idFind = /^.*#(?<id>\d+)$/u;
 const idReplace = '$<id>';
 
-/**
-* @typedef {{
-*   parentUrl: string,
-*   url: string,
-*   title: string
-* }} Collection
-*/
+const setWorksSectionsAndParagraphsToIds = (
+  obj, mainSectionTitle, title, idElem
+) => {
+  const paragraphNumber = Number.parseInt(
+    idElem.previousElementSibling?.textContent?.trim()
+  );
+  if (!obj[mainSectionTitle]) {
+    obj[mainSectionTitle] = {};
+  }
+  if (!obj[mainSectionTitle][title]) {
+    obj[mainSectionTitle][title] = {};
+  }
+  if (Number.isNaN(paragraphNumber)) {
+    // We create an array even for `$main` because Tablets can actually have
+    //   the same title in the same work, e.g.:
+    // "In the Name of our Lord, the Most Holy, the Most Great, the Exalted,
+    //   the Most Glorious!"
+    if (!obj[mainSectionTitle][title].null) {
+      obj[mainSectionTitle][title].null = [];
+    }
+    if (!obj[mainSectionTitle][title].null.includes(idElem.id)) {
+      obj[mainSectionTitle][title].null.push(idElem.id);
+    }
+    return obj;
+  }
+  obj[mainSectionTitle][title][paragraphNumber] = idElem.id;
+  return obj;
+};
+
+const setIdsToWorksSectionsAndParagraphs = (
+  obj, mainSectionTitle, title, idElem
+) => {
+  const paragraphNumber = Number.parseInt(
+    idElem.previousElementSibling?.textContent?.trim()
+  );
+  obj[idElem.id] = {
+    work: mainSectionTitle,
+    section: title,
+    paragraph: Number.isNaN(paragraphNumber) ? null : paragraphNumber
+  };
+  return obj;
+};
 
 /**
-* @typedef {Collection} MainCollection
-*/
+ * @typedef {{
+ *   parentUrl: string,
+ *   url: string,
+ *   title: string
+ * }} Collection
+ */
+
+/**
+ * @typedef {Collection} MainCollection
+ */
 
 /**
  * @returns {Promise<MainCollection[]>}
@@ -53,7 +97,7 @@ async function downloadAndSaveMainCollections () {
  */
 async function downloadAndSaveCollections (mainCollections) {
   const promiseThrottle = new PromiseThrottle({
-    requestsPerSecond: 1
+    requestsPerSecond
   });
 
   const collections = (await Promise.all(
@@ -83,16 +127,16 @@ async function downloadAndSaveCollections (mainCollections) {
 }
 
 /**
-* @typedef {Collection} Work
-*/
+ * @typedef {Collection} Work
+ */
 
 /**
  * @param {Collection[]} collections
- * @returns {Work[]}
+ * @returns {Promise<Work[]>}
  */
 async function downloadAndSaveWorks (collections) {
   const promiseThrottle = new PromiseThrottle({
-    requestsPerSecond: 1
+    requestsPerSecond
   });
 
   const works = (await Promise.all(collections.map(({url: parentUrl}) => {
@@ -118,18 +162,16 @@ async function downloadAndSaveWorks (collections) {
 }
 
 /**
-* @typedef {{mainSections: Collection[], subSections: Collection[]}} Work
-*/
+ * @typedef {{mainSections: Collection[], subSections: Collection[]}} Work
+ */
 
 /**
  * @param {Work[]} works
- * @returns {Section[]}
+ * @returns {Promise<Section[]>}
  */
 async function downloadAndSaveSections (works) {
-  // There are many, many more total sections so we at least need to throttle
-  //   this (though we probably should throttle all)
   const promiseThrottle = new PromiseThrottle({
-    requestsPerSecond: 1
+    requestsPerSecond
   });
 
   // NOTE: There is some redundancy here; we could cache URL for results, as
@@ -190,6 +232,11 @@ async function downloadAndSaveSections (works) {
   }).filter((item) => {
     return item;
   }))).reduce((obj, {mainSections, subSections}) => {
+    // We could improve this by checking for redundancy, e.g., `187607508`,
+    //  "Prayers and Meditations of Bahá'u'lláh" appears twice, once listed
+    //  on the prayers once in the Writings of Bahá'u'lláh; but we may want
+    //  it separate if we instead wish to add the collection URL here, since
+    //  that should differ.
     obj.mainSections.push(...mainSections);
     obj.subSections.push(...subSections);
     return obj;
@@ -229,7 +276,86 @@ async function downloadAndSaveSections (works) {
   return sections;
 }
 
+/**
+ * @param {Section[]} sections
+ * @returns {Promise<void>}
+ */
+async function downloadAndSaveParagraphIdInfo (sections) {
+  const promiseThrottle = new PromiseThrottle({
+    requestsPerSecond
+  });
+
+  const worksSectionsAndParagraphsToIds = {};
+  const idsToWorksSectionsAndParagraphs = {};
+
+  await Promise.all(sections.mainSections.map(({
+    title, id
+  }) => {
+    const sectionTitle = '$main';
+
+    setWorksSectionsAndParagraphsToIds(
+      worksSectionsAndParagraphsToIds, title, sectionTitle, {id}
+    );
+
+    setIdsToWorksSectionsAndParagraphs(
+      idsToWorksSectionsAndParagraphs, title, sectionTitle, {id}
+    );
+
+    return null;
+  }));
+
+  await Promise.all(sections.subSections.map(({
+    url, title, parentUrl
+  }) => {
+    return promiseThrottle.add(async () => {
+      const {$$} = await getDomForUrl(url);
+
+      // There are some titles that match but they don't have pnum content, so
+      //   restrict to those within paragraphs
+      // <a class="brl-pnum">9</a> <a id="282442314" class="brl-location"></a>
+      const idElems = $$('p > a.brl-pnum + a.brl-location');
+
+      const {
+        title: mainSectionTitle
+      } = sections.mainSections.find(({parentUrl: mainSectionUrl}) => {
+        return parentUrl === mainSectionUrl;
+      });
+
+      idElems.reduce((obj, idElem) => {
+        return setWorksSectionsAndParagraphsToIds(
+          obj, mainSectionTitle, title, idElem
+        );
+      }, worksSectionsAndParagraphsToIds);
+
+      idElems.reduce((obj, idElem) => {
+        return setIdsToWorksSectionsAndParagraphs(
+          obj, mainSectionTitle, title, idElem
+        );
+      }, idsToWorksSectionsAndParagraphs);
+
+      // eslint-disable-next-line no-console -- Logging
+      console.log(
+        `Processed subsection URL for ${mainSectionTitle}, ${title} ` +
+          `ID/paragraph`,
+        url
+      );
+    });
+  }));
+
+  await Promise.all([
+    writeJSONFile(
+      join(dataDir, 'works-sections-and-paragraphs-to-ids.json'),
+      worksSectionsAndParagraphsToIds
+    ),
+    writeJSONFile(
+      join(dataDir, 'ids-to-works-sections-and-paragraphs.json'),
+      idsToWorksSectionsAndParagraphs
+    )
+  ]);
+}
+
 export {
   downloadAndSaveMainCollections, downloadAndSaveCollections,
-  downloadAndSaveWorks, downloadAndSaveSections
+  downloadAndSaveWorks, downloadAndSaveSections,
+  downloadAndSaveParagraphIdInfo
 };

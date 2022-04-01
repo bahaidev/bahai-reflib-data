@@ -1,32 +1,26 @@
-import {readFile} from 'fs/promises';
-import {join, dirname} from 'path';
-import {fileURLToPath} from 'url';
+import {
+  getIdsToSectionsAndParagraphs, getSectionsAndParagraphsToIds
+} from './getData.js';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+/**
+ * @param {string} id
+ * @returns {Promise<{work: string, section: string, paragraph: number}>}
+ */
+async function getWorkSectionAndParagraphForId (id) {
+  return (await getIdsToSectionsAndParagraphs())[id];
+}
 
 /**
  * @param {string} work
+ * @param {string} section
  * @param {number} paragraph
  * @returns {Promise<string>}
  */
-async function getIdForWorkAndParagraph (work, paragraph) {
-  return JSON.parse(
-    await readFile(join(__dirname, 'data', work, 'paragraphs-to-ids.json'))
-  )[paragraph];
-}
-
-/**
- * @param {string} work
- * @param {string} id
- * @returns {Promise<string>}
- */
-async function getParagraphForWorkAndId (work, id) {
-  return Number.parseInt(JSON.parse(
-    await readFile(join(__dirname, 'data', work, 'ids-to-paragraphs.json'))
-  )[id]);
+async function getIdForWorkSectionAndParagraph (work, section, paragraph) {
+  return (await getSectionsAndParagraphsToIds())[work][section][paragraph];
 }
 
 export {
-  getIdForWorkAndParagraph,
-  getParagraphForWorkAndId
+  getWorkSectionAndParagraphForId,
+  getIdForWorkSectionAndParagraph
 };

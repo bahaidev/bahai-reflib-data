@@ -14,7 +14,7 @@
   "scripts": {
     "build-data": "node tools/index.js",
     "eslint": "eslint --ext=js,cjs,mjs,md,html",
-    "lint": "npm run eslint",
+    "lint": "npm run eslint --",
     "mocha": "mocha --require chai/register-expect.js",
     "test": "c8 npm run mocha"
   },

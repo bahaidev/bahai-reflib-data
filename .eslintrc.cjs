@@ -11,6 +11,7 @@ module.exports = {
       'console',
       'JSON',
       'Map',
+      'Number.isNaN',
       'Number.parseInt',
       'Object.entries',
       'Object.fromEntries',
