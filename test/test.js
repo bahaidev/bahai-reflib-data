@@ -1,5 +1,6 @@
 import {
-  getWorkSectionAndParagraphForId, getIdForWorkSectionAndParagraph
+  getWorkSectionAndParagraphForId, getIdForWorkSectionAndParagraph,
+  getIdForUrl, getInfoForUrl
 } from '../src/index.js';
 
 import {
@@ -76,5 +77,36 @@ describe('getIdForWorkAndParagraph', function () {
     );
 
     expect(id).to.equal('148954012');
+  });
+});
+
+describe('getIdForUrl', function () {
+  it('gets the ID for a main section URL', async function () {
+    const id = await getIdForUrl(
+      'https://www.bahai.org/library/authoritative-texts/bahaullah/epistle-son-wolf/1'
+    );
+
+    expect(id).to.equal('804716281');
+  });
+
+  it('gets the ID for a subsection URL', async function () {
+    const id = await getIdForUrl(
+      'https://www.bahai.org/library/authoritative-texts/bahaullah/days-remembrance/4#819748059'
+    );
+
+    expect(id).to.equal('819748059');
+  });
+
+  it('gets the info for a subsection URL', async function () {
+    const info = await getInfoForUrl(
+      'https://www.bahai.org/library/authoritative-texts/bahaullah/days-remembrance/4#819748059'
+    );
+
+    expect(info).to.deep.equal({
+      parentUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/days-remembrance/',
+      id: '819748059',
+      url: 'https://www.bahai.org/library/authoritative-texts/bahaullah/days-remembrance/4#819748059',
+      title: 'Lawḥ-i-‘Áshiq va Ma‘shúq (Tablet of the Lover and the Beloved)'
+    });
   });
 });

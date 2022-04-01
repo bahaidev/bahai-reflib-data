@@ -13,10 +13,6 @@ One bit of info: typing <https://bahai.org/r/[ID]> and replacing `[ID]` with
 the unique ID will redirect to the URL and potentially anchor that it
 targets.
 
-***Note that this is a work in progress. Currently only hosts data for
-the Rashḥ-i-‘Amá, though we can gather the IDs by adding (or crawling for)
-more titles with their URL metadata.***
-
 ## Development
 
 1. `npm i -g pnpm` (If you don't have it installed already)
@@ -37,6 +33,5 @@ more titles with their URL metadata.***
 
 ## Possible to-dos
 
-1. API to **get ID or work/section/paragraph info for URL**
 1. **RSS feed for new additions** to the library (based on a date-detected
     field)
