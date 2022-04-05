@@ -1,5 +1,10 @@
 # CHANGES for `bahai-reflib-data`
 
+## 0.3.1
+
+- docs: disclaimer on individual effort; link to site and server project;
+  move to-dos
+
 ## 0.3.0
 
 - feat: add `getInfoForId`, `getUrlForId`

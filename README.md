@@ -1,8 +1,12 @@
 # bahai-reflib-data
 
-This project aims to host information on the official Bahá'í Reference Library
+This project aims to host information on the official
+[Bahá'í Reference Library](https://bahai.org/library)
 website, in particular its unique identifiers, and host scripts for obtaining
 and processing those IDs, such as to map them to paragraph number.
+
+Note that although this uses data from the Bahá'í Reference Library, this is
+just an individual effort not related to the site.
 
 Per <https://bahai-library.com/uhj_additional_tablets_urls>, it seems that the
 URLS hosted on <https://bahai.org/library> may now be permanent, and it is
@@ -12,6 +16,9 @@ permanent as well.
 One bit of info: typing <https://bahai.org/r/[ID]> and replacing `[ID]` with
 the unique ID will redirect to the URL and potentially anchor that it
 targets.
+
+A **server** is available via
+[bahai-reflib-data-server](https://github.com/brettz9/bahai-reflib-data-server).
 
 ## Development
 
@@ -24,10 +31,6 @@ targets.
 
 ## To-dos
 
-1. Put online as a **JSON service** (using, e.g., for Bahaipedia and Bahai9
-    links)
-1. Put online as a **web app**, allowing a series of pull-downs for work,
-    section, and paragraph number to get the ID and link.
 1. Utilize in restoration of **webextensions**-based Bahá'í Reference Library
     Wiki Overlay add-on
 
