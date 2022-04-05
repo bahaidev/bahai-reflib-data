@@ -46,9 +46,27 @@ async function getInfoForUrl (url) {
   });
 }
 
+/**
+ * @param {string} id
+ * @returns {Promise<string|undefined>}
+ */
+async function getUrlForId (id) {
+  const sections = await getSections();
+  let found = sections.mainSections.find(({id: mainSectionId}) => {
+    return mainSectionId === id;
+  });
+
+  found = (found || sections.subSections.find(({id: subSectionId}) => {
+    return subSectionId === id;
+  }));
+
+  return found && found.url;
+}
+
 export {
   getWorkSectionAndParagraphForId,
   getIdForWorkSectionAndParagraph,
   getIdForUrl,
-  getInfoForUrl
+  getInfoForUrl,
+  getUrlForId
 };

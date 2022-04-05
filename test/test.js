@@ -1,6 +1,6 @@
 import {
   getWorkSectionAndParagraphForId, getIdForWorkSectionAndParagraph,
-  getIdForUrl, getInfoForUrl
+  getIdForUrl, getInfoForUrl, getUrlForId
 } from '../src/index.js';
 
 import {
@@ -108,5 +108,11 @@ describe('getIdForUrl', function () {
       url: 'https://www.bahai.org/library/authoritative-texts/bahaullah/days-remembrance/4#819748059',
       title: 'Lawḥ-i-‘Áshiq va Ma‘shúq (Tablet of the Lover and the Beloved)'
     });
+  });
+
+  it('gets the URL for a (subsection) id', async function () {
+    const url = await getUrlForId('819748059');
+
+    expect(url).to.equal('https://www.bahai.org/library/authoritative-texts/bahaullah/days-remembrance/4#819748059');
   });
 });

@@ -1,5 +1,9 @@
 # CHANGES for `bahai-reflib-data`
 
+## 0.3.0
+
+- feat: add `getUrlForId`
+
 ## 0.2.0
 
 - feat: `getIdForUrl`, `getInfoForUrl`
