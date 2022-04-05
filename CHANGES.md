@@ -2,7 +2,7 @@
 
 ## 0.3.0
 
-- feat: add `getUrlForId`
+- feat: add `getInfoForId`, `getUrlForId`
 
 ## 0.2.0
 

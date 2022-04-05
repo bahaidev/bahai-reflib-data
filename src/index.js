@@ -21,18 +21,14 @@ async function getIdForWorkSectionAndParagraph (work, section, paragraph) {
 }
 
 /**
- * @param {string} url
- * @returns {string|undefined}
- */
-async function getIdForUrl (url) {
-  return (await getInfoForUrl(url))?.id;
-}
+* @typedef {{
+*   parentUrl: string, url: string, title: string, id: string
+* }} SectionInfo
+*/
 
 /**
  * @param {string} url
- * @returns {Promise<{
- *   parentUrl: string, url: string, title: string, id: string
- * }|undefined>}
+ * @returns {Promise<SectionInfo|undefined>}
  */
 async function getInfoForUrl (url) {
   const sections = await getSections();
@@ -47,26 +43,42 @@ async function getInfoForUrl (url) {
 }
 
 /**
+ * @param {string} url
+ * @returns {string|undefined}
+ */
+async function getIdForUrl (url) {
+  return (await getInfoForUrl(url))?.id;
+}
+
+/**
+ * @param {string} id
+ * @returns {Promise<SectionInfo|undefined>}
+ */
+async function getInfoForId (id) {
+  const sections = await getSections();
+  const info = sections.mainSections.find(({id: mainSectionId}) => {
+    return mainSectionId === id;
+  });
+
+  return (info || sections.subSections.find(({id: subSectionId}) => {
+    return subSectionId === id;
+  }));
+}
+
+/**
  * @param {string} id
  * @returns {Promise<string|undefined>}
  */
 async function getUrlForId (id) {
-  const sections = await getSections();
-  let found = sections.mainSections.find(({id: mainSectionId}) => {
-    return mainSectionId === id;
-  });
-
-  found = (found || sections.subSections.find(({id: subSectionId}) => {
-    return subSectionId === id;
-  }));
-
-  return found && found.url;
+  const info = await getInfoForId(id);
+  return info && info.url;
 }
 
 export {
   getWorkSectionAndParagraphForId,
   getIdForWorkSectionAndParagraph,
-  getIdForUrl,
   getInfoForUrl,
+  getIdForUrl,
+  getInfoForId,
   getUrlForId
 };
