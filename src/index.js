@@ -30,7 +30,9 @@ async function getIdForUrl (url) {
 
 /**
  * @param {string} url
- * @returns {string|undefined}
+ * @returns {{
+ *   parentUrl: string, url: string, title: string, id: string
+ * }|undefined}
  */
 async function getInfoForUrl (url) {
   const sections = await getSections();
