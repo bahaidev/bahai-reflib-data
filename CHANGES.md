@@ -1,5 +1,9 @@
 # CHANGES for `bahai-reflib-data`
 
+## 0.3.2
+
+- fix: remove optional chaining use from browser-facing API
+
 ## 0.3.1
 
 - docs: disclaimer on individual effort; link to site and server project;

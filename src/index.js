@@ -47,7 +47,8 @@ async function getInfoForUrl (url) {
  * @returns {string|undefined}
  */
 async function getIdForUrl (url) {
-  return (await getInfoForUrl(url))?.id;
+  const info = await getInfoForUrl(url);
+  return info && info.id;
 }
 
 /**
