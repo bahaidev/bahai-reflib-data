@@ -1,6 +1,7 @@
 import {
   getWorkSectionAndParagraphForId, getIdForWorkSectionAndParagraph,
-  getIdForUrl, getInfoForUrl, getInfoForId, getUrlForId
+  getIdForUrl, getInfoForUrl, getInfoForId, getUrlForId,
+  getWorkNames, getSectionNamesForWork
 } from '../src/index.js';
 
 import {
@@ -125,5 +126,23 @@ describe('getIdForUrl', function () {
     const url = await getUrlForId('819748059');
 
     expect(url).to.equal('https://www.bahai.org/library/authoritative-texts/bahaullah/days-remembrance/4#819748059');
+  });
+});
+
+describe('`getWorkNames`', function () {
+  it('gets the work names', async function () {
+    const workNames = await getWorkNames();
+    expect(workNames).to.be.lengthOf(89);
+    expect(workNames).to.contain('The Call of the Divine Beloved');
+    expect(workNames).to.contain('Days of Remembrance');
+  });
+});
+
+describe('`getSectionNamesForWork`', function () {
+  it('gets the section names for a work', async function () {
+    const sectionNames = await getSectionNamesForWork('Days of Remembrance');
+    expect(sectionNames).to.be.lengthOf(55);
+    expect(sectionNames).to.contain('Naw-Rúz');
+    expect(sectionNames).to.contain('Riḍván');
   });
 });

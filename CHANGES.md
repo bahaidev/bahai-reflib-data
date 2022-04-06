@@ -1,5 +1,9 @@
 # CHANGES for `bahai-reflib-data`
 
+## 0.4.0
+
+- feat: adds `getWorkNames`, `getSectionNamesForWork`
+
 ## 0.3.2
 
 - fix: remove optional chaining use from browser-facing API

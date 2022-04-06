@@ -1,5 +1,6 @@
 import {
-  getIdsToSectionsAndParagraphs, getSectionsAndParagraphsToIds, getSections
+  getIdsToSectionsAndParagraphs, getSectionsAndParagraphsToIds, getSections,
+  getWorks
 } from './getData.js';
 
 /**
@@ -75,11 +76,39 @@ async function getUrlForId (id) {
   return info && info.url;
 }
 
+/**
+ * @returns {string[]}
+ */
+async function getWorkNames () {
+  const works = (await getWorks()).map(({title}) => {
+    return title;
+  });
+  return works;
+}
+
+/**
+ * @param {string} work
+ * @returns {string[]}
+ */
+async function getSectionNamesForWork (work) {
+  const sections = await getSections();
+  return sections.subSections.filter(({parentUrl}) => {
+    const mainSection = sections.mainSections.find(({title}) => {
+      return title === work;
+    });
+    return mainSection && mainSection.parentUrl === parentUrl;
+  }).map(({title}) => {
+    return title;
+  });
+}
+
 export {
   getWorkSectionAndParagraphForId,
   getIdForWorkSectionAndParagraph,
   getInfoForUrl,
   getIdForUrl,
   getInfoForId,
-  getUrlForId
+  getUrlForId,
+  getWorkNames,
+  getSectionNamesForWork
 };
