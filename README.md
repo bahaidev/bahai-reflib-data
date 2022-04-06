@@ -31,6 +31,8 @@ A **server** is available via
 
 ## To-dos
 
+1. Add the Persian (or means to build). (The Arabic has not been ported to the
+    new site.)
 1. Utilize in restoration of **webextensions**-based Bahá'í Reference Library
     Wiki Overlay add-on
 
