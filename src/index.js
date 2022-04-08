@@ -145,6 +145,32 @@ async function getUrlForWork (work, language) {
   return found && found.url;
 }
 
+/**
+ * @param {string} work
+ * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @returns {Promise<string>}
+ */
+async function getSubsectionUrlForWork (work, language) {
+  const [works, sections] = await Promise.all([
+    getWorks(language),
+    getSections(language)
+  ]);
+  const found = sections.mainSections.find(({
+    parentUrl: mainSectionParentUrl
+  }) => {
+    const innerFound = works.find(({url, title}) => {
+      return work === title;
+    });
+    /* c8 ignore next 3 */
+    if (!innerFound) {
+      return false;
+    }
+    return mainSectionParentUrl === innerFound.url;
+  });
+
+  return found && found.url;
+}
+
 export {
   getWorkSectionAndParagraphForId,
   getIdForWorkSectionAndParagraph,
@@ -154,5 +180,6 @@ export {
   getUrlForId,
   getWorkNames,
   getSectionNamesForWork,
-  getUrlForWork
+  getUrlForWork,
+  getSubsectionUrlForWork
 };
