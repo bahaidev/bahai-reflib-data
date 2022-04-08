@@ -1,7 +1,14 @@
-import {readFile} from 'fs/promises';
-import {join} from 'path';
+import {getDataDir, getLanguageSuffix} from './pathInfo.js';
 
-import {dataDir, getLanguageSuffix} from './pathInfo.js';
+let join;
+const setJoin = (_join) => {
+  join = _join;
+};
+
+let fetch;
+const setFetch = (_fetch) => {
+  fetch = _fetch;
+};
 
 const allLanguages = ['en', 'fa'];
 
@@ -83,9 +90,9 @@ const mergeArrayOfObjects = (objs) => {
  */
 const getMergedLanguageObject = async (langs, converter) => {
   const jsons = await Promise.all(langs.map(async (lang) => {
-    return JSON.parse(
-      await readFile(join(dataDir, converter(lang)))
-    );
+    return await (
+      await fetch(join(getDataDir(), converter(lang)))
+    ).json();
   }));
   return mergeArrayOfObjects(jsons);
 };
@@ -161,6 +168,7 @@ async function getSectionsAndParagraphsToIds (language) {
 }
 
 export {
+  setJoin, setFetch,
   getMainCollections, getCollections,
   getWorks, getSections,
   getIdsToSectionsAndParagraphs, getSectionsAndParagraphsToIds

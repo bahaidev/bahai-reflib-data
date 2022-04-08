@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Bahá'í Reflib Data Tests</title>
+        <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon" />
+        <link rel="stylesheet" href="../node_modules/mocha/mocha.css"/>
+    </head>
+    <body>
+        <h1>Bahá'í Reflib Data Tests</h1>
+        <div id="mocha"></div>
+
+        <!-- Test Environment -->
+        <script src="../node_modules/mocha/mocha.js"></script>
+        <script src="../node_modules/chai/chai.js"></script>
+        <!-- <script src="../node_modules/sinon/pkg/sinon-no-sourcemaps.js"></script> -->
+
+        <script type="module">
+        /* eslint-disable import/unambiguous -- Runs first */
+        /* globals chai */
+        window.expect = chai.expect;
+        window.assert = chai.assert;
+        mocha.setup({ui: 'bdd', timeout: 5000});
+        </script>
+        <script type="module">
+        /* eslint-disable import/unambiguous -- Runs first */
+        import './test.js';
+        </script>
+    </body>
+</html>

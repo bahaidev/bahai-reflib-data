@@ -5,7 +5,7 @@ import PromiseThrottle from 'promise-throttle';
 import {getDomForUrl} from './fetchDom.js';
 import {writeJSONFile} from './jsUtils.js';
 import {
-  dataDir, getLanguageSuffix, getLanguagePrefix
+  getDataDir, getLanguageSuffix, getLanguagePrefix
 } from '../src/pathInfo.js';
 
 const requestsPerSecond = 0.5;
@@ -93,7 +93,7 @@ async function downloadAndSaveMainCollections (language) {
 
   await writeJSONFile(
     join(
-      dataDir,
+      getDataDir(),
       `mainCollections${getLanguageSuffix(language)}.json`
     ),
     mainCollections
@@ -135,7 +135,7 @@ async function downloadAndSaveCollections (mainCollections, language) {
 
   await writeJSONFile(
     join(
-      dataDir,
+      getDataDir(),
       `collections${getLanguageSuffix(language)}.json`
     ),
     collections
@@ -176,7 +176,7 @@ async function downloadAndSaveWorks (collections, language) {
   }))).flat();
 
   await writeJSONFile(
-    join(dataDir, `works${getLanguageSuffix(language)}.json`),
+    join(getDataDir(), `works${getLanguageSuffix(language)}.json`),
     works
   );
 
@@ -293,7 +293,7 @@ async function downloadAndSaveSections (works, language) {
   }));
 
   await writeJSONFile(
-    join(dataDir, `sections${getLanguageSuffix(language)}.json`),
+    join(getDataDir(), `sections${getLanguageSuffix(language)}.json`),
     sections
   );
 
@@ -370,7 +370,7 @@ async function downloadAndSaveParagraphIdInfo (sections, language) {
   await Promise.all([
     writeJSONFile(
       join(
-        dataDir,
+        getDataDir(),
         `works-sections-and-paragraphs-to-ids${
           getLanguageSuffix(language)
         }.json`
@@ -379,7 +379,7 @@ async function downloadAndSaveParagraphIdInfo (sections, language) {
     ),
     writeJSONFile(
       join(
-        dataDir,
+        getDataDir(),
         `ids-to-works-sections-and-paragraphs${
           getLanguageSuffix(language)
         }.json`

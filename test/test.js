@@ -1,14 +1,20 @@
 import {
-  getWorkSectionAndParagraphForId, getIdForWorkSectionAndParagraph,
-  getIdForUrl, getInfoForUrl, getInfoForId, getUrlForId,
-  getWorkNames, getSectionNamesForWork
-} from '../src/index.js';
-
-import {
   getMainCollections, getCollections, getWorks, getSections
 } from '../src/getData.js';
 
 import {getLanguagePrefix} from '../src/pathInfo.js';
+
+(async () => {
+const {
+  getWorkSectionAndParagraphForId, getIdForWorkSectionAndParagraph,
+  getIdForUrl, getInfoForUrl, getInfoForId, getUrlForId,
+  getWorkNames, getSectionNamesForWork
+// eslint-disable-next-line no-unsanitized/method -- Testing
+} = await import(
+  typeof window !== 'undefined'
+    ? '../src/index-browser.js'
+    : '../src/index-node.js'
+);
 
 describe('`getMainCollections`', function () {
   it('gets a main collection', async function () {
@@ -345,3 +351,11 @@ describe('`getLanguagePrefix`', function () {
     expect(prefix).to.equal('/fa');
   });
 });
+
+// Mocha delay
+if (typeof run !== 'undefined') {
+  run();
+} else if (typeof mocha !== 'undefined') {
+  mocha.run();
+}
+})();

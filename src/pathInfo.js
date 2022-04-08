@@ -1,8 +1,10 @@
-import {join, dirname} from 'path';
-import {fileURLToPath} from 'url';
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const dataDir = join(__dirname, 'data');
+let dataDir;
+const getDataDir = () => {
+  return dataDir;
+};
+const setDataDir = (_dataDkr) => {
+  dataDir = _dataDkr;
+};
 
 /**
  * @param {"fa"|"en"} language
@@ -20,4 +22,4 @@ const getLanguageSuffix = (language) => {
   return language === 'en' ? '' : '-' + language;
 };
 
-export {dataDir, getLanguagePrefix, getLanguageSuffix};
+export {getDataDir, setDataDir, getLanguagePrefix, getLanguageSuffix};

@@ -13,13 +13,15 @@ module.exports = {
     polyfills: [
       'Array.isArray',
       'console',
+      'fetch',
       'JSON',
       'Map',
       'Number.isNaN',
       'Number.parseInt',
       'Object.entries',
       'Object.fromEntries',
-      'Promise'
+      'Promise',
+      'URL'
     ]
   },
   parserOptions: {

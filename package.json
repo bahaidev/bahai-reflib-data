@@ -1,21 +1,27 @@
 {
   "name": "bahai-reflib-data",
-  "version": "0.5.2",
+  "version": "0.6.0",
   "author": "Brett Zamir <brettz9@yahoo.com>",
   "contributors": [],
   "description": "Host information on the official Bahá'í Reference Library",
   "license": "MIT",
   "keywords": [],
   "type": "module",
-  "main": "src/index.js",
+  "main": "./src/index-node.js",
+  "exports": {
+    "import": "./src/index-node.js",
+    "browser": "./src/index-browser.js",
+    "default": "./src/index.js"
+  },
   "browserslist": [
     "cover 100%"
   ],
   "scripts": {
+    "start": "static -p 8008",
     "build-data": "node tools/index.js",
     "eslint": "eslint --ext=js,cjs,mjs,md,html",
     "lint": "npm run eslint --",
-    "mocha": "mocha --require chai/register-expect.js",
+    "mocha": "mocha --require chai/register-expect.js --delay",
     "test": "c8 npm run mocha"
   },
   "repository": {
@@ -30,9 +36,11 @@
     "node": ">=12.0.0"
   },
   "dependencies": {
+    "file-fetch": "^1.7.0"
   },
   "devDependencies": {
     "@brettz9/eslint-plugin": "^1.0.4",
+    "@brettz9/node-static": "^0.1.1",
     "c8": "^7.11.0",
     "chai": "^4.3.6",
     "eslint": "^8.12.0",

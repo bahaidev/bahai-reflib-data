@@ -1,5 +1,9 @@
 # CHANGES for `bahai-reflib-data`
 
+## 0.6.0
+
+- feat: make browser/webextension-friendly build
+
 ## 0.5.2
 
 - fix: due to Reflib sometimes using different characters for their
