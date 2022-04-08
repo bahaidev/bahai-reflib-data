@@ -21,6 +21,47 @@ const mergeArrayOfArrays = (arrays) => {
 };
 
 /**
+ * @typedef {any} ObjectItem
+ */
+
+/**
+ * Simple object check.
+ * @param {ObjectItem} item
+ * @returns {boolean}
+ * @see https://stackoverflow.com/a/34749873/271577
+ */
+export function isObject (item) {
+  return (item && typeof item === 'object' && !Array.isArray(item));
+}
+
+/**
+ * Deep merge two objects.
+ * @param {object} target
+ * @param {object[]} sources
+ * @returns {object}
+ * @see https://stackoverflow.com/a/34749873/271577
+ */
+export function mergeDeep (target, ...sources) {
+  if (!sources.length) return target;
+  const source = sources.shift();
+
+  if (isObject(target) && isObject(source)) {
+    for (const key in source) {
+      if (isObject(source[key])) {
+        if (!target[key]) Object.assign(target, {[key]: {}});
+        mergeDeep(target[key], source[key]);
+      } else if (Array.isArray(target[key])) {
+        target[key].push(...source[key]);
+      } else {
+        Object.assign(target, {[key]: source[key]});
+      }
+    }
+  }
+
+  return mergeDeep(target, ...sources);
+}
+
+/**
  * @param {object[]} objs
  * @returns {object}
  */
@@ -28,10 +69,7 @@ const mergeArrayOfObjects = (objs) => {
   if (Array.isArray(objs[0])) {
     return mergeArrayOfArrays(objs);
   }
-  return objs.reduce((output, obj) => {
-    output = {...output, ...obj};
-    return output;
-  }, {});
+  return mergeDeep({}, ...objs);
 };
 
 /**

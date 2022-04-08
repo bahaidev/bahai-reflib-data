@@ -1,5 +1,10 @@
 # CHANGES for `bahai-reflib-data`
 
+## 0.5.1
+
+- fix: merging issue
+- test: adds Persian tests
+
 ## 0.5.0
 
 - feat: support Persian and all language processing (site is currently

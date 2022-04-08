@@ -11,6 +11,7 @@ module.exports = {
       mode: 'typescript'
     },
     polyfills: [
+      'Array.isArray',
       'console',
       'JSON',
       'Map',
