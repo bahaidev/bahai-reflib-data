@@ -307,6 +307,8 @@ describe('`getWorkNames`', function () {
   it('gets the work names (Persian)', async function () {
     const workNames = await getWorkNames('fa');
     expect(workNames).to.be.lengthOf(26);
+
+    expect(workNames).to.contain('سراپردۀ يگانگی');
     expect(workNames).to.contain('مقاله شخصى سياح');
     expect(workNames).to.contain(
       'دوازده گفتگوی حضرت عبدالبهاء بر سر نهار در عکّا'
@@ -324,7 +326,7 @@ describe('`getSectionNamesForWork`', function () {
 
   it('gets the section names for a work (Persian)', async function () {
     const sectionNames = await getSectionNamesForWork(
-      'سراپردهٔ یگانگی',
+      'سراپردۀ يگانگی',
       'fa'
     );
     expect(sectionNames).to.be.lengthOf(6);

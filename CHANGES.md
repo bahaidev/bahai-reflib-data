@@ -1,5 +1,11 @@
 # CHANGES for `bahai-reflib-data`
 
+## 0.5.2
+
+- fix: due to Reflib sometimes using different characters for their
+  Table of Contents and headings (at least in Persian), with ID not available,
+  we match by URL instead
+
 ## 0.5.1
 
 - fix: merging issue

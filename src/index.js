@@ -103,10 +103,23 @@ async function getWorkNames (language) {
  * @returns {string[]}
  */
 async function getSectionNamesForWork (work, language) {
-  const sections = await getSections(language);
+  const [works, sections] = await Promise.all([
+    getWorks(language),
+    getSections(language)
+  ]);
   return sections.subSections.filter(({parentUrl}) => {
-    const mainSection = sections.mainSections.find(({title}) => {
-      return title === work;
+    // Due to a mismatch between the title found on the Table of Contents,
+    //   and the one found as a heading on the page (e.g.,
+    //   'سراپردۀ يگانگی' and 'سراپردهٔ یگانگی', we need to match another way
+    //   between section and work. But since the Table of Contents
+    //   apparently doesn't store the ID, we need to check the works,
+    //   directly, cross-referenced by parentUrl/url
+    const mainSection = sections.mainSections.find(({
+      parentUrl: mainSectionParentUrl
+    }) => {
+      return mainSectionParentUrl === works.find(({url, title}) => {
+        return work === title;
+      }).url;
     });
     return mainSection && mainSection.parentUrl === parentUrl;
   }).map(({title}) => {
