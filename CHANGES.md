@@ -1,5 +1,11 @@
 # CHANGES for `bahai-reflib-data`
 
+## 0.7.0
+
+- feat: add `getSubsectionUrlForWork`
+- feat: add `getUrlForWork`
+- fix: build
+
 ## 0.6.0
 
 - feat: make browser/webextension-friendly build
