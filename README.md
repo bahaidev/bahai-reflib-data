@@ -31,6 +31,7 @@ A **server** is available via
 
 ## To-dos
 
+1. Make **browser/webextension-friendly** build
 1. Utilize in restoration of **webextensions**-based Bahá'í Reference Library
     Wiki Overlay add-on
 
