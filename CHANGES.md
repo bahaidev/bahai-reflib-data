@@ -1,5 +1,12 @@
 # CHANGES for `bahai-reflib-data`
 
+## 0.5.0
+
+- feat: support Persian and all language processing (site is currently
+    limited to Persian and English)
+- chore: update devDeps.
+- chore: lint in TS mode
+
 ## 0.4.0
 
 - feat: adds `getWorkNames`, `getSectionNamesForWork`

@@ -10,23 +10,24 @@ import {
 } from '../src/getData.js';
 
 (async () => {
+const language = process.argv.includes('fa') ? 'fa' : 'en';
 const mainCollections = process.argv.includes('mainCollections')
-  ? await downloadAndSaveMainCollections()
-  : await getMainCollections();
+  ? await downloadAndSaveMainCollections(language)
+  : await getMainCollections(language);
 
 const collections = process.argv.includes('collections')
-  ? await downloadAndSaveCollections(mainCollections)
-  : await getCollections();
+  ? await downloadAndSaveCollections(mainCollections, language)
+  : await getCollections(language);
 
 const works = process.argv.includes('works')
-  ? await downloadAndSaveWorks(collections)
-  : await getWorks();
+  ? await downloadAndSaveWorks(collections, language)
+  : await getWorks(language);
 
 const sections = process.argv.includes('sections')
-  ? await downloadAndSaveSections(works)
-  : await getSections();
+  ? await downloadAndSaveSections(works, language)
+  : await getSections(language);
 
 if (process.argv.includes('paragraphIdInfo')) {
-  await downloadAndSaveParagraphIdInfo(sections);
+  await downloadAndSaveParagraphIdInfo(sections, language);
 }
 })();

@@ -4,7 +4,9 @@ import PromiseThrottle from 'promise-throttle';
 
 import {getDomForUrl} from './fetchDom.js';
 import {writeJSONFile} from './jsUtils.js';
-import {dataDir} from '../src/pathInfo.js';
+import {
+  dataDir, getLanguageSuffix, getLanguagePrefix
+} from '../src/pathInfo.js';
 
 const requestsPerSecond = 0.5;
 const doubleAngleQuotes = /»/gu;
@@ -67,10 +69,13 @@ const setIdsToWorksSectionsAndParagraphs = (
  */
 
 /**
+ * @param {"fa"|"en"} language
  * @returns {Promise<MainCollection[]>}
  */
-async function downloadAndSaveMainCollections () {
-  const parentUrl = 'https://www.bahai.org/library/';
+async function downloadAndSaveMainCollections (language) {
+  const parentUrl = `https://www.bahai.org${
+    getLanguagePrefix(language)
+  }/library/`;
   const {$$} = await getDomForUrl(parentUrl);
 
   // eslint-disable-next-line no-console -- Logging
@@ -86,16 +91,23 @@ async function downloadAndSaveMainCollections () {
     };
   });
 
-  await writeJSONFile(join(dataDir, 'mainCollections.json'), mainCollections);
+  await writeJSONFile(
+    join(
+      dataDir,
+      `mainCollections${getLanguageSuffix(language)}.json`
+    ),
+    mainCollections
+  );
 
   return mainCollections;
 }
 
 /**
  * @param {MainCollection[]} mainCollections
+ * @param {"fa"|"en"} language
  * @returns {Promise<Collection[]>}
  */
-async function downloadAndSaveCollections (mainCollections) {
+async function downloadAndSaveCollections (mainCollections, language) {
   const promiseThrottle = new PromiseThrottle({
     requestsPerSecond
   });
@@ -121,7 +133,13 @@ async function downloadAndSaveCollections (mainCollections) {
     })
   )).flat();
 
-  await writeJSONFile(join(dataDir, 'collections.json'), collections);
+  await writeJSONFile(
+    join(
+      dataDir,
+      `collections${getLanguageSuffix(language)}.json`
+    ),
+    collections
+  );
 
   return collections;
 }
@@ -132,9 +150,10 @@ async function downloadAndSaveCollections (mainCollections) {
 
 /**
  * @param {Collection[]} collections
+ * @param {"fa"|"en"} language
  * @returns {Promise<Work[]>}
  */
-async function downloadAndSaveWorks (collections) {
+async function downloadAndSaveWorks (collections, language) {
   const promiseThrottle = new PromiseThrottle({
     requestsPerSecond
   });
@@ -156,7 +175,10 @@ async function downloadAndSaveWorks (collections) {
     });
   }))).flat();
 
-  await writeJSONFile(join(dataDir, 'works.json'), works);
+  await writeJSONFile(
+    join(dataDir, `works${getLanguageSuffix(language)}.json`),
+    works
+  );
 
   return works;
 }
@@ -167,9 +189,10 @@ async function downloadAndSaveWorks (collections) {
 
 /**
  * @param {Work[]} works
+ * @param {"fa"|"en"} language
  * @returns {Promise<Section[]>}
  */
-async function downloadAndSaveSections (works) {
+async function downloadAndSaveSections (works, language) {
   const promiseThrottle = new PromiseThrottle({
     requestsPerSecond
   });
@@ -229,9 +252,7 @@ async function downloadAndSaveSections (works) {
         subSections
       };
     });
-  }).filter((item) => {
-    return item;
-  }))).reduce((obj, {mainSections, subSections}) => {
+  }).filter(Boolean))).reduce((obj, {mainSections, subSections}) => {
     // We could improve this by checking for redundancy, e.g., `187607508`,
     //  "Prayers and Meditations of Bahá'u'lláh" appears twice, once listed
     //  on the prayers once in the Writings of Bahá'u'lláh; but we may want
@@ -271,16 +292,20 @@ async function downloadAndSaveSections (works) {
     });
   }));
 
-  await writeJSONFile(join(dataDir, 'sections.json'), sections);
+  await writeJSONFile(
+    join(dataDir, `sections${getLanguageSuffix(language)}.json`),
+    sections
+  );
 
   return sections;
 }
 
 /**
  * @param {Section[]} sections
+ * @param {"fa"|"en"} language
  * @returns {Promise<void>}
  */
-async function downloadAndSaveParagraphIdInfo (sections) {
+async function downloadAndSaveParagraphIdInfo (sections, language) {
   const promiseThrottle = new PromiseThrottle({
     requestsPerSecond
   });
@@ -344,11 +369,21 @@ async function downloadAndSaveParagraphIdInfo (sections) {
 
   await Promise.all([
     writeJSONFile(
-      join(dataDir, 'works-sections-and-paragraphs-to-ids.json'),
+      join(
+        dataDir,
+        `works-sections-and-paragraphs-to-ids${
+          getLanguageSuffix(language)
+        }.json`
+      ),
       worksSectionsAndParagraphsToIds
     ),
     writeJSONFile(
-      join(dataDir, 'ids-to-works-sections-and-paragraphs.json'),
+      join(
+        dataDir,
+        `ids-to-works-sections-and-paragraphs${
+          getLanguageSuffix(language)
+        }.json`
+      ),
       idsToWorksSectionsAndParagraphs
     )
   ]);

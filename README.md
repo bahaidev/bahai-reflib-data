@@ -31,12 +31,15 @@ A **server** is available via
 
 ## To-dos
 
-1. Add the Persian (or means to build). (The Arabic has not been ported to the
-    new site.)
 1. Utilize in restoration of **webextensions**-based Bahá'í Reference Library
     Wiki Overlay add-on
 
 ## Possible to-dos
 
+1. Waiting: Once ready, add the **Arabic** or any other languages added later
+    (The Arabic has not been ported to the new site.) Should just need to
+    populate the `allLanguages` array. (We could scrape "Other languages"
+    from <https://www.bahai.org/library/> but no telling if that structure
+    will stay the same.)
 1. **RSS feed for new additions** to the library (based on a date-detected
     field)

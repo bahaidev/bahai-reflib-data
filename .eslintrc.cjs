@@ -7,6 +7,9 @@ module.exports = {
     fetch: 'off'
   },
   settings: {
+    jsdoc: {
+      mode: 'typescript'
+    },
     polyfills: [
       'console',
       'JSON',
