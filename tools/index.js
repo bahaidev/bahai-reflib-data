@@ -1,3 +1,5 @@
+import '../src/index-node.js'; // Set-up code
+
 import {
   downloadAndSaveMainCollections, downloadAndSaveCollections,
   downloadAndSaveWorks, downloadAndSaveSections,
