@@ -28,6 +28,36 @@ async function getIdForWorkSectionAndParagraph (
 }
 
 /**
+ * @param {string} work
+ * @param {string} section
+ * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @returns {Promise<string>}
+ */
+async function getParagraphsForWorkAndSection (
+  work, section, language
+) {
+  const sectionsAndParagraphs = await getSectionsAndParagraphsToIds(
+    language
+  );
+
+  const sections = sectionsAndParagraphs[work];
+  if (!sections) {
+    return undefined;
+  }
+
+  const paragraphsToIds = sections[section];
+  if (!paragraphsToIds) {
+    return undefined;
+  }
+
+  const array = Object.keys(paragraphsToIds).filter((par) => {
+    return par !== 'null';
+  });
+
+  return array.length ? array : undefined;
+}
+
+/**
 * @typedef {{
 *   parentUrl: string, url: string, title: string, id: string
 * }} SectionInfo
@@ -210,6 +240,7 @@ async function getUrlForWorkAndSection (work, section, language) {
 export {
   getWorkSectionAndParagraphForId,
   getIdForWorkSectionAndParagraph,
+  getParagraphsForWorkAndSection,
   getInfoForUrl,
   getIdForUrl,
   getInfoForId,

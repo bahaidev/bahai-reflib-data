@@ -3,6 +3,7 @@
 ## 0.8.0
 
 - feat: add `getUrlForWorkAndSection`
+- feat: add `getParagraphsForWorkAndSection`
 
 ## 0.7.0
 

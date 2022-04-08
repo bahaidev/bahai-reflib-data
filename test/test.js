@@ -9,7 +9,8 @@ const {
   getWorkSectionAndParagraphForId, getIdForWorkSectionAndParagraph,
   getIdForUrl, getInfoForUrl, getInfoForId, getUrlForId,
   getWorkNames, getSectionNamesForWork, getUrlForWork,
-  getSubsectionUrlForWork, getUrlForWorkAndSection
+  getSubsectionUrlForWork, getUrlForWorkAndSection,
+  getParagraphsForWorkAndSection
 // eslint-disable-next-line no-unsanitized/method -- Testing
 } = await import(
   typeof window !== 'undefined'
@@ -195,6 +196,53 @@ describe('`getIdForWorkSectionAndParagraph`', function () {
       ]);
     }
   );
+});
+
+describe('`getParagraphsForWorkAndSection`', function () {
+  it('gets the paragraphs for a work and section', async function () {
+    const paragraphs = await getParagraphsForWorkAndSection(
+      'Days of Remembrance',
+      '“He it is Who is established upon this luminous Throne…”'
+    );
+    // Array of 1-34
+    const expected = Array.from({length: 34}, (_, i) => {
+      return String(i + 1);
+    });
+    expect(paragraphs).to.deep.equal(expected);
+  });
+
+  it('returns undefined for a bad work', async function () {
+    const paragraphs = await getParagraphsForWorkAndSection(
+      'Non-existent',
+      '“He it is Who is established upon this luminous Throne…”'
+    );
+    expect(paragraphs).to.equal(undefined);
+  });
+
+  it('returns undefined for a bad section', async function () {
+    const paragraphs = await getParagraphsForWorkAndSection(
+      'Days of Remembrance',
+      'Non-existent'
+    );
+    expect(paragraphs).to.equal(undefined);
+  });
+
+  it('returns undefined for missing valid paragraphs', async function () {
+    const paragraphs = await getParagraphsForWorkAndSection(
+      'The Call of the Divine Beloved',
+      'Preface'
+    );
+    expect(paragraphs).to.equal(undefined);
+  });
+
+  it('returns undefined for a bad section (Persian)', async function () {
+    const paragraphs = await getParagraphsForWorkAndSection(
+      'جواهر الاسرار',
+      'Non-existent',
+      'fa'
+    );
+    expect(paragraphs).to.equal(undefined);
+  });
 });
 
 describe('`getIdForUrl`', function () {

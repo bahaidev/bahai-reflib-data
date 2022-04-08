@@ -11,6 +11,7 @@ module.exports = {
       mode: 'typescript'
     },
     polyfills: [
+      'Array.from',
       'Array.isArray',
       'console',
       'fetch',
@@ -20,6 +21,7 @@ module.exports = {
       'Number.parseInt',
       'Object.entries',
       'Object.fromEntries',
+      'Object.keys',
       'Promise',
       'URL'
     ]
