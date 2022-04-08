@@ -103,7 +103,7 @@ describe('`getSections`', function () {
 });
 
 describe('`getWorkSectionAndParagraphForId`', function () {
-  it('gets the ID for a work and paragraph', async function () {
+  it('gets the work, section, and paragraph for an ID', async function () {
     const {work, section, paragraph} = await getWorkSectionAndParagraphForId(
       '148954012'
     );
@@ -113,19 +113,22 @@ describe('`getWorkSectionAndParagraphForId`', function () {
     expect(paragraph).to.equal(6);
   });
 
-  it('gets the ID for a work and paragraph (Persian)', async function () {
-    const {work, section, paragraph} = await getWorkSectionAndParagraphForId(
-      '825528201',
-      'fa'
-    );
+  it(
+    'gets the work, (main) section, and paragraph for an ID (Persian)',
+    async function () {
+      const {work, section, paragraph} = await getWorkSectionAndParagraphForId(
+        '825528201',
+        'fa'
+      );
 
-    expect(work).to.equal('سراپردهٔ یگانگی');
-    expect(section).to.equal('$main');
-    expect(paragraph).to.equal(null);
-  });
+      expect(work).to.equal('سراپردهٔ یگانگی');
+      expect(section).to.equal('$main');
+      expect(paragraph).to.equal(null);
+    }
+  );
 
   it(
-    'gets the ID for a work, section, and paragraph (Persian)',
+    'gets the work, section, and paragraph for an ID (Persian)',
     async function () {
       const {work, section, paragraph} = await getWorkSectionAndParagraphForId(
         '167639371',
@@ -140,7 +143,7 @@ describe('`getWorkSectionAndParagraphForId`', function () {
 });
 
 describe('`getIdForWorkSectionAndParagraph`', function () {
-  it('gets the ID for a work and paragraph', async function () {
+  it('gets the ID for a work, section, and paragraph', async function () {
     const id = await getIdForWorkSectionAndParagraph(
       'The Call of the Divine Beloved',
       'Rashḥ-i-‘Amá (The Clouds of the Realms Above)',
@@ -150,35 +153,41 @@ describe('`getIdForWorkSectionAndParagraph`', function () {
     expect(id).to.equal('148954012');
   });
 
-  it('gets the ID(s) for a work and paragraph (Persian)', async function () {
-    const id = await getIdForWorkSectionAndParagraph(
-      'سراپردهٔ یگانگی',
-      '$main',
-      null,
-      'fa'
-    );
+  it(
+    'gets the ID(s) for a work, (main) section, and paragraph (Persian)',
+    async function () {
+      const id = await getIdForWorkSectionAndParagraph(
+        'سراپردهٔ یگانگی',
+        '$main',
+        null,
+        'fa'
+      );
 
-    expect(id).to.deep.equal(['825528201']);
-  });
+      expect(id).to.deep.equal(['825528201']);
+    }
+  );
 
-  it('gets the ID(s) for a work and paragraph (Persian)', async function () {
-    const id = await getIdForWorkSectionAndParagraph(
-      'سراپردهٔ یگانگی',
-      'مقدّمه',
-      null,
-      'fa'
-    );
+  it(
+    'gets the ID(s) for a work, section, and paragraph (Persian)',
+    async function () {
+      const id = await getIdForWorkSectionAndParagraph(
+        'سراپردهٔ یگانگی',
+        'مقدّمه',
+        null,
+        'fa'
+      );
 
-    expect(id).to.deep.equal([
-      '825528200',
-      '167639371',
-      '167639372',
-      '167639373',
-      '167639374',
-      '167639375',
-      '167639376'
-    ]);
-  });
+      expect(id).to.deep.equal([
+        '825528200',
+        '167639371',
+        '167639372',
+        '167639373',
+        '167639374',
+        '167639375',
+        '167639376'
+      ]);
+    }
+  );
 });
 
 describe('`getIdForUrl`', function () {
