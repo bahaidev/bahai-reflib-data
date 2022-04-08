@@ -53,7 +53,7 @@ async function getInfoForUrl (url, language) {
 /**
  * @param {string} url
  * @param {"fa"|"en"} [language] If none is provided, will check all languages
- * @returns {string|undefined}
+ * @returns {Promise<string|undefined>}
  */
 async function getIdForUrl (url, language) {
   const info = await getInfoForUrl(url, language);
@@ -88,7 +88,7 @@ async function getUrlForId (id, language) {
 
 /**
  * @param {"fa"|"en"} [language] If none is provided, will check all languages
- * @returns {string[]}
+ * @returns {Promise<string[]>}
  */
 async function getWorkNames (language) {
   const works = (await getWorks(language)).map(({title}) => {
@@ -100,7 +100,7 @@ async function getWorkNames (language) {
 /**
  * @param {string} work
  * @param {"fa"|"en"} [language] If none is provided, will check all languages
- * @returns {string[]}
+ * @returns {Promise<string[]>}
  */
 async function getSectionNamesForWork (work, language) {
   const [works, sections] = await Promise.all([
@@ -117,14 +117,32 @@ async function getSectionNamesForWork (work, language) {
     const mainSection = sections.mainSections.find(({
       parentUrl: mainSectionParentUrl
     }) => {
-      return mainSectionParentUrl === works.find(({url, title}) => {
+      const found = works.find(({url, title}) => {
         return work === title;
-      }).url;
+      });
+      /* c8 ignore next 3 */
+      if (!found) {
+        return false;
+      }
+      return mainSectionParentUrl === found.url;
     });
     return mainSection && mainSection.parentUrl === parentUrl;
   }).map(({title}) => {
     return title;
   });
+}
+
+/**
+ * @param {string} work
+ * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @returns {Promise<string>}
+ */
+async function getUrlForWork (work, language) {
+  const found = (await getWorks(language)).find(({title}) => {
+    return title === work;
+  });
+
+  return found && found.url;
 }
 
 export {
@@ -135,5 +153,6 @@ export {
   getInfoForId,
   getUrlForId,
   getWorkNames,
-  getSectionNamesForWork
+  getSectionNamesForWork,
+  getUrlForWork
 };

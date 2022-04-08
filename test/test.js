@@ -8,7 +8,7 @@ import {getLanguagePrefix} from '../src/pathInfo.js';
 const {
   getWorkSectionAndParagraphForId, getIdForWorkSectionAndParagraph,
   getIdForUrl, getInfoForUrl, getInfoForId, getUrlForId,
-  getWorkNames, getSectionNamesForWork
+  getWorkNames, getSectionNamesForWork, getUrlForWork
 // eslint-disable-next-line no-unsanitized/method -- Testing
 } = await import(
   typeof window !== 'undefined'
@@ -338,6 +338,18 @@ describe('`getSectionNamesForWork`', function () {
     expect(sectionNames).to.be.lengthOf(6);
     expect(sectionNames).to.contain('مقدّمه');
     expect(sectionNames).to.contain('۱. لوح مانکچی صاحب');
+  });
+});
+
+describe('`getUrlForWork`', function () {
+  it('gets a URL for a work', async function () {
+    const url = await getUrlForWork('Consultation');
+    expect(url).to.equal('https://www.bahai.org/library/authoritative-texts/compilations/consultation/');
+  });
+
+  it('gets a URL for a work (Persian)', async function () {
+    const url = await getUrlForWork('سراپردۀ يگانگی');
+    expect(url).to.equal('https://www.bahai.org/fa/library/authoritative-texts/bahaullah/tabernacle-unity/');
   });
 });
 
