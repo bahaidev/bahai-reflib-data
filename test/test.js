@@ -9,7 +9,7 @@ const {
   getWorkSectionAndParagraphForId, getIdForWorkSectionAndParagraph,
   getIdForUrl, getInfoForUrl, getInfoForId, getUrlForId,
   getWorkNames, getSectionNamesForWork, getUrlForWork,
-  getSubsectionUrlForWork
+  getSubsectionUrlForWork, getUrlForWorkAndSection
 // eslint-disable-next-line no-unsanitized/method -- Testing
 } = await import(
   typeof window !== 'undefined'
@@ -363,6 +363,25 @@ describe('`getSubsectionUrlForWork`', function () {
   it('gets a URL for a work (Persian)', async function () {
     const url = await getSubsectionUrlForWork('سراپردۀ يگانگی');
     expect(url).to.equal('https://www.bahai.org/fa/library/authoritative-texts/bahaullah/tabernacle-unity/1');
+  });
+});
+
+describe('`getUrlForWorkAndSection`', function () {
+  it('gets URL for a work and section', async function () {
+    const url = await getUrlForWorkAndSection(
+      'The Call of the Divine Beloved',
+      'Rashḥ-i-‘Amá (The Clouds of the Realms Above)'
+    );
+    expect(url).to.equal('https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/3#874317698');
+  });
+
+  it('gets URL for a work and section (Persian)', async function () {
+    const url = await getUrlForWorkAndSection(
+      'سراپردۀ يگانگی',
+      '۱. لوح مانکچی صاحب',
+      'fa'
+    );
+    expect(url).to.equal('https://www.bahai.org/fa/library/authoritative-texts/bahaullah/tabernacle-unity/3#167639377');
   });
 });
 

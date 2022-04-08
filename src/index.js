@@ -158,6 +158,7 @@ async function getSubsectionUrlForWork (work, language) {
   const found = sections.mainSections.find(({
     parentUrl: mainSectionParentUrl
   }) => {
+    // See discussion above on another `sections.mainSections.find`
     const innerFound = works.find(({url, title}) => {
       return work === title;
     });
@@ -171,6 +172,41 @@ async function getSubsectionUrlForWork (work, language) {
   return found && found.url;
 }
 
+/**
+ * @param {string} work
+ * @param {string} section
+ * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @returns {Promise<string[]>}
+ */
+async function getUrlForWorkAndSection (work, section, language) {
+  const [works, sections] = await Promise.all([
+    getWorks(language),
+    getSections(language)
+  ]);
+  const subSectionFound = sections.subSections.find(({
+    parentUrl, title: sectionTitle
+  }) => {
+    // See discussion above on another `sections.mainSections.find`
+    const mainSection = sections.mainSections.find(({
+      parentUrl: mainSectionParentUrl
+    }) => {
+      const found = works.find(({url, title}) => {
+        return work === title;
+      });
+
+      /* c8 ignore next 3 */
+      if (!found) {
+        return false;
+      }
+      return mainSectionParentUrl === found.url;
+    });
+    return mainSection && mainSection.parentUrl === parentUrl &&
+      sectionTitle === section;
+  });
+
+  return subSectionFound && subSectionFound.url;
+}
+
 export {
   getWorkSectionAndParagraphForId,
   getIdForWorkSectionAndParagraph,
@@ -181,5 +217,6 @@ export {
   getWorkNames,
   getSectionNamesForWork,
   getUrlForWork,
-  getSubsectionUrlForWork
+  getSubsectionUrlForWork,
+  getUrlForWorkAndSection
 };
