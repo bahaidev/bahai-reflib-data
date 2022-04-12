@@ -1,5 +1,9 @@
 # CHANGES for `bahai-reflib-data`
 
+## 0.9.0
+
+- feat: add `getFullInfoForUrl`
+
 ## 0.8.0
 
 - feat: add `getUrlForWorkAndSection`

@@ -17,13 +17,12 @@
 
         <script type="module">
         /* eslint-disable import/unambiguous -- Runs first */
-        /* globals chai */
+        /* globals chai -- No ESM export */
         window.expect = chai.expect;
         window.assert = chai.assert;
         mocha.setup({ui: 'bdd', timeout: 5000});
         </script>
         <script type="module">
-        /* eslint-disable import/unambiguous -- Runs first */
         import './test.js';
         </script>
     </body>

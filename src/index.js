@@ -4,6 +4,91 @@ import {
 } from './getData.js';
 
 /**
+ * @todo Should build optimized version to avoid all this processing
+ * @param {string} url
+ * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @returns {Promise<{work: string, section: string, paragraph: number}|false>}
+ */
+async function getFullInfoForUrl (url, language) {
+  const [
+    idsToSectionsAndParagraphs, works, sections
+  ] = await Promise.all([
+    getIdsToSectionsAndParagraphs(language),
+    getWorks(language),
+    getSections(language)
+  ]);
+
+  const {
+    groups: {id}
+  } = url.match(/\/\d#(?<id>\d+)$/u) || {groups: {}};
+
+  if (!id) {
+    return false;
+  }
+
+  const workSectionParagraph = idsToSectionsAndParagraphs[id];
+
+  const subSectionInfo = sections.subSections.find(({
+    url: subSectionUrl, parentUrl, title: sectionTitle
+  }) => {
+    return subSectionUrl === url;
+  });
+
+  /* c8 ignore next 3 */
+  if (!subSectionInfo) {
+    return false;
+  }
+
+  // See discussion below on another `sections.mainSections.find`
+  const mainSectionInfo = sections.mainSections.find(({
+    parentUrl: mainSectionParentUrl
+  }) => {
+    return mainSectionParentUrl === subSectionInfo.parentUrl;
+  });
+
+  /* c8 ignore next 3 */
+  if (!mainSectionInfo) {
+    return false;
+  }
+
+  const workInfo = works.find(({url: workUrl}) => {
+    return subSectionInfo.parentUrl === workUrl;
+  });
+
+  /* c8 ignore next 3 */
+  if (!workInfo) {
+    return false;
+  }
+
+  const {
+    parentUrl: subSectionParentUrl,
+    url: subSectionUrl,
+    title: subSectionTitle,
+    id: subSectionId
+  } = subSectionInfo;
+
+  const {
+    parentUrl: mainSectionParentUrl,
+    url: mainSectionUrl,
+    title: mainSectionTitle,
+    id: mainSectionId
+  } = mainSectionInfo;
+
+  const {
+    parentUrl: workParentUrl,
+    url: workUrl,
+    title: workTitle
+  } = workInfo;
+
+  return {
+    ...workSectionParagraph,
+    subSectionParentUrl, subSectionUrl, subSectionTitle, subSectionId,
+    mainSectionParentUrl, mainSectionUrl, mainSectionTitle, mainSectionId,
+    workParentUrl, workUrl, workTitle
+  };
+}
+
+/**
  * @param {string} id
  * @param {"fa"|"en"} [language] If none is provided, will check all languages
  * @returns {Promise<{work: string, section: string, paragraph: number}>}
@@ -147,7 +232,7 @@ async function getSectionNamesForWork (work, language) {
     const mainSection = sections.mainSections.find(({
       parentUrl: mainSectionParentUrl
     }) => {
-      const found = works.find(({url, title}) => {
+      const found = works.find(({title}) => {
         return work === title;
       });
       /* c8 ignore next 3 */
@@ -189,7 +274,7 @@ async function getSubsectionUrlForWork (work, language) {
     parentUrl: mainSectionParentUrl
   }) => {
     // See discussion above on another `sections.mainSections.find`
-    const innerFound = works.find(({url, title}) => {
+    const innerFound = works.find(({title}) => {
       return work === title;
     });
     /* c8 ignore next 3 */
@@ -220,7 +305,7 @@ async function getUrlForWorkAndSection (work, section, language) {
     const mainSection = sections.mainSections.find(({
       parentUrl: mainSectionParentUrl
     }) => {
-      const found = works.find(({url, title}) => {
+      const found = works.find(({title}) => {
         return work === title;
       });
 
@@ -238,6 +323,7 @@ async function getUrlForWorkAndSection (work, section, language) {
 }
 
 export {
+  getFullInfoForUrl,
   getWorkSectionAndParagraphForId,
   getIdForWorkSectionAndParagraph,
   getParagraphsForWorkAndSection,

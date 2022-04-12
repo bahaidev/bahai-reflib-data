@@ -6,6 +6,7 @@ import {getLanguagePrefix} from '../src/pathInfo.js';
 
 (async () => {
 const {
+  getFullInfoForUrl,
   getWorkSectionAndParagraphForId, getIdForWorkSectionAndParagraph,
   getIdForUrl, getInfoForUrl, getInfoForId, getUrlForId,
   getWorkNames, getSectionNamesForWork, getUrlForWork,
@@ -107,6 +108,32 @@ describe('`getSections`', function () {
       url: 'https://www.bahai.org/fa/library/authoritative-texts/bahaullah/tabernacle-unity/2#825528209',
       title: 'مقدّمه'
     });
+  });
+});
+
+describe('`getFullInfoForUrl`', function () {
+  it('gets the full info for a URL', async function () {
+    const url = 'https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/3#874317698';
+    const fullInfo = await getFullInfoForUrl(url);
+    expect(fullInfo).to.deep.equal({
+      mainSectionId: '959114648',
+      mainSectionParentUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/',
+      mainSectionTitle: 'The Call of the Divine Beloved',
+      mainSectionUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/1',
+      subSectionId: '874317698',
+      subSectionParentUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/',
+      subSectionTitle: 'Rashḥ-i-‘Amá (The Clouds of the Realms Above)',
+      subSectionUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/3#874317698',
+      workParentUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/',
+      workTitle: 'The Call of the Divine Beloved',
+      workUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/'
+    });
+  });
+
+  it('gets `false` for a bad URL', async function () {
+    const url = 'badURL';
+    const fullInfo = await getFullInfoForUrl(url);
+    expect(fullInfo).to.equal(false);
   });
 });
 
