@@ -25,14 +25,20 @@ async function getFullInfoForUrl (url, language) {
   if (!id) {
     return false;
   }
-
   const workSectionParagraph = idsToSectionsAndParagraphs[id];
 
-  const subSectionInfo = sections.subSections.find(({
-    url: subSectionUrl, parentUrl, title: sectionTitle
-  }) => {
-    return subSectionUrl.includes(baseURL);
-  });
+  const subSectionInfo = workSectionParagraph
+    ? sections.subSections.find(({
+      url: subSectionUrl, parentUrl, title: sectionTitle
+    }) => {
+      return subSectionUrl.includes(baseURL) &&
+        sectionTitle === workSectionParagraph.section;
+    })
+    : sections.subSections.find(({
+      url: subSectionUrl, parentUrl, title: sectionTitle
+    }) => {
+      return subSectionUrl.includes(baseURL);
+    });
 
   /* c8 ignore next 3 */
   if (!subSectionInfo) {
