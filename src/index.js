@@ -19,8 +19,8 @@ async function getFullInfoForUrl (url, language) {
   ]);
 
   const {
-    groups: {id}
-  } = url.match(/\/\d#(?<id>\d+)$/u) || {groups: {}};
+    groups: {baseURL, id}
+  } = url.match(/(?<baseURL>^.*\/\d#)(?<id>\d+)$/u) || {groups: {}};
 
   if (!id) {
     return false;
@@ -31,7 +31,7 @@ async function getFullInfoForUrl (url, language) {
   const subSectionInfo = sections.subSections.find(({
     url: subSectionUrl, parentUrl, title: sectionTitle
   }) => {
-    return subSectionUrl === url;
+    return subSectionUrl.includes(baseURL);
   });
 
   /* c8 ignore next 3 */

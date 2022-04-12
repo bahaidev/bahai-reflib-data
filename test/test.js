@@ -130,6 +130,27 @@ describe('`getFullInfoForUrl`', function () {
     });
   });
 
+  it('gets the full info for a URL (with anchor)', async function () {
+    const url = 'https://www.bahai.org/library/authoritative-texts/bahaullah/days-remembrance/5#154708814';
+    const fullInfo = await getFullInfoForUrl(url);
+    expect(fullInfo).to.deep.equal({
+      mainSectionId: '640354408',
+      mainSectionParentUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/days-remembrance/',
+      mainSectionTitle: 'Days of Remembrance',
+      mainSectionUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/days-remembrance/1',
+      paragraph: 5,
+      section: '“He is the Ever-Abiding, the Most Exalted, the Most Great…”',
+      subSectionId: '464723235',
+      subSectionParentUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/days-remembrance/',
+      subSectionTitle: 'Declaration of the Báb',
+      subSectionUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/days-remembrance/5#464723235',
+      work: 'Days of Remembrance',
+      workParentUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/',
+      workTitle: 'Days of Remembrance',
+      workUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/days-remembrance/'
+    });
+  });
+
   it('gets `false` for a bad URL', async function () {
     const url = 'badURL';
     const fullInfo = await getFullInfoForUrl(url);

@@ -1,5 +1,9 @@
 # CHANGES for `bahai-reflib-data`
 
+## 0.9.1
+
+- fix: ensure getting paragraph info for properly anchored URLs
+
 ## 0.9.0
 
 - feat: add `getFullInfoForUrl`
