@@ -3,6 +3,17 @@ import {
   getWorks
 } from './getData.js';
 
+export {
+  setJoin,
+  setFetch,
+  getMainCollections,
+  getCollections,
+  getWorks,
+  getSections,
+  getIdsToSectionsAndParagraphs,
+  getSectionsAndParagraphsToIds
+} from './getData.js';
+
 /**
  * @todo Should build optimized version to avoid all this processing
  * @param {string} url
