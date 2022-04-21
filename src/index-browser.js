@@ -7,7 +7,10 @@ const join = (...paths) => {
 };
 
 const __dirname = new URL('.', import.meta.url).pathname;
-const dataDir = join(__dirname, 'data');
+
+// Strip the slash for sake of precise permission requirements in
+//  Chrome extension
+const dataDir = join(__dirname.replace(/\/$/u, ''), 'data');
 
 setDataDir(dataDir);
 setJoin(join);

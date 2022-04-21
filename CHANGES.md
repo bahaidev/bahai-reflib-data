@@ -1,5 +1,10 @@
 # CHANGES for `bahai-reflib-data`
 
+## 0.9.3
+
+- fix: strip the slash in joined URL for sake of precise permission
+  requirements in Chrome extension
+
 ## 0.9.2
 
 - fix: ensure getting paragraph info for properly anchored URLs
