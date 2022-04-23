@@ -8,7 +8,7 @@ import {
   getDataDir, getLanguageSuffix, getLanguagePrefix
 } from '../src/pathInfo.js';
 
-const requestsPerSecond = 0.5;
+const requestsPerSecond = 0.2;
 const doubleAngleQuotes = /»/gu;
 const idFind = /^.*#(?<id>\d+)$/u;
 const idReplace = '$<id>';
@@ -236,13 +236,29 @@ async function downloadAndSaveSections (works, language) {
       const subSections = $$(
         '.publication-page-contents li a[href]'
       ).map((a) => {
+        const url = a.href;
+        // NOTE: This excludes a handful of meta sections (only in
+        //    English to date):
+        // 1. Memorials of the Faithful: "List of individuals"
+        // 2. Citadel of Faith: "List of topics" and "In Memoriam"
+        // 3. Promised Day Is Come: "List of sections"
+        // 4. This Decisive Hour: "List of topics"
+        // 5. Turning Point For All Nations: This empty item: https://www.bahai.org/library/other-literature/official-statements-commentaries/turning-point-all-nations/#tpan_en-tp
+        const {
+          groups: {number}
+        } = (/(?<number>\d+)#/u).exec(url) || {groups: {}};
+
+        if (!number) {
+          return null;
+        }
+
         return {
           parentUrl,
-          id: a.href.replace(idFind, idReplace),
-          url: a.href,
+          id: url.replace(idFind, idReplace),
+          url,
           title: a.textContent.replace(doubleAngleQuotes, '').trim()
         };
-      });
+      }).filter(Boolean);
 
       // eslint-disable-next-line no-console -- Logging
       console.log('Processed work URL for sections', parentUrl);
@@ -291,6 +307,157 @@ async function downloadAndSaveSections (works, language) {
       console.log('Processed main section URL for ID', url);
     });
   }));
+
+  await writeJSONFile(
+    join(getDataDir(), `sections${getLanguageSuffix(language)}.json`),
+    sections
+  );
+
+  return sections;
+}
+
+/**
+ * @param {Section[]} sections
+ * @param {"fa"|"en"} language
+ * @returns {Promise<Section[]>}
+ */
+async function downloadAndSaveAmendedSections (sections, language) {
+  const {subSections} = sections;
+  const promiseThrottle = new PromiseThrottle({
+    requestsPerSecond
+  });
+
+  const urlToSubsectionNumberMap = {};
+  subSections.forEach(({parentUrl, url, title}, idx) => {
+    if (!urlToSubsectionNumberMap[parentUrl]) {
+      urlToSubsectionNumberMap[parentUrl] = [];
+    }
+    const {
+      groups: {number}
+    } = (/(?<number>\d+)#/u).exec(url);
+
+    urlToSubsectionNumberMap[parentUrl].push({
+      idx,
+      title,
+      number: Number.parseInt(number)
+    });
+  });
+
+  const urlInfo = [];
+  Object.entries(urlToSubsectionNumberMap).forEach(([
+    parentUrl, numbers
+  ]) => {
+    let offset = 0;
+    numbers.forEach(({number, idx}, numberIdx) => {
+      let ct = numberIdx + 1 + offset;
+      const titleMap = {};
+      while (number > ct) {
+        if (ct !== 1) {
+          const {title} = subSections[idx - 1];
+          if (!titleMap[title]) {
+            titleMap[title] = 1;
+          }
+          titleMap[title]++;
+
+          urlInfo.push({
+            spliceIndex: idx,
+            baseURL: `${parentUrl}${ct}`,
+            title: title + ` (${titleMap[title]})`,
+            parentUrl
+          });
+        }
+        offset++;
+        ct = numberIdx + 1 + offset;
+      }
+    });
+
+    const {idx, number, title} = numbers[numbers.length - 1];
+    urlInfo.push({
+      number,
+      checkForContinuation: true,
+      spliceIndex: idx,
+      baseURL: `${parentUrl}${number}`,
+      title,
+      parentUrl
+    });
+  });
+
+  const doms = (await Promise.all(urlInfo.map(async ({
+    baseURL, title, spliceIndex, parentUrl, checkForContinuation, number
+  }) => {
+    if (checkForContinuation) {
+      const hrefs = [];
+      let id;
+      let href = baseURL;
+      let ct = 2;
+      while (href) {
+        // eslint-disable-next-line max-len -- Too long
+        // eslint-disable-next-line no-await-in-loop, no-loop-func -- Has to be sequential
+        href = await promiseThrottle.add(async () => {
+          // eslint-disable-next-line no-console -- Info
+          console.log(`Checking ${href} for continuation`);
+          const {$$: $_} = await getDomForUrl(href);
+
+          const {
+            href: _href
+          } = $_('.js-continue-below > .js-continue-link') || {};
+          ({id} = $_('.brl-location').pop());
+
+          return _href;
+        });
+
+        if (href) {
+          // eslint-disable-next-line no-console -- Info
+          console.log(`Found ${href} for continuation`);
+          hrefs.push(
+            {
+              id,
+              url: `${baseURL}#${id}`,
+              title: `${title} (${ct})`,
+              spliceIndex,
+              parentUrl
+            }
+          );
+          ct++;
+        }
+      }
+      return hrefs;
+    }
+
+    return promiseThrottle.add(async () => {
+      // eslint-disable-next-line no-console -- Info
+      console.log(`Checking ${baseURL} for ID`);
+      const {$$: $_} = await getDomForUrl(baseURL);
+      const {id} = $_('.brl-location').pop();
+
+      // eslint-disable-next-line no-console -- Logging
+      console.log('adding', {
+        id,
+        url: `${baseURL}#${id}`,
+        title,
+        spliceIndex,
+        parentUrl
+      });
+      return {
+        id,
+        url: `${baseURL}#${id}`,
+        title,
+        spliceIndex,
+        parentUrl
+      };
+    });
+  }))).filter(Boolean).flat();
+
+  doms.forEach(({
+    spliceIndex, $, title, id, url, parentUrl
+  }, i) => {
+    subSections.splice(spliceIndex + i, 0, {
+      parentUrl,
+      id,
+      url,
+      title
+    });
+  });
 
   await writeJSONFile(
     join(getDataDir(), `sections${getLanguageSuffix(language)}.json`),
@@ -392,5 +559,6 @@ async function downloadAndSaveParagraphIdInfo (sections, language) {
 export {
   downloadAndSaveMainCollections, downloadAndSaveCollections,
   downloadAndSaveWorks, downloadAndSaveSections,
+  downloadAndSaveAmendedSections,
   downloadAndSaveParagraphIdInfo
 };

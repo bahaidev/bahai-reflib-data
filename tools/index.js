@@ -3,6 +3,7 @@ import '../src/index-node.js'; // Set-up code
 import {
   downloadAndSaveMainCollections, downloadAndSaveCollections,
   downloadAndSaveWorks, downloadAndSaveSections,
+  downloadAndSaveAmendedSections,
   downloadAndSaveParagraphIdInfo
 } from './downloadAndSave.js';
 
@@ -29,7 +30,12 @@ const sections = process.argv.includes('sections')
   ? await downloadAndSaveSections(works, language)
   : await getSections(language);
 
+// NOTE: Do not run this with an already amended section!
+const amendedSections = process.argv.includes('amendedSections')
+  ? await downloadAndSaveAmendedSections(sections, language)
+  : await getSections(language);
+
 if (process.argv.includes('paragraphIdInfo')) {
-  await downloadAndSaveParagraphIdInfo(sections, language);
+  await downloadAndSaveParagraphIdInfo(amendedSections, language);
 }
 })();
