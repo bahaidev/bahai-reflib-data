@@ -396,14 +396,14 @@ describe('`getUrlForId`', function () {
 describe('`getWorkNames`', function () {
   it('gets the work names', async function () {
     const workNames = await getWorkNames();
-    expect(workNames).to.be.lengthOf(115);
+    expect(workNames).to.be.lengthOf(111);
     expect(workNames).to.contain('The Call of the Divine Beloved');
     expect(workNames).to.contain('Days of Remembrance');
   });
 
   it('gets the work names (English)', async function () {
     const workNames = await getWorkNames('en');
-    expect(workNames).to.be.lengthOf(89);
+    expect(workNames).to.be.lengthOf(85);
     expect(workNames).to.contain('The Call of the Divine Beloved');
     expect(workNames).to.contain('Days of Remembrance');
   });

@@ -16,6 +16,8 @@ export {
 
 /**
  * @todo Should build optimized version to avoid all this processing
+ * @todo Might not get full info if two identical works have different
+ * `parentUrl`'s (e.g., "Additional Prayers Revealed by Bahá’u’lláh")
  * @param {string} url
  * @param {"fa"|"en"} [language] If none is provided, will check all languages
  * @returns {Promise<{work: string, section: string, paragraph: number}|false>}
@@ -223,10 +225,17 @@ async function getUrlForId (id, language) {
  * @returns {Promise<string[]>}
  */
 async function getWorkNames (language) {
-  const works = (await getWorks(language)).map(({title}) => {
+  const works = await getWorks(language);
+  // Avoid some duplicates whose title and url are the same, but have a
+  //  separate entry given being listed on a different `parentUrl` page
+  return works.filter((work, i) => {
+    const idx = works.findIndex((comparedWork) => {
+      return work.url === comparedWork.url;
+    });
+    return idx === i;
+  }).map(({title}) => {
     return title;
   });
-  return works;
 }
 
 /**

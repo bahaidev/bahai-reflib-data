@@ -2,7 +2,8 @@
 
 ## 0.9.5
 
-- fix: avoid duplicate sections
+- fix(`getWorks`): avoid returning duplicate work names
+- fix(section-building): avoid duplicate sections
 
 ## 0.9.4
 
