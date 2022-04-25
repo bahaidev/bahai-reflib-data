@@ -10,8 +10,7 @@ import {
 
 const requestsPerSecond = 0.2;
 const doubleAngleQuotes = /»/gu;
-const idFind = /^.*#(?<id>\d+)$/u;
-const idReplace = '$<id>';
+const idFind = /#(?<id>\d+)$/u;
 
 const setWorksSectionsAndParagraphsToIds = (
   obj, mainSectionTitle, title, idElem
@@ -254,7 +253,7 @@ async function downloadAndSaveSections (works, language) {
 
         return {
           parentUrl,
-          id: url.replace(idFind, idReplace),
+          id: idFind.exec(url).groups.id,
           url,
           title: a.textContent.replace(doubleAngleQuotes, '').trim()
         };
@@ -276,14 +275,14 @@ async function downloadAndSaveSections (works, language) {
     //  that should differ.
     mainSections.forEach((mainSection) => {
       if (!obj.mainSections.some((existingMainSection) => {
-        return existingMainSection.id === mainSection.id;
+        return existingMainSection.url === mainSection.url;
       })) {
         obj.mainSections.push(mainSection);
       }
     });
     subSections.forEach((subSection) => {
       if (!obj.subSections.some((existingSubSection) => {
-        return existingSubSection.id === subSection.id;
+        return existingSubSection.url === subSection.url;
       })) {
         obj.subSections.push(subSection);
       }
@@ -309,9 +308,7 @@ async function downloadAndSaveSections (works, language) {
       }
 
       const {$} = await getDomForUrl(url);
-      const id = $('.brl-tableofcontents h1 > a').href.replace(
-        idFind, idReplace
-      );
+      const {id} = idFind.exec($('.brl-tableofcontents h1 > a').href).groups;
       mainSection.id = id;
       urlToIDMap.set(url, id);
 
@@ -331,9 +328,12 @@ async function downloadAndSaveSections (works, language) {
 /**
  * @param {Section[]} sections
  * @param {"fa"|"en"} language
+ * @param {boolean} noContinuation
  * @returns {Promise<Section[]>}
  */
-async function downloadAndSaveAmendedSections (sections, language) {
+async function downloadAndSaveAmendedSections (
+  sections, language, noContinuation
+) {
   const {subSections} = sections;
   const promiseThrottle = new PromiseThrottle({
     requestsPerSecond
@@ -383,15 +383,17 @@ async function downloadAndSaveAmendedSections (sections, language) {
       }
     });
 
-    const {idx, number, title} = numbers[numbers.length - 1];
-    urlInfo.push({
-      number,
-      checkForContinuation: true,
-      spliceIndex: idx,
-      baseURL: `${parentUrl}${number}`,
-      title,
-      parentUrl
-    });
+    if (!noContinuation) {
+      const {idx, number, title} = numbers[numbers.length - 1];
+      urlInfo.push({
+        number,
+        checkForContinuation: true,
+        spliceIndex: idx,
+        baseURL: `${parentUrl}${number}`,
+        title,
+        parentUrl
+      });
+    }
   });
 
   const doms = (await Promise.all(urlInfo.map(async ({

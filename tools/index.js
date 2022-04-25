@@ -32,7 +32,9 @@ const sections = process.argv.includes('sections')
 
 // NOTE: Do not run this with an already amended section!
 const amendedSections = process.argv.includes('amendedSections')
-  ? await downloadAndSaveAmendedSections(sections, language)
+  ? await downloadAndSaveAmendedSections(
+    sections, language, process.argv.includes('noContinuation')
+  )
   : await getSections(language);
 
 if (process.argv.includes('paragraphIdInfo')) {

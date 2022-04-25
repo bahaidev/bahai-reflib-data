@@ -1,9 +1,10 @@
 # CHANGES for `bahai-reflib-data`
 
-## 0.9.5
+## 0.10.0
 
 - fix(`getWorks`): avoid returning duplicate work names
 - fix(section-building): avoid duplicate sections
+- feat: allow avoiding continuation checks in building
 
 ## 0.9.4
 
