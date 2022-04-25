@@ -485,6 +485,16 @@ describe('`getUrlForWorkAndSection`', function () {
     expect(url).to.equal('https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/3#874317698');
   });
 
+  it('gets the paragraphs for a work and first line', async function () {
+    const url = await getUrlForWorkAndSection(
+      'Additional Prayers Revealed by Bahá’u’lláh',
+      'He is the Ever-Abiding, the Almighty, the Most High...'
+    );
+    expect(url).to.equal(
+      'https://www.bahai.org/library/authoritative-texts/bahaullah/additional-prayers-revealed-bahaullah/639512070/1'
+    );
+  });
+
   it('gets URL for a work and section (Persian)', async function () {
     const url = await getUrlForWorkAndSection(
       'سراپردۀ يگانگی',

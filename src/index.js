@@ -331,6 +331,15 @@ async function getUrlForWorkAndSection (work, section, language) {
     getWorks(language),
     getSections(language)
   ]);
+
+  const found = works.find(({title}) => {
+    return work === title;
+  });
+  /* c8 ignore next 3 */
+  if (!found) {
+    return [];
+  }
+
   const subSectionFound = sections.subSections.find(({
     parentUrl, title: sectionTitle
   }) => {
@@ -338,21 +347,19 @@ async function getUrlForWorkAndSection (work, section, language) {
     const mainSection = sections.mainSections.find(({
       parentUrl: mainSectionParentUrl
     }) => {
-      const found = works.find(({title}) => {
-        return work === title;
-      });
-
-      /* c8 ignore next 3 */
-      if (!found) {
-        return false;
-      }
       return mainSectionParentUrl === found.url;
     });
     return mainSection && mainSection.parentUrl === parentUrl &&
       sectionTitle === section;
   });
 
-  return subSectionFound && subSectionFound.url;
+  return subSectionFound?.url ||
+    sections.mainSections.find(({
+      title: mainSectionTitle,
+      parentUrl: mainSectionParentUrl
+    }) => {
+      return mainSectionParentUrl === found.url && mainSectionTitle === section;
+    })?.url;
 }
 
 export {
