@@ -248,27 +248,34 @@ async function getSectionNamesForWork (work, language) {
     getWorks(language),
     getSections(language)
   ]);
-  return sections.subSections.filter(({parentUrl}) => {
-    // Due to a mismatch between the title found on the Table of Contents,
-    //   and the one found as a heading on the page (e.g.,
-    //   'سراپردۀ يگانگی' and 'سراپردهٔ یگانگی', we need to match another way
-    //   between section and work. But since the Table of Contents
-    //   apparently doesn't store the ID, we need to check the works,
-    //   directly, cross-referenced by parentUrl/url
+  // Due to a mismatch between the title found on the Table of Contents,
+  //   and the one found as a heading on the page (e.g.,
+  //   'سراپردۀ يگانگی' and 'سراپردهٔ یگانگی', we need to match another way
+  //   between section and work. But since the Table of Contents
+  //   apparently doesn't store the ID, we need to check the works,
+  //   directly, cross-referenced by parentUrl/url
+  const found = works.find(({title}) => {
+    return work === title;
+  });
+  /* c8 ignore next 3 */
+  if (!found) {
+    return [];
+  }
+  const subSectionMatches = sections.subSections.filter(({parentUrl}) => {
     const mainSection = sections.mainSections.find(({
       parentUrl: mainSectionParentUrl
     }) => {
-      const found = works.find(({title}) => {
-        return work === title;
-      });
-      /* c8 ignore next 3 */
-      if (!found) {
-        return false;
-      }
       return mainSectionParentUrl === found.url;
     });
     return mainSection && mainSection.parentUrl === parentUrl;
-  }).map(({title}) => {
+  });
+  return (
+    subSectionMatches.length
+      ? subSectionMatches
+      : sections.mainSections.filter(({parentUrl}) => {
+        return parentUrl === found.url;
+      })
+  ).map(({title}) => {
     return title;
   });
 }

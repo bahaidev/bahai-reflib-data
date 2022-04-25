@@ -1,5 +1,10 @@
 # CHANGES for `bahai-reflib-data`
 
+## 0.11.0
+
+- fix(`getSectionNamesForWork`): ensure returns from `mainSections` if not
+  found in `subSections` (will get first lines)
+
 ## 0.10.0
 
 - fix(`getWorks`): avoid returning duplicate work names

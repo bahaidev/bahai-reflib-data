@@ -421,6 +421,19 @@ describe('`getWorkNames`', function () {
 });
 
 describe('`getSectionNamesForWork`', function () {
+  it('gets the lines for a work', async function () {
+    const sectionNames = await getSectionNamesForWork(
+      'Additional Prayers Revealed by Bahá’u’lláh'
+    );
+    expect(sectionNames).to.be.lengthOf(15);
+    expect(sectionNames).to.contain(
+      'Praise be to Thee, O my God, that Thou didst graciously ' +
+        'remember me through Thy Most...'
+    );
+    expect(sectionNames).to.contain(
+      'He is the Ever-Abiding, the Almighty, the Most High...'
+    );
+  });
   it('gets the section names for a work', async function () {
     const sectionNames = await getSectionNamesForWork('Days of Remembrance');
     expect(sectionNames).to.be.lengthOf(55);
