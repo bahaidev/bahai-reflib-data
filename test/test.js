@@ -9,7 +9,7 @@ const {
   getFullInfoForUrl,
   getWorkSectionAndParagraphForId, getIdForWorkSectionAndParagraph,
   getIdForUrl, getInfoForUrl, getInfoForId, getUrlForId,
-  getWorkNames, getSectionNamesForWork, getUrlForWork,
+  getWorkNames, getSectionNamesForWork, getSectionInfoForWork, getUrlForWork,
   getSubsectionUrlForWork, getUrlForWorkAndSection,
   getParagraphsForWorkAndSection
 // eslint-disable-next-line no-unsanitized/method -- Testing
@@ -449,6 +449,27 @@ describe('`getSectionNamesForWork`', function () {
     expect(sectionNames).to.be.lengthOf(6);
     expect(sectionNames).to.contain('مقدّمه');
     expect(sectionNames).to.contain('۱. لوح مانکچی صاحب');
+  });
+});
+
+describe('`getSectionInfoForWork`', function () {
+  it('gets the section IDs for a work with lines', async function () {
+    const sectionIDs = await getSectionInfoForWork(
+      'Additional Prayers Revealed by Bahá’u’lláh'
+    );
+    expect(sectionIDs).to.be.lengthOf(15);
+    expect(sectionIDs[0].id).to.equal(
+      '542155991'
+    );
+    expect(sectionIDs[1].id).to.equal(
+      '798565991'
+    );
+  });
+  it('gets the section IDs for a work', async function () {
+    const sectionIDs = await getSectionInfoForWork('Days of Remembrance');
+    expect(sectionIDs).to.be.lengthOf(55);
+    expect(sectionIDs[0].id).to.equal('768390050');
+    expect(sectionIDs[1].id).to.equal('902693089');
   });
 });
 

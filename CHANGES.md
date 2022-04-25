@@ -5,6 +5,7 @@
 - fix(`getSectionNamesForWork`): ensure returns from `mainSections` if not
   found in `subSections` (will get first lines)
 - fix(`getUrlForWorkAndSection`): gets the paragraphs for a work and first line
+- feat(`getSectionInfoForWork`): add new method
 
 ## 0.10.0
 
