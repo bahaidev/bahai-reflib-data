@@ -274,8 +274,20 @@ async function downloadAndSaveSections (works, language) {
     //  on the prayers once in the Writings of Bahá'u'lláh; but we may want
     //  it separate if we instead wish to add the collection URL here, since
     //  that should differ.
-    obj.mainSections.push(...mainSections);
-    obj.subSections.push(...subSections);
+    mainSections.forEach((mainSection) => {
+      if (!obj.mainSections.some((existingMainSection) => {
+        return existingMainSection.id === mainSection.id;
+      })) {
+        obj.mainSections.push(mainSection);
+      }
+    });
+    subSections.forEach((subSection) => {
+      if (!obj.subSections.some((existingSubSection) => {
+        return existingSubSection.id === subSection.id;
+      })) {
+        obj.subSections.push(subSection);
+      }
+    });
     return obj;
   }, {
     mainSections: [],

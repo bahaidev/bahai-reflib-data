@@ -1,5 +1,9 @@
 # CHANGES for `bahai-reflib-data`
 
+## 0.9.5
+
+- fix: avoid duplicate sections
+
 ## 0.9.4
 
 - fix: expose missing `getData.js` functions to public API
