@@ -1,5 +1,10 @@
 # CHANGES for `bahai-reflib-data`
 
+## 0.12.0
+
+- feat(`getFullInfoForUrl`): allow to get the full info for a main section
+  (opening line) URL
+
 ## 0.11.0
 
 - feat(`getSectionInfoForWork`): add new method

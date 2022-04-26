@@ -37,45 +37,50 @@ async function getFullInfoForUrl (url, language) {
 
   const {
     groups: {baseURL, id}
-  } = url.match(/(?<baseURL>^.*\/\d#)(?<id>\d+)$/u) || {groups: {}};
+  // eslint-disable-next-line unicorn/no-unsafe-regex -- Todo
+  } = url.match(/(?<baseURL>^.*\/\d+)#?(?<id>\d+)?$/u) || {groups: {}};
 
-  if (!id) {
-    return false;
+  let subSectionInfo, workSectionParagraph;
+  if (id) {
+    workSectionParagraph = idsToSectionsAndParagraphs[id];
+
+    subSectionInfo = workSectionParagraph
+      ? sections.subSections.find(({
+        url: subSectionUrl, parentUrl, title: sectionTitle
+      }) => {
+        return subSectionUrl.includes(baseURL) &&
+          sectionTitle === workSectionParagraph.section;
+      })
+      : sections.subSections.find(({
+        url: subSectionUrl, parentUrl, title: sectionTitle
+      }) => {
+        return subSectionUrl.includes(baseURL);
+      });
   }
-  const workSectionParagraph = idsToSectionsAndParagraphs[id];
 
-  const subSectionInfo = workSectionParagraph
-    ? sections.subSections.find(({
-      url: subSectionUrl, parentUrl, title: sectionTitle
+  const mainSectionInfo = subSectionInfo
+    // See discussion below on another `sections.mainSections.find`
+    ? sections.mainSections.find(({
+      parentUrl: mainSectionParentUrl
     }) => {
-      return subSectionUrl.includes(baseURL) &&
-        sectionTitle === workSectionParagraph.section;
+      return mainSectionParentUrl === subSectionInfo.parentUrl;
     })
-    : sections.subSections.find(({
-      url: subSectionUrl, parentUrl, title: sectionTitle
+    : sections.mainSections.find(({
+      url: mainSectionUrl
     }) => {
-      return subSectionUrl.includes(baseURL);
+      return mainSectionUrl === baseURL;
     });
-
-  /* c8 ignore next 3 */
-  if (!subSectionInfo) {
-    return false;
-  }
-
-  // See discussion below on another `sections.mainSections.find`
-  const mainSectionInfo = sections.mainSections.find(({
-    parentUrl: mainSectionParentUrl
-  }) => {
-    return mainSectionParentUrl === subSectionInfo.parentUrl;
-  });
 
   /* c8 ignore next 3 */
   if (!mainSectionInfo) {
     return false;
   }
 
+  const comparisonURL = subSectionInfo
+    ? subSectionInfo.parentUrl
+    : mainSectionInfo.parentUrl;
   const workInfo = works.find(({url: workUrl}) => {
-    return subSectionInfo.parentUrl === workUrl;
+    return comparisonURL === workUrl;
   });
 
   /* c8 ignore next 3 */
@@ -88,7 +93,7 @@ async function getFullInfoForUrl (url, language) {
     url: subSectionUrl,
     title: subSectionTitle,
     id: subSectionId
-  } = subSectionInfo;
+  } = subSectionInfo || {};
 
   const {
     parentUrl: mainSectionParentUrl,

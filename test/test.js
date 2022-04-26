@@ -137,6 +137,28 @@ describe('`getFullInfoForUrl`', function () {
     });
   });
 
+  it(
+    'gets the full info for a main section (opening line) URL',
+    async function () {
+      const url = 'https://www.bahai.org/library/authoritative-texts/bahaullah/additional-prayers-revealed-bahaullah/639512072/1';
+      const fullInfo = await getFullInfoForUrl(url);
+      expect(fullInfo).to.deep.equal({
+        mainSectionId: '542155991',
+        mainSectionParentUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/additional-prayers-revealed-bahaullah/',
+        mainSectionTitle: 'O God, my God! I yield Thee thanks for having ' +
+          'guided me unto Thy straight Path and enabled me...',
+        mainSectionUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/additional-prayers-revealed-bahaullah/639512072/1',
+        subSectionId: undefined,
+        subSectionParentUrl: undefined,
+        subSectionTitle: undefined,
+        subSectionUrl: undefined,
+        workParentUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/',
+        workTitle: 'Additional Prayers Revealed by Bahá’u’lláh',
+        workUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/additional-prayers-revealed-bahaullah/'
+      });
+    }
+  );
+
   it('gets the full info for a URL (with anchor)', async function () {
     const url = 'https://www.bahai.org/library/authoritative-texts/bahaullah/days-remembrance/5#154708814';
     const fullInfo = await getFullInfoForUrl(url);
