@@ -4,6 +4,12 @@ import {
 
 import {getLanguagePrefix} from '../src/pathInfo.js';
 
+const range = (num) => {
+  return Array.from({length: num}, (_, i) => {
+    return String(i + 1);
+  });
+};
+
 (async () => {
 const {
   getFullInfoForUrl,
@@ -11,7 +17,8 @@ const {
   getIdForUrl, getInfoForUrl, getInfoForId, getUrlForId,
   getWorkNames, getSectionNamesForWork, getSectionInfoForWork, getUrlForWork,
   getSubsectionUrlForWork, getUrlForWorkAndSection,
-  getParagraphsForWorkAndSection
+  getParagraphsForWorkAndSection,
+  getParagraphsForSectionId
 // eslint-disable-next-line no-unsanitized/method -- Testing
 } = await import(
   typeof window !== 'undefined'
@@ -253,10 +260,7 @@ describe('`getParagraphsForWorkAndSection`', function () {
       'Days of Remembrance',
       '“He it is Who is established upon this luminous Throne…”'
     );
-    // Array of 1-34
-    const expected = Array.from({length: 34}, (_, i) => {
-      return String(i + 1);
-    });
+    const expected = range(34);
     expect(paragraphs).to.deep.equal(expected);
   });
 
@@ -289,6 +293,23 @@ describe('`getParagraphsForWorkAndSection`', function () {
       'جواهر الاسرار',
       'Non-existent',
       'fa'
+    );
+    expect(paragraphs).to.equal(undefined);
+  });
+});
+
+describe('`getParagraphsForSectionId`', function () {
+  it('gets the paragraphs for a section ID', async function () {
+    const paragraphs = await getParagraphsForSectionId(
+      '874317698'
+    );
+    const expected = range(20);
+    expect(paragraphs).to.deep.equal(expected);
+  });
+
+  it('returns undefined for a bad section ID', async function () {
+    const paragraphs = await getParagraphsForSectionId(
+      '000000000'
     );
     expect(paragraphs).to.equal(undefined);
   });

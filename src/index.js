@@ -15,11 +15,15 @@ export {
 } from './getData.js';
 
 /**
+ * @typedef {"fa"|"en"} Language
+ */
+
+/**
  * @todo Should build optimized version to avoid all this processing
  * @todo Might not get full info if two identical works have different
  * `parentUrl`'s (e.g., "Additional Prayers Revealed by Bahá’u’lláh")
  * @param {string} url
- * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @param {Language} [language] If none is provided, will check all languages
  * @returns {Promise<{work: string, section: string, paragraph: number}|false>}
  */
 async function getFullInfoForUrl (url, language) {
@@ -109,7 +113,7 @@ async function getFullInfoForUrl (url, language) {
 
 /**
  * @param {string} id
- * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @param {Language} [language] If none is provided, will check all languages
  * @returns {Promise<{work: string, section: string, paragraph: number}>}
  */
 async function getWorkSectionAndParagraphForId (id, language) {
@@ -120,7 +124,7 @@ async function getWorkSectionAndParagraphForId (id, language) {
  * @param {string} work
  * @param {string} section
  * @param {number} paragraph
- * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @param {Language} [language] If none is provided, will check all languages
  * @returns {Promise<string>}
  */
 async function getIdForWorkSectionAndParagraph (
@@ -134,8 +138,8 @@ async function getIdForWorkSectionAndParagraph (
 /**
  * @param {string} work
  * @param {string} section
- * @param {"fa"|"en"} [language] If none is provided, will check all languages
- * @returns {Promise<string>}
+ * @param {Language} [language] If none is provided, will check all languages
+ * @returns {Promise<string[]>}
  */
 async function getParagraphsForWorkAndSection (
   work, section, language
@@ -162,6 +166,45 @@ async function getParagraphsForWorkAndSection (
 }
 
 /**
+ * @param {string} id
+ * @param {Language} [language] If none is provided, will check all languages
+ * @returns {Promise<string[]|undefined>}
+ */
+async function getParagraphsForSectionId (id, language) {
+  const [works, sections] = await Promise.all([
+    getWorks(language),
+    getSections(language)
+  ]);
+  let parentUrl;
+  const section = sections.mainSections.find(({
+    id: mainSectionId, parentUrl: mainSectionParentUrl
+  }) => {
+    parentUrl = mainSectionParentUrl;
+    return mainSectionId === id;
+  })?.title || sections.subSections.find(({
+    id: subSectionId, parentUrl: subSectionParentUrl
+  }) => {
+    parentUrl = subSectionParentUrl;
+    return subSectionId === id;
+  })?.title;
+
+  if (!section) {
+    return undefined;
+  }
+
+  const work = works.find(({url}) => {
+    return parentUrl === url;
+  })?.title;
+
+  /* c8 ignore next 3 */
+  if (!work) {
+    return undefined;
+  }
+
+  return await getParagraphsForWorkAndSection(work, section, language);
+}
+
+/**
 * @typedef {{
 *   parentUrl: string, url: string, title: string, id: string
 * }} SectionInfo
@@ -169,7 +212,7 @@ async function getParagraphsForWorkAndSection (
 
 /**
  * @param {string} url
- * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @param {Language} [language] If none is provided, will check all languages
  * @returns {Promise<SectionInfo|undefined>}
  */
 async function getInfoForUrl (url, language) {
@@ -186,7 +229,7 @@ async function getInfoForUrl (url, language) {
 
 /**
  * @param {string} url
- * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @param {Language} [language] If none is provided, will check all languages
  * @returns {Promise<string|undefined>}
  */
 async function getIdForUrl (url, language) {
@@ -196,7 +239,7 @@ async function getIdForUrl (url, language) {
 
 /**
  * @param {string} id
- * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @param {Language} [language] If none is provided, will check all languages
  * @returns {Promise<SectionInfo|undefined>}
  */
 async function getInfoForId (id, language) {
@@ -212,7 +255,7 @@ async function getInfoForId (id, language) {
 
 /**
  * @param {string} id
- * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @param {Language} [language] If none is provided, will check all languages
  * @returns {Promise<string|undefined>}
  */
 async function getUrlForId (id, language) {
@@ -221,7 +264,7 @@ async function getUrlForId (id, language) {
 }
 
 /**
- * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @param {Language} [language] If none is provided, will check all languages
  * @returns {Promise<string[]>}
  */
 async function getWorkNames (language) {
@@ -240,7 +283,7 @@ async function getWorkNames (language) {
 
 /**
  * @param {string} work
- * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @param {Language} [language] If none is provided, will check all languages
  * @returns {Promise<string[]>}
  */
 async function getSectionNamesForWork (work, language) {
@@ -282,7 +325,7 @@ async function getSectionNamesForWork (work, language) {
 
 /**
  * @param {string} work
- * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @param {Language} [language] If none is provided, will check all languages
  * @returns {Promise<string[]>}
  */
 async function getSectionInfoForWork (work, language) {
@@ -322,7 +365,7 @@ async function getSectionInfoForWork (work, language) {
 
 /**
  * @param {string} work
- * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @param {Language} [language] If none is provided, will check all languages
  * @returns {Promise<string>}
  */
 async function getUrlForWork (work, language) {
@@ -335,7 +378,7 @@ async function getUrlForWork (work, language) {
 
 /**
  * @param {string} work
- * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @param {Language} [language] If none is provided, will check all languages
  * @returns {Promise<string>}
  */
 async function getSubsectionUrlForWork (work, language) {
@@ -363,7 +406,7 @@ async function getSubsectionUrlForWork (work, language) {
 /**
  * @param {string} work
  * @param {string} section
- * @param {"fa"|"en"} [language] If none is provided, will check all languages
+ * @param {Language} [language] If none is provided, will check all languages
  * @returns {Promise<string[]>}
  */
 async function getUrlForWorkAndSection (work, section, language) {
@@ -407,6 +450,7 @@ export {
   getWorkSectionAndParagraphForId,
   getIdForWorkSectionAndParagraph,
   getParagraphsForWorkAndSection,
+  getParagraphsForSectionId,
   getInfoForUrl,
   getIdForUrl,
   getInfoForId,
