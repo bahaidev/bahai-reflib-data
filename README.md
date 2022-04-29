@@ -29,13 +29,9 @@ A **server** is available via
     `mainCollections`, `collections`, `works`, `sections`, `paragraphIdInfo` to
     run the (throttled) downloading and saving of the information
 
-## To-dos
-
-1. Utilize in restoration of **webextensions**-based Bahá'í Reference Library
-    Wiki Overlay add-on
-
 ## Possible to-dos
 
+1. Gather mini-sections (ensure talks are included)
 1. Waiting: Once ready, add the **Arabic** or any other languages added later
     (The Arabic has not been ported to the new site.) Should just need to
     populate the `allLanguages` array. (We could scrape "Other languages"
