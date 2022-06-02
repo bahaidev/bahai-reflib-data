@@ -18,7 +18,7 @@ the unique ID will redirect to the URL and potentially anchor that it
 targets.
 
 A **server** is available via
-[bahai-reflib-data-server](https://github.com/brettz9/bahai-reflib-data-server).
+[bahai-reflib-data-server](https://github.com/bahaidev/bahai-reflib-data-server).
 
 ## Development
 
