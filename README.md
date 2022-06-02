@@ -29,6 +29,10 @@ A **server** is available via
     `mainCollections`, `collections`, `works`, `sections`, `paragraphIdInfo` to
     run the (throttled) downloading and saving of the information
 
+## To-dos
+
+1. Fix apparent bug with Kitáb-i-Aqdas not gathering paragraphs
+
 ## Possible to-dos
 
 1. Gather mini-sections (ensure talks are included)
