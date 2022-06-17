@@ -126,33 +126,14 @@ async function getWorkSectionAndParagraphForId (id, language) {
 }
 
 /**
- * @param {string} work
- * @param {string} section
- * @param {number} paragraph
- * @param {Language} [language] If none is provided, will check all languages
- * @returns {Promise<string>}
+* @param {string} work
+* @param {Language} [language] If none is provided, will check all languages
+* @returns {Promise<ParagraphIdInfo>}
  */
-async function getIdForWorkSectionAndParagraph (
-  work, section, paragraph, language
-) {
-  return (await getSectionsAndParagraphsToIds(
-    language
-  ))[work][section][paragraph];
-}
-
-/**
- * @param {string} work
- * @param {string} section
- * @param {Language} [language] If none is provided, will check all languages
- * @returns {Promise<string[]>}
- */
-async function getParagraphsForWorkAndSection (
-  work, section, language
-) {
+async function getSectionsAndParagraphsForWork (work, language) {
   const sectionsAndParagraphs = await getSectionsAndParagraphsToIds(
     language
   );
-
   let sections = sectionsAndParagraphs[work];
   if (!sections) {
     // May be using different title
@@ -167,12 +148,43 @@ async function getParagraphsForWorkAndSection (
       return url === parentUrl;
     })?.title;
     sections = sectionsAndParagraphs[title];
-    if (!sections) {
-      return undefined;
-    }
+  }
+  return sections;
+}
+
+/**
+ * @param {string} work
+ * @param {string} section
+ * @param {number} paragraph
+ * @param {Language} [language] If none is provided, will check all languages
+ * @returns {Promise<string>}
+ */
+async function getIdForWorkSectionAndParagraph (
+  work, section, paragraph, language
+) {
+  const sectionsAndParagraphs = await getSectionsAndParagraphsForWork(
+    work, language
+  );
+  return sectionsAndParagraphs[section][paragraph];
+}
+
+/**
+ * @param {string} work
+ * @param {string} section
+ * @param {Language} [language] If none is provided, will check all languages
+ * @returns {Promise<string[]>}
+ */
+async function getParagraphsForWorkAndSection (
+  work, section, language
+) {
+  const sectionsAndParagraphs = await getSectionsAndParagraphsForWork(
+    work, language
+  );
+  if (!sectionsAndParagraphs) {
+    return undefined;
   }
 
-  const paragraphsToIds = sections[section];
+  const paragraphsToIds = sectionsAndParagraphs[section];
   if (!paragraphsToIds) {
     return undefined;
   }

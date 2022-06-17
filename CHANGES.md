@@ -1,7 +1,8 @@
 # CHANGES for `bahai-reflib-data`
 
-## ?
+## 0.12.2
 
+- fix(`getIdForWorkSectionAndParagraph`): check for alternative title
 - chore: update devDeps.
 
 ## 0.12.1
