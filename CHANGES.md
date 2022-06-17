@@ -1,5 +1,9 @@
 # CHANGES for `bahai-reflib-data`
 
+## ?
+
+- chore: update devDeps.
+
 ## 0.12.1
 
 - fix(`getParagraphsForWorkAndSection`): check for alternative title
