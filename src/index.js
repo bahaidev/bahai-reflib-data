@@ -153,9 +153,23 @@ async function getParagraphsForWorkAndSection (
     language
   );
 
-  const sections = sectionsAndParagraphs[work];
+  let sections = sectionsAndParagraphs[work];
   if (!sections) {
-    return undefined;
+    // May be using different title
+    const [works, sectionsHolder] = await Promise.all([
+      getWorks(language),
+      getSections(language)
+    ]);
+    const url = works.find(({title}) => {
+      return title === work;
+    })?.url;
+    const title = sectionsHolder.mainSections.find(({parentUrl}) => {
+      return url === parentUrl;
+    })?.title;
+    sections = sectionsAndParagraphs[title];
+    if (!sections) {
+      return undefined;
+    }
   }
 
   const paragraphsToIds = sections[section];

@@ -329,6 +329,14 @@ describe('`getParagraphsForSectionId`', function () {
     expect(paragraphs).to.deep.equal(expected);
   });
 
+  it('gets the paragraphs for a section ID', async function () {
+    const paragraphs = await getParagraphsForSectionId(
+      '366312870'
+    );
+    const expected = range(62);
+    expect(paragraphs).to.deep.equal(expected);
+  });
+
   it('returns undefined for a bad section ID', async function () {
     const paragraphs = await getParagraphsForSectionId(
       '000000000'
