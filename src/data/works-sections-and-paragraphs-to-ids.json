@@ -5377,7 +5377,7 @@
         "408496473"
       ]
     },
-    "Súriy-i-Haykal": {
+    "Súriy-i-Haykal / Súrih of the Temple": {
       "1": "692556341",
       "2": "774704028",
       "3": "268889023",
@@ -5433,7 +5433,7 @@
         "222848440"
       ]
     },
-    "Súriy-i-Haykal (2)": {
+    "Súriy-i-Haykal / Súrih of the Temple (2)": {
       "51": "577603916",
       "52": "775329519",
       "53": "019870673",
@@ -5685,7 +5685,7 @@
         "990284655"
       ]
     },
-    "Náṣiri’d-Dín Sháh": {
+    "Náṣiri’d-Dín Sháh / Lawḥ-i-Sulṭán": {
       "186": "159246174",
       "187": "610490289",
       "188": "063579413",
@@ -5892,7 +5892,7 @@
         "465340958"
       ]
     },
-    "Súriy-i-Mulúk": {
+    "Súriy-i-Mulúk / Súrih of the Kings": {
       "1": "999764355",
       "2": "281123945",
       "3": "914433185",
@@ -5958,7 +5958,7 @@
         "295372139"
       ]
     },
-    "Notes": {
+    "Endnotes": {
       "null": [
         "345026499",
         "407238489",
@@ -8196,6 +8196,55 @@
       ]
     }
   },
+  "I swear by Thy glory, O my God! I am astonished at them and at that which they have manifested...": {
+    "$main": {
+      "null": [
+        "324741469"
+      ]
+    }
+  },
+  "Glorified art Thou, O Lord my God! Behold how one slave hath stood at the door of another, seeking...": {
+    "$main": {
+      "null": [
+        "625753576"
+      ]
+    }
+  },
+  "O Thou Who art the Lord of all names and Fashioner of the heavens! Deliver Thy loved ones from...": {
+    "$main": {
+      "null": [
+        "311498628"
+      ]
+    }
+  },
+  "Say: I yield Thee thanks, O my God, and my Master, and my Mainstay, for having...": {
+    "$main": {
+      "null": [
+        "623165308"
+      ]
+    }
+  },
+  "Glorified art Thou, O Lord my God! I call upon Thee at this time when the accents...": {
+    "$main": {
+      "null": [
+        "282063749"
+      ]
+    }
+  },
+  "O my Lord, my Master, and the Goal of my Desire! I have heard that Thou hast declared...": {
+    "$main": {
+      "null": [
+        "742371889"
+      ]
+    }
+  },
+  "Although this wretched state in which I am, O my God, maketh me deserving...": {
+    "$main": {
+      "null": [
+        "110218643"
+      ]
+    }
+  },
   "O God, my God! I yield Thee thanks for having guided me unto Thy straight Path and enabled me...": {
     "$main": {
       "null": [
@@ -8234,7 +8283,6 @@
   "In the Name of our Lord, the Most Holy, the Most Great, the Exalted, the Most Glorious!": {
     "$main": {
       "null": [
-        "514330809",
         "853045685"
       ]
     }
@@ -8295,17 +8343,451 @@
       ]
     }
   },
+  "The purpose of that which hath been sent down from the heaven of the Will of God...": {
+    "$main": {
+      "null": [
+        "135811079"
+      ]
+    }
+  },
+  "A number of people in various regions are at present illumined with the light of...": {
+    "$main": {
+      "null": [
+        "767392168"
+      ]
+    }
+  },
+  "It is indeed a most excellent favour, a boundless grace vouchsafed unto...": {
+    "$main": {
+      "null": [
+        "007979384"
+      ]
+    }
+  },
+  "O ye in mortal graves! The peace of God, Him Who is the Lord of Revelation and the...": {
+    "$main": {
+      "null": [
+        "388064368"
+      ]
+    }
+  },
+  "Teach ye your children so that they may peruse the divine verses every...": {
+    "$main": {
+      "null": [
+        "540900318"
+      ]
+    }
+  },
+  "We have caused thee to return to thy home as a token of Our mercy unto thy mother, inasmuch...": {
+    "$main": {
+      "null": [
+        "881122863"
+      ]
+    }
+  },
+  "Wealth and children are the adornment of this present life; but good...": {
+    "$main": {
+      "null": [
+        "576544649"
+      ]
+    }
+  },
+  "O “Times”, O thou endowed with the power of utterance! O dawning-place of news! Spend...": {
+    "$main": {
+      "null": [
+        "310642713"
+      ]
+    }
+  },
+  "All should know, and in this regard attain the splendours of the sun of certitude, and be...": {
+    "$main": {
+      "null": [
+        "156706577"
+      ]
+    }
+  },
+  "This Ḥuqúq which hath been mentioned, and the command of which hath issued forth from...": {
+    "$main": {
+      "null": [
+        "340320927"
+      ]
+    }
+  },
+  "If the learned ones of the earth were all present at the time of the revealing of...": {
+    "$main": {
+      "null": [
+        "599268978"
+      ]
+    }
+  },
+  "In this Day the Bayán is conditioned and dependent upon the acceptance of this...": {
+    "$main": {
+      "null": [
+        "231394323"
+      ]
+    }
+  },
+  "This, truly, is a Revelation which revealeth itself only once every five hundred thousand years. Thus...": {
+    "$main": {
+      "null": [
+        "701613134"
+      ]
+    }
+  },
+  "All the days have been honoured, O my God, by the arrival of the days upon which Thou hast conferred the...": {
+    "$main": {
+      "null": [
+        "317696291"
+      ]
+    }
+  },
+  "O people of the Caucasus! Baṭḥá (Mecca) hath flowed with water, and the...": {
+    "$main": {
+      "null": [
+        "920987981"
+      ]
+    }
+  },
+  "O My Leaf! ...Thou art with the Supreme Companion, and...": {
+    "$main": {
+      "null": [
+        "114734089"
+      ]
+    }
+  },
+  "Thou hast mentioned the station of parents in the next world. One of the special bounties...": {
+    "$main": {
+      "null": [
+        "960282598"
+      ]
+    }
+  },
+  "The Divine Lote-Tree speaketh forth; hearken unto Him with your hearts. The Tongue of...": {
+    "$main": {
+      "null": [
+        "250874478"
+      ]
+    }
+  },
+  "During these days the laws of God have shone forth from the Dayspring of Divine...": {
+    "$main": {
+      "null": [
+        "180827949"
+      ]
+    }
+  },
+  "The truth is manifest, the kingdom of utterance is resplendent, and the Day of God is...": {
+    "$main": {
+      "null": [
+        "080874004"
+      ]
+    }
+  },
+  "His first enquiry concerneth the fact that, in the Scriptures of the past, Isaac is said to have been sacrificed...": {
+    "$main": {
+      "null": [
+        "302058317"
+      ]
+    }
+  },
+  "These, in brief, are the prerequisites pertaining to those who obtain leave to undertake pilgrimage. First is...": {
+    "$main": {
+      "null": [
+        "011328718"
+      ]
+    }
+  },
+  "As to the children: We have directed that in the beginning they should...": {
+    "$main": {
+      "null": [
+        "755950496"
+      ]
+    }
+  },
+  "O friends! You must all be so ablaze in this day with the fire of the love of God that the...": {
+    "$main": {
+      "null": [
+        "856381701"
+      ]
+    }
+  },
+  "Thou hast asked about affection and reconciliation in the case of...": {
+    "$main": {
+      "null": [
+        "009237198"
+      ]
+    }
+  },
+  "The state of affairs hath changed, the countries are agitated, and Islam hath thereby been...": {
+    "$main": {
+      "null": [
+        "101304057"
+      ]
+    }
+  },
+  "We testify that thou didst enter the prison, that thou didst present thyself and didst...": {
+    "$main": {
+      "null": [
+        "539797135"
+      ]
+    }
+  },
+  "What thou hadst written regarding martyrdom in the Path of God was presented, and He spoke thus, supreme...": {
+    "$main": {
+      "null": [
+        "632401213"
+      ]
+    }
+  },
+  "O Zayn! It behoveth thee to entreat God to graciously enable His faithful servants to meet the obligation...": {
+    "$main": {
+      "null": [
+        "793994980"
+      ]
+    }
+  },
+  "O Samandar! How many are the souls who, with the utmost endeavour and effort, collect a handful...": {
+    "$main": {
+      "null": [
+        "772109960"
+      ]
+    }
+  },
+  "O My handmaiden! How many the men who, throughout the centuries and ages, expectantly awaited...": {
+    "$main": {
+      "null": [
+        "057512604"
+      ]
+    }
+  },
+  "Glory be to the Lord of the world, and thanks be to the Hands of His Cause, and praise be to the...": {
+    "$main": {
+      "null": [
+        "393829373"
+      ]
+    }
+  },
+  "Thy letter hath come into the presence of God, and attained unto the...": {
+    "$main": {
+      "null": [
+        "404852139"
+      ]
+    }
+  },
+  "As for thy mention of the Obligatory Prayer: In truth, anyone who...": {
+    "$main": {
+      "null": [
+        "150486855"
+      ]
+    }
+  },
+  "In the early days, when the Divine verses were revealed, absolutely no regard was given to the...": {
+    "$main": {
+      "null": [
+        "959315823"
+      ]
+    }
+  },
+  "By God! The Preserved Tablet hath appeared; it walketh amongst His servants and calleth...": {
+    "$main": {
+      "null": [
+        "905085121"
+      ]
+    }
+  },
+  "Concerning the question of language: In the Kitáb-i-Aqdas hath been revealed that which is...": {
+    "$main": {
+      "null": [
+        "468235112"
+      ]
+    }
+  },
+  "You asked about My sons.... And one of them will be...": {
+    "$main": {
+      "null": [
+        "635376331"
+      ]
+    }
+  },
+  "O Abu’l-Ḥasan! God willing thou art sustained by His lordly favours and art occupied with such deeds as...": {
+    "$main": {
+      "null": [
+        "441401089"
+      ]
+    }
+  },
+  "Give ear, O people of Bahá, to the counsel of the Most Exalted Pen: Renounce the promptings of...": {
+    "$main": {
+      "null": [
+        "159909148"
+      ]
+    }
+  },
+  "Remember us to all those in thy land who have believed in God and in His signs, as well as those who journeyed...": {
+    "$main": {
+      "null": [
+        "735495680"
+      ]
+    }
+  },
+  "O Most Great Branch! By God! Thine illness...": {
+    "$main": {
+      "null": [
+        "893604726"
+      ]
+    }
+  },
+  "In recent days the Kitáb-i-Aqdas hath been revealed from the...": {
+    "$main": {
+      "null": [
+        "676213188"
+      ]
+    }
+  },
+  "Thou didst beg the Supreme Lord ... to bestow upon thee a station...": {
+    "$main": {
+      "null": [
+        "731249780"
+      ]
+    }
+  },
+  "The one true God, exalted be He, loveth to witness handiworks of high craftsmanship produced by...": {
+    "$main": {
+      "null": [
+        "609753174"
+      ]
+    }
+  },
+  "One of the names of God is the Fashioner. He loveth craftsmanship. Therefore...": {
+    "$main": {
+      "null": [
+        "853046943"
+      ]
+    }
+  },
+  "The Sun of Truth is the Word of God, upon which dependeth...": {
+    "$main": {
+      "null": [
+        "485472535"
+      ]
+    }
+  },
+  "Moderation is indeed highly desirable. Every person who...": {
+    "$main": {
+      "null": [
+        "408066910"
+      ]
+    }
+  },
+  "Hearken thou unto My call from the horizon of My prison in the midst...": {
+    "$main": {
+      "null": [
+        "807928720"
+      ]
+    }
+  },
+  "O maidservant of God! Occupy thyself with...": {
+    "$main": {
+      "null": [
+        "679816157"
+      ]
+    }
+  },
+  "Praise be unto the Best-Beloved, the cloud of whose mercy hath...": {
+    "$main": {
+      "null": [
+        "437910466"
+      ]
+    }
+  },
+  "O maidservant of God! Render thanks unto the one true Beloved for having...": {
+    "$main": {
+      "null": [
+        "866769791"
+      ]
+    }
+  },
+  "Forsake wickedness and rebellion and hold fast unto the fear of God. Sanctify yourselves from...": {
+    "$main": {
+      "null": [
+        "928078315"
+      ]
+    }
+  },
+  "Divest not yourselves of the robe of courtesy and fairmindedness, and speak not that...": {
+    "$main": {
+      "null": [
+        "613867124"
+      ]
+    }
+  },
+  "Say: That justice which causeth the pillars of tyranny...": {
+    "$main": {
+      "null": [
+        "865684548"
+      ]
+    }
+  },
+  "It ill beseemeth the people of God to transgress the...": {
+    "$main": {
+      "null": [
+        "613828968"
+      ]
+    }
+  },
+  "Courtesy is among the hallmarks of the human reality, an attribute whereby man...": {
+    "$main": {
+      "null": [
+        "811378005"
+      ]
+    }
+  },
+  "Detachment is even as a sun, which, dawning...": {
+    "$main": {
+      "null": [
+        "740129757"
+      ]
+    }
+  },
+  "Alas, alas! May the souls of the Concourse on high...": {
+    "$main": {
+      "null": [
+        "461561326"
+      ]
+    }
+  },
+  "It ill beseemeth men to centre all their efforts on their own...": {
+    "$main": {
+      "null": [
+        "275436615"
+      ]
+    }
+  },
+  "Adorn thyself with My virtues, in such wise that...": {
+    "$main": {
+      "null": [
+        "228892775"
+      ]
+    }
+  },
+  "This is a Tablet from God unto him who hath been guided...": {
+    "$main": {
+      "null": [
+        "459004236"
+      ]
+    }
+  },
+  "Gracious God! The people of God suffered themselves...": {
+    "$main": {
+      "null": [
+        "816802039"
+      ]
+    }
+  },
   "O Mihrábán! One of the friends hath evoked thy remembrance...": {
     "$main": {
       "null": [
         "506062722"
-      ]
-    }
-  },
-  "Strain every nerve to acquire both inner and outer perfections...": {
-    "$main": {
-      "null": [
-        "478542091"
       ]
     }
   },
@@ -8316,7 +8798,7 @@
       ]
     }
   },
-  "He is God. Glorified be He; Grandeur and Might...": {
+  "On the morning of the blessed Friday, We proceeded from the Mansion and entered...": {
     "$main": {
       "null": [
         "840516670"
@@ -50462,6 +50944,27 @@
       ]
     }
   },
+  "O Lord! Bless this family and grant it happiness in both this world and the...": {
+    "$main": {
+      "null": [
+        "446042641"
+      ]
+    }
+  },
+  "O Thou kind Lord! Illumine the hearts with the light of Thy most great guidance. Revive the souls through...": {
+    "$main": {
+      "null": [
+        "348303195"
+      ]
+    }
+  },
+  "O Divine Providence! Bestow happiness and blessings upon Washington. Illumine...": {
+    "$main": {
+      "null": [
+        "603792452"
+      ]
+    }
+  },
   "O ye children of the Kingdom! Give thanks unto God that, at this tender age...": {
     "$main": {
       "null": [
@@ -50588,13 +51091,6 @@
       ]
     }
   },
-  "O Compassionate God! O Lord of Hosts! Praise be unto Thee...": {
-    "$main": {
-      "null": [
-        "538807367"
-      ]
-    }
-  },
   "O Thou beloved of my heart and soul! I have no refuge save Thee. I raise...": {
     "$main": {
       "null": [
@@ -50634,6 +51130,391 @@
     "$main": {
       "null": [
         "489542456"
+      ]
+    }
+  },
+  "As to the Nineteen Day festivity, it is of the utmost importance that the friends should gather...": {
+    "$main": {
+      "null": [
+        "662174560"
+      ]
+    }
+  },
+  "O servant of the Blessed Beauty! Blessed art thou, since thou art engaged in rendering a service which will...": {
+    "$main": {
+      "null": [
+        "672749361"
+      ]
+    }
+  },
+  "O young trees and plants, matchless and tender, that grow in the meadows of guidance! O ye...": {
+    "$main": {
+      "null": [
+        "615798457"
+      ]
+    }
+  },
+  "O thou steadfast in the Covenant! In reply to thy letter, I am obliged to be brief. Praise...": {
+    "$main": {
+      "null": [
+        "324061452"
+      ]
+    }
+  },
+  "O thou servant of God! Thou didst ask as to the education of children. Those children...": {
+    "$main": {
+      "null": [
+        "567111635"
+      ]
+    }
+  },
+  "O ye handmaids of the Merciful! The school for girls taketh precedence over the school for boys, for...": {
+    "$main": {
+      "null": [
+        "106290490"
+      ]
+    }
+  },
+  "O ye daughters of the Kingdom! In past centuries the girl children of Persia were deprived of...": {
+    "$main": {
+      "null": [
+        "860774310"
+      ]
+    }
+  },
+  "O maidservants of God! Now is the time to take hold of the viol of love, raise the melody of...": {
+    "$main": {
+      "null": [
+        "281895650"
+      ]
+    }
+  },
+  "Praise be to God, within the sheltering grace of the Blessed Beauty, here in the lands of the...": {
+    "$main": {
+      "null": [
+        "949323649"
+      ]
+    }
+  },
+  "A thousand praises be to the one true God, that for years thou didst suffer in the path of...": {
+    "$main": {
+      "null": [
+        "357277787"
+      ]
+    }
+  },
+  "... and this servant has, as a thing divinely ordained, been unwell for some time past, until I went to...": {
+    "$main": {
+      "null": [
+        "410726726"
+      ]
+    }
+  },
+  "O kind Friend! What thy musk-laden pen hath inscribed bestowed joy and brought delight. It was...": {
+    "$main": {
+      "null": [
+        "776115752"
+      ]
+    }
+  },
+  "As for your desire to publish a monthly magazine in the Arabic and Persian languages that would have a circulation in...": {
+    "$main": {
+      "null": [
+        "501672291"
+      ]
+    }
+  },
+  "The handmaid of God, Miss Barney, had asked a question as to the wisdom of burying the dead in the earth. She...": {
+    "$main": {
+      "null": [
+        "632774428"
+      ]
+    }
+  },
+  "The vegetable spirit, the animal spirit, and the human spirit—the rational...": {
+    "$main": {
+      "null": [
+        "133748986"
+      ]
+    }
+  },
+  "O thou whose heart is turned to the Kingdom of God! I was informed of the contents of thy letter to the maidservant...": {
+    "$main": {
+      "null": [
+        "225055317"
+      ]
+    }
+  },
+  "O ye who are chosen! O ye who are firm! O ye who are calling! O ye who are...": {
+    "$main": {
+      "null": [
+        "407544940"
+      ]
+    }
+  },
+  "Praised be God ye have adorned yourselves with devotion and love, and are engaged in serving the Cause of...": {
+    "$main": {
+      "null": [
+        "930570904"
+      ]
+    }
+  },
+  "O thou who art serving at the Pilgrim House of the Lord! Thou art a servant, but in reality...": {
+    "$main": {
+      "null": [
+        "484214932"
+      ]
+    }
+  },
+  "O thou attracted maid-servant of God! The celebration of the Feast of Naw-Rúz made me glad. Consider how...": {
+    "$main": {
+      "null": [
+        "111492243"
+      ]
+    }
+  },
+  "According to ancient custom, every nation has general holidays when...": {
+    "$main": {
+      "null": [
+        "026660544"
+      ]
+    }
+  },
+  "O ye friends of God! It is understood that a wall hath been put up around the Bombay Cemetery, and...": {
+    "$main": {
+      "null": [
+        "788537505"
+      ]
+    }
+  },
+  "O Friends of God! Now is the time for joy and gladness, for acquiring the characteristics of the All-Merciful. This...": {
+    "$main": {
+      "null": [
+        "586356422"
+      ]
+    }
+  },
+  "O ye flock of the Lord of glory! Blessed are they who have observed the fast during...": {
+    "$main": {
+      "null": [
+        "267350722"
+      ]
+    }
+  },
+  "O friends of God! Every assembly is in need of seasoned members who are worthy of its membership and are...": {
+    "$main": {
+      "null": [
+        "058570308"
+      ]
+    }
+  },
+  "The followers of truth hold dear not only human beings but animals as well. Man...": {
+    "$main": {
+      "null": [
+        "313948941"
+      ]
+    }
+  },
+  "O thou who circlest in adoration round His hallowed Shrine! Render thou thanks unto God for having received...": {
+    "$main": {
+      "null": [
+        "871244381"
+      ]
+    }
+  },
+  "O thou my companion! It appeareth that thou hast become a prisoner in the city of Haifa, for when travel...": {
+    "$main": {
+      "null": [
+        "181024258"
+      ]
+    }
+  },
+  "O Shoghi! I have no time to talk; leave me be! Thou didst say “Write”, and I have written. What else...": {
+    "$main": {
+      "null": [
+        "873632595"
+      ]
+    }
+  },
+  "O thou pilgrim unto that Spot round which circle the embodiments of holiness! It is among the greatest of divine...": {
+    "$main": {
+      "null": [
+        "477047312"
+      ]
+    }
+  },
+  "O thou who hast attained unto the Threshold of that Shrine which is sacred unto all the world and the envy of...": {
+    "$main": {
+      "null": [
+        "815969824"
+      ]
+    }
+  },
+  "O thou who circlest round the Holy Sanctuary! Render thanks unto God that thou hast soared unto the...": {
+    "$main": {
+      "null": [
+        "630819653"
+      ]
+    }
+  },
+  "O thou pilgrim to the Spot round which circle the Concourse on high! Unloose thy tongue and render...": {
+    "$main": {
+      "null": [
+        "667583400"
+      ]
+    }
+  },
+  "O thou who circlest round the Point of Adoration of all that dwell on earth! Though thou hast...": {
+    "$main": {
+      "null": [
+        "394476296"
+      ]
+    }
+  },
+  "O thou musk-scented pilgrim! It is incumbent upon thee to pass through those lands like unto...": {
+    "$main": {
+      "null": [
+        "116446920"
+      ]
+    }
+  },
+  "O thou pilgrim to the land of the Beloved! Thou didst endure the toils of travel till at last thou didst...": {
+    "$main": {
+      "null": [
+        "285977564"
+      ]
+    }
+  },
+  "O pilgrim unto that Spot round which circle the holy ones! Praise be unto God that thou didst travel vast distances and...": {
+    "$main": {
+      "null": [
+        "687881096"
+      ]
+    }
+  },
+  "O thou musk-scented pilgrim! The Holy Shrine is the quintessential musk, the ambergris and...": {
+    "$main": {
+      "null": [
+        "136388134"
+      ]
+    }
+  },
+  "O physician of the body and the spirit! Thy letter dated...": {
+    "$main": {
+      "null": [
+        "901965877"
+      ]
+    }
+  },
+  "O handmaiden of the Most High! Thy letter was received. Thou hast written that thou...": {
+    "$main": {
+      "null": [
+        "603150987"
+      ]
+    }
+  },
+  "When that essence of holiness and reality of sanctity, her honour the Virgin Mary...": {
+    "$main": {
+      "null": [
+        "911714763"
+      ]
+    }
+  },
+  "The meaning is this: Although those ill-mannered ones offered thee insults and taunts, cursed...": {
+    "$main": {
+      "null": [
+        "121889244"
+      ]
+    }
+  },
+  "Glad tidings! The light of the Sun of Truth hath shed its radiance from the...": {
+    "$main": {
+      "null": [
+        "854641822"
+      ]
+    }
+  },
+  "Our hope is that the Spiritual Assembly of Rangoon may shine resplendent and become...": {
+    "$main": {
+      "null": [
+        "545144312"
+      ]
+    }
+  },
+  "As regards the seven qualities which thou hadst requested be enumerated, they are...": {
+    "$main": {
+      "null": [
+        "431780005"
+      ]
+    }
+  },
+  "O thou whose heart hath been filled with love for the beauty of God! I have perused thy...": {
+    "$main": {
+      "null": [
+        "052477750"
+      ]
+    }
+  },
+  "O thou who art steadfast in the Covenant! A few days ago I was glancing at some photographs of the...": {
+    "$main": {
+      "null": [
+        "576474870"
+      ]
+    }
+  },
+  "O harbinger of the Covenant! Thou hast written concerning...": {
+    "$main": {
+      "null": [
+        "022180309"
+      ]
+    }
+  },
+  "Bahá’u’lláh hath proclaimed the universality of education, which is essential to the...": {
+    "$main": {
+      "null": [
+        "581667101"
+      ]
+    }
+  },
+  "My hope is that the Tarbíyat School may be under the protection of the...": {
+    "$main": {
+      "null": [
+        "447415153"
+      ]
+    }
+  },
+  "... if you seek immunity from the sway of the forces of the contingent world, hang the...": {
+    "$main": {
+      "null": [
+        "885855132"
+      ]
+    }
+  },
+  "O thou spiritual teacher! In thy school, instruct thou God’s children in the...": {
+    "$main": {
+      "null": [
+        "236192535"
+      ]
+    }
+  },
+  "O ye friends of God! The All-Merciful hath created humankind for the adornment of this...": {
+    "$main": {
+      "null": [
+        "156538673"
+      ]
+    }
+  },
+  "O handmaid of the Most High! Our hearts rejoiced at thy letter concerning a school for girls. Praised be God that...": {
+    "$main": {
+      "null": [
+        "893648470"
+      ]
+    }
+  },
+  "It is incumbent upon the youth to walk in the footsteps of...": {
+    "$main": {
+      "null": [
+        "016991139"
       ]
     }
   },
@@ -50732,13 +51613,6 @@
     "$main": {
       "null": [
         "478293365"
-      ]
-    }
-  },
-  "O ye two honourable souls!...": {
-    "$main": {
-      "null": [
-        "930427249"
       ]
     }
   },
@@ -50886,13 +51760,6 @@
     "$main": {
       "null": [
         "575788828"
-      ]
-    }
-  },
-  "It is possible, nay most easy, to please God, for if only one is pure in heart, His good-pleasure is attained...": {
-    "$main": {
-      "null": [
-        "421581984"
       ]
     }
   },
@@ -51190,7 +52057,7 @@
       ]
     }
   },
-  "He is God! O thou dear handmaid of God! Thy letter dated 6 April 1906...": {
+  "O thou dear handmaid of God! Thy letter dated 6 April 1906...": {
     "$main": {
       "null": [
         "170105887"
@@ -51204,7 +52071,7 @@
       ]
     }
   },
-  "Know ye that the Torah is what was revealed in the Tablets unto Moses...": {
+  "As to that which hath been mentioned in the Torah and the Scriptures...": {
     "$main": {
       "null": [
         "392272996"
@@ -96148,39 +97015,6 @@
         "950117553"
       ]
     },
-    "The Torchbearers of the Cause": {
-      "null": [
-        "316204556",
-        "458604228",
-        "818702766",
-        "551133758",
-        "261173716",
-        "176087137",
-        "292376297",
-        "880960554",
-        "711150698",
-        "666139111",
-        "485199621",
-        "028673590",
-        "866013180",
-        "567549392",
-        "523815948",
-        "089113482",
-        "626456297",
-        "035015064",
-        "948596851",
-        "898027846",
-        "334138999",
-        "851476127",
-        "620566739",
-        "932222517",
-        "443017281",
-        "732993693",
-        "377544678",
-        "714698398",
-        "950117553"
-      ]
-    },
     "The Spiritual Descendants of the Dawn-Breakers": {
       "null": [
         "316204556",
@@ -96215,39 +97049,6 @@
       ]
     },
     "The Cradle of the Administrative Order": {
-      "null": [
-        "316204556",
-        "458604228",
-        "818702766",
-        "551133758",
-        "261173716",
-        "176087137",
-        "292376297",
-        "880960554",
-        "711150698",
-        "666139111",
-        "485199621",
-        "028673590",
-        "866013180",
-        "567549392",
-        "523815948",
-        "089113482",
-        "626456297",
-        "035015064",
-        "948596851",
-        "898027846",
-        "334138999",
-        "851476127",
-        "620566739",
-        "932222517",
-        "443017281",
-        "732993693",
-        "377544678",
-        "714698398",
-        "950117553"
-      ]
-    },
-    "The Achievements of the American Bahá’ís": {
       "null": [
         "316204556",
         "458604228",
@@ -96478,79 +97279,7 @@
         "950117553"
       ]
     },
-    "The Importance of Daily Exertions": {
-      "null": [
-        "316204556",
-        "458604228",
-        "818702766",
-        "551133758",
-        "261173716",
-        "176087137",
-        "292376297",
-        "880960554",
-        "711150698",
-        "666139111",
-        "485199621",
-        "028673590",
-        "866013180",
-        "567549392",
-        "523815948",
-        "089113482",
-        "626456297",
-        "035015064",
-        "948596851",
-        "898027846",
-        "334138999",
-        "851476127",
-        "620566739",
-        "932222517",
-        "443017281",
-        "732993693",
-        "377544678",
-        "714698398",
-        "950117553"
-      ]
-    },
     "Call for the Acquisition of Virtues Needed to Equip the North American Bahá’ís to Fulfill Their Destiny": {
-      "null": [
-        "395909703",
-        "496642817",
-        "296193160",
-        "424025460",
-        "102235206",
-        "551876211",
-        "034096683",
-        "929878743",
-        "464301738",
-        "011656339",
-        "663134693",
-        "716325250",
-        "293314070",
-        "616588933",
-        "990670022",
-        "656762538",
-        "293485253",
-        "802156000",
-        "778087946",
-        "823945920",
-        "870655891",
-        "323251261",
-        "114138899",
-        "720204804",
-        "912316578",
-        "756071510",
-        "892225408",
-        "486554855",
-        "906573525",
-        "351186116",
-        "376777192",
-        "305328767",
-        "782523270",
-        "167286496",
-        "814806165"
-      ]
-    },
-    "A Warning about the Shortcomings of North Americans": {
       "null": [
         "395909703",
         "496642817",
@@ -96668,45 +97397,6 @@
       ]
     },
     "The Cultivation of Spiritual Qualities Essential for All Teaching Plans, Temple Projects, and Financial Plans": {
-      "null": [
-        "395909703",
-        "496642817",
-        "296193160",
-        "424025460",
-        "102235206",
-        "551876211",
-        "034096683",
-        "929878743",
-        "464301738",
-        "011656339",
-        "663134693",
-        "716325250",
-        "293314070",
-        "616588933",
-        "990670022",
-        "656762538",
-        "293485253",
-        "802156000",
-        "778087946",
-        "823945920",
-        "870655891",
-        "323251261",
-        "114138899",
-        "720204804",
-        "912316578",
-        "756071510",
-        "892225408",
-        "486554855",
-        "906573525",
-        "351186116",
-        "376777192",
-        "305328767",
-        "782523270",
-        "167286496",
-        "814806165"
-      ]
-    },
-    "Introduction": {
       "null": [
         "395909703",
         "496642817",
@@ -147514,6 +148204,48 @@
       ]
     }
   },
+  "25 March 2023": {
+    "$main": {
+      "null": [
+        "018888168"
+      ]
+    }
+  },
+  "1 November 2022": {
+    "$main": {
+      "null": [
+        "561948941"
+      ]
+    }
+  },
+  "4 July 2022": {
+    "$main": {
+      "null": [
+        "846512238"
+      ]
+    }
+  },
+  "Riḍván 2022": {
+    "$main": {
+      "null": [
+        "750967520"
+      ]
+    }
+  },
+  "14 April 2022": {
+    "$main": {
+      "null": [
+        "845512238"
+      ]
+    }
+  },
+  "8 April 2022": {
+    "$main": {
+      "null": [
+        "983656782"
+      ]
+    }
+  },
   "4 January 2022": {
     "$main": {
       "null": [
@@ -152040,99 +152772,6 @@
       ]
     },
     "The Fund": {
-      "null": [
-        "987974516",
-        "267176772",
-        "263373367",
-        "236633774",
-        "263336775",
-        "263336776",
-        "263336777",
-        "263336778",
-        "263336779",
-        "176004670",
-        "176004671",
-        "263367872",
-        "176004673",
-        "176004674",
-        "176004675",
-        "263338882",
-        "176004677",
-        "176004678",
-        "176004679",
-        "415610920",
-        "263336788",
-        "415610922",
-        "415610923",
-        "415610924",
-        "415610925",
-        "263338772",
-        "415610927",
-        "415610928",
-        "264336772",
-        "996323060",
-        "996323061",
-        "996323062",
-        "996323063",
-        "996323064",
-        "996323065",
-        "263336711",
-        "996323067",
-        "996323068",
-        "996323069",
-        "495599810",
-        "495599811",
-        "263336342",
-        "495599813",
-        "495599814",
-        "495599815",
-        "495599816",
-        "495599817",
-        "495599818",
-        "495599819",
-        "263364772",
-        "817651361",
-        "817651362",
-        "817651363",
-        "817651364",
-        "817651365",
-        "254336772",
-        "817651367",
-        "263126772",
-        "817651369",
-        "295073140",
-        "295073141",
-        "295073142",
-        "295073143",
-        "295073144",
-        "295073145",
-        "295073146",
-        "295073147",
-        "295073148",
-        "876425258",
-        "262398777",
-        "552310360",
-        "552310361",
-        "552310362",
-        "552310363",
-        "552310364",
-        "552310365",
-        "263330072",
-        "552310367",
-        "552310368",
-        "552310369",
-        "269596772",
-        "467424121",
-        "467424122",
-        "467424123",
-        "467424124",
-        "364336772",
-        "467424126",
-        "467424127",
-        "467424128"
-      ]
-    },
-    "Protection of the Cause": {
       "null": [
         "987974516",
         "267176772",
@@ -160397,6 +161036,342 @@
       ]
     }
   },
+  "The Covenant": {
+    "$main": {
+      "null": [
+        "400056314"
+      ]
+    }
+  },
+  "Crisis and Victory": {
+    "$main": {
+      "null": [
+        "278290299"
+      ]
+    },
+    "“The hosts of the world … are from every side launching their assault”‘Abdu’l-Bahá, quoted in “The Advent of Divine Justice”, p. 6": {
+      "null": [
+        "181457396",
+        "971491220",
+        "622503594",
+        "405754954",
+        "281999998",
+        "387230087",
+        "886218551",
+        "047345002",
+        "440670738",
+        "592845161",
+        "571088285",
+        "726939645",
+        "294488277",
+        "917697051",
+        "473029685",
+        "060282251",
+        "433616089",
+        "514029153",
+        "302010950",
+        "195459103",
+        "635531464",
+        "595477238",
+        "882777776",
+        "067443873",
+        "966203778",
+        "462609035",
+        "747592467",
+        "469167064",
+        "112230949",
+        "838793018",
+        "754111669",
+        "537129930",
+        "716906397",
+        "593701678",
+        "811592275",
+        "694046101",
+        "760700312",
+        "513752047",
+        "235862229",
+        "230899508",
+        "650759239",
+        "367915682",
+        "685978762",
+        "293007057",
+        "555210599",
+        "171880385",
+        "472064269",
+        "385451830",
+        "063991888",
+        "648323403",
+        "129902693",
+        "598827426",
+        "076248386",
+        "622097096",
+        "042975579",
+        "208125805",
+        "836967231",
+        "124186437",
+        "196147351",
+        "745037027",
+        "582711192",
+        "721768458",
+        "605624365",
+        "975829705",
+        "458208204",
+        "652175757",
+        "757967283",
+        "807896018",
+        "873469487",
+        "625797656",
+        "460980408",
+        "167513860",
+        "768888614",
+        "763484353",
+        "386088761",
+        "108493810",
+        "190490884",
+        "447448326",
+        "709854170",
+        "474604607",
+        "385105111",
+        "823782636",
+        "969866213",
+        "210276133",
+        "058521332",
+        "504390606",
+        "803318515",
+        "121475136",
+        "009483661",
+        "308293140",
+        "218084456",
+        "143857858",
+        "858534923",
+        "327646529",
+        "777052026",
+        "989609685",
+        "592384692",
+        "651875462",
+        "430102934",
+        "567982240",
+        "050439891",
+        "228219849",
+        "431572605",
+        "543555480",
+        "195724838",
+        "627528923",
+        "990864823",
+        "479939113",
+        "877196372",
+        "886030538"
+      ]
+    },
+    "“The resistless march of the Faith of Bahá’u’lláh”Shoghi Effendi, “Messages to America: Selected Letters and Cablegrams Addressed to the Bahá’ís of North America 1932–1946”, p. 51": {
+      "null": [
+        "880496752",
+        "825130708",
+        "863018427",
+        "194748925",
+        "156388041",
+        "095582597",
+        "073045610",
+        "986352785",
+        "782130147",
+        "090353393",
+        "522926931",
+        "700455407",
+        "600232823",
+        "857396550",
+        "441004585",
+        "069731240",
+        "811635481",
+        "013105478",
+        "572603102",
+        "200311178",
+        "047039485",
+        "706720952",
+        "686294764",
+        "894627330",
+        "570511905",
+        "693803636",
+        "076119515",
+        "147161185",
+        "187205332",
+        "144238997",
+        "854507823",
+        "982867096",
+        "745726976",
+        "787782298",
+        "992874369",
+        "049161083",
+        "855572287",
+        "605047319",
+        "552524239",
+        "641912211",
+        "326686912",
+        "110600749",
+        "683314795",
+        "905661361",
+        "587999237",
+        "957564079",
+        "718914760",
+        "129219218",
+        "126366486",
+        "959151533",
+        "883500989",
+        "092722512",
+        "623654689",
+        "566264213",
+        "826997585",
+        "175407654",
+        "404509091",
+        "195955174",
+        "959525575",
+        "993510935",
+        "175819934",
+        "129544421",
+        "628994326",
+        "561836986",
+        "518117177",
+        "373776266",
+        "028552820",
+        "359508894",
+        "390309343",
+        "766536919",
+        "053255066",
+        "197076497",
+        "611369706",
+        "918073049",
+        "324713344",
+        "613054656",
+        "947066512",
+        "030055946",
+        "524077433",
+        "325394081",
+        "621981122",
+        "941601754",
+        "177355979",
+        "152021245",
+        "756167750",
+        "589879775",
+        "942980819",
+        "350260658",
+        "727899076",
+        "519692405",
+        "368636003",
+        "077858792",
+        "853732515",
+        "788276936",
+        "126503466",
+        "024274613"
+      ]
+    },
+    "“The security of our precious Faith”Shoghi Effendi, “Messages to the Bahá’í World, 1950–1957”, p. 123": {
+      "null": [
+        "275685467",
+        "214204359",
+        "370895898",
+        "355149845",
+        "001658848",
+        "054097301",
+        "316926016",
+        "671491949",
+        "694531433",
+        "149956557",
+        "536887863",
+        "872284743",
+        "630409069",
+        "883992164",
+        "860782980",
+        "266110254",
+        "984805914",
+        "231459910",
+        "711207655",
+        "987227652",
+        "555594718",
+        "230046469",
+        "017536342",
+        "908536468",
+        "528637583",
+        "484686069",
+        "079434496",
+        "996981428",
+        "732956932",
+        "360775032",
+        "169031768",
+        "651068758",
+        "567612054",
+        "758310435",
+        "106981933",
+        "229693579",
+        "775338831",
+        "333567741",
+        "867278174",
+        "557183729",
+        "366368832",
+        "292997087",
+        "807743821",
+        "501293709",
+        "010676112",
+        "011998040",
+        "968347572",
+        "712899565",
+        "563391829",
+        "797796594",
+        "336505312",
+        "603624644",
+        "346053856",
+        "099960027",
+        "171876863",
+        "052679053",
+        "404453753",
+        "971882980",
+        "601710982",
+        "482608412",
+        "689813034",
+        "944078164",
+        "455753281",
+        "363116102",
+        "033765320",
+        "754106191",
+        "447907077",
+        "663826845",
+        "401100933",
+        "392710138",
+        "069123527",
+        "572832079",
+        "505828385",
+        "130395602",
+        "404829323",
+        "212367146",
+        "374771832",
+        "393308072",
+        "142840809",
+        "800469332",
+        "440599227",
+        "306070793"
+      ]
+    },
+    "Index": {
+      "null": [
+        "244165917",
+        "205155813"
+      ]
+    },
+    "Notes": {
+      "null": [
+        "413525466",
+        "400235280",
+        "877995120",
+        "678204323",
+        "806933708",
+        "257804178",
+        "115666833",
+        "715519748",
+        "285925634",
+        "235935101",
+        "701476482",
+        "264307430"
+      ]
+    }
+  },
   "Excellence in All Things": {
     "$main": {
       "null": [
@@ -160410,7 +161385,7 @@
         "582622718"
       ]
     },
-    "I. Preservation of the Bond between Husband and Wife": {
+    "Preservation of the Bond between Husband and Wife": {
       "null": [
         "741526531",
         "083927966",
@@ -160453,7 +161428,7 @@
         "753013813"
       ]
     },
-    "I. Preservation of the Bond between Husband and Wife (2)": {
+    "Preservation of the Bond between Husband and Wife (2)": {
       "null": [
         "576050005",
         "270080399",
@@ -160491,7 +161466,7 @@
         "379132628"
       ]
     },
-    "I. Preservation of the Bond between Husband and Wife (3)": {
+    "Preservation of the Bond between Husband and Wife (3)": {
       "null": [
         "751710619",
         "801381567",
@@ -160547,7 +161522,7 @@
         "331682195"
       ]
     },
-    "II. Parent-Child Relationships and Responsibilities": {
+    "Parent-Child Relationships and Responsibilities": {
       "null": [
         "384603769",
         "892029279",
@@ -160600,7 +161575,7 @@
         "246719290"
       ]
     },
-    "II. Parent-Child Relationships and Responsibilities (2)": {
+    "Parent-Child Relationships and Responsibilities (2)": {
       "null": [
         "350643050",
         "469416059",
@@ -160629,7 +161604,7 @@
         "705768691"
       ]
     },
-    "II. Parent-Child Relationships and Responsibilities (3)": {
+    "Parent-Child Relationships and Responsibilities (3)": {
       "null": [
         "938382453",
         "902840085",
@@ -160690,7 +161665,7 @@
         "540522804"
       ]
     },
-    "III. Enhancing Family Life": {
+    "Enhancing Family Life": {
       "null": [
         "022290222",
         "376293071",
@@ -160736,7 +161711,7 @@
         "151685661"
       ]
     },
-    "I. FROM THE WRITINGS OF BAHÁ’U’LLÁH": {
+    "FROM THE WRITINGS OF BAHÁ’U’LLÁH": {
       "null": [
         "154495001",
         "178495101",
@@ -160785,7 +161760,7 @@
         "187491103"
       ]
     },
-    "II. FROM THE WRITINGS OF ‘ABDU’L-BAHÁ": {
+    "FROM THE WRITINGS OF ‘ABDU’L-BAHÁ": {
       "null": [
         "154495002",
         "535495101",
@@ -160905,7 +161880,7 @@
         "554492007"
       ]
     },
-    "III. FROM THE LETTERS OF SHOGHI EFFENDI": {
+    "FROM THE LETTERS OF SHOGHI EFFENDI": {
       "null": [
         "154495004",
         "101495101",
@@ -161343,6 +162318,13 @@
         "925909508",
         "158104580",
         "995421112"
+      ]
+    }
+  },
+  "The Importance of the Arts in Promoting the Faith": {
+    "$main": {
+      "null": [
+        "880114725"
       ]
     }
   },
@@ -167562,7 +168544,7 @@
         "735059557"
       ]
     },
-    "I. The Bahá’í concept of equality": {
+    "The Bahá’í concept of equality": {
       "null": [
         "618414637",
         "795167231",
@@ -167663,7 +168645,7 @@
         "351547635"
       ]
     },
-    "II. The role of education in the development of women": {
+    "The role of education in the development of women": {
       "null": [
         "329616910",
         "255286253",
@@ -167715,7 +168697,7 @@
         "351547652"
       ]
     },
-    "III. Application of the principle of equality to family life": {
+    "Application of the principle of equality to family life": {
       "null": [
         "096993812",
         "263012639",
@@ -167781,7 +168763,7 @@
         "351547675"
       ]
     },
-    "IV. Women in the world at large": {
+    "Women in the world at large": {
       "null": [
         "817949728",
         "606563895",
@@ -167838,7 +168820,7 @@
         "351547694"
       ]
     },
-    "V. Fostering the development of women": {
+    "Fostering the development of women": {
       "null": [
         "120621094",
         "339558641",
@@ -167924,7 +168906,7 @@
         "351547122"
       ]
     },
-    "VI. Bibliography": {
+    "Bibliography": {
       "null": [
         "819652962",
         "398948148",
@@ -168409,6 +169391,7 @@
         "385126454",
         "484233516",
         "115188877",
+        "115189877",
         "188539104",
         "695511098",
         "604291398",
@@ -168431,7 +169414,6 @@
         "297185241",
         "853652918",
         "631222165",
-        "629523932",
         "524381017",
         "559524587",
         "450208270",
@@ -171122,44 +172104,6 @@
         "584751417",
         "781134829",
         "678246084"
-      ]
-    },
-    "Foreword": {
-      "null": [
-        "615426374",
-        "062452070",
-        "691694928",
-        "238716732",
-        "233883346",
-        "428539564",
-        "677903974",
-        "053997755",
-        "094159545",
-        "194699830",
-        "700132765",
-        "639621978",
-        "691389048",
-        "539298042",
-        "763593959",
-        "876505579",
-        "436094317",
-        "924902113",
-        "581943985",
-        "206412214",
-        "593482755",
-        "993755357",
-        "215658951",
-        "205868009",
-        "073159757",
-        "903777332",
-        "998672578",
-        "487712016",
-        "730726266",
-        "494428773",
-        "633679136",
-        "742114427",
-        "302563592",
-        "846319670"
       ]
     },
     "Preface to 1937 Edition": {

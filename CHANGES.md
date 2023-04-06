@@ -3,6 +3,7 @@
 ## ?
 
 - fix(`downloadAndSave`): adjust changed CSS selector
+- chore: update data
 
 ## 0.12.2
 
