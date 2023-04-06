@@ -223,7 +223,7 @@ async function downloadAndSaveSections (works, language) {
         //   have their data in a table; there are multiple repeats (date, to,
         //   and summary have their own copies of the link), so only choose
         //   the first
-        '#letterstable td:first-child > a[href]'
+        '.js-letterstable td:first-child > a[href]'
       ).map((a) => {
         return {
           parentUrl,

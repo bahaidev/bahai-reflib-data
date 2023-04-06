@@ -1,5 +1,9 @@
 # CHANGES for `bahai-reflib-data`
 
+## ?
+
+- fix(`downloadAndSave`): adjust changed CSS selector
+
 ## 0.12.2
 
 - fix(`getIdForWorkSectionAndParagraph`): check for alternative title
