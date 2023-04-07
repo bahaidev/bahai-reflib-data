@@ -12,7 +12,6 @@ import {
   getWorks, getSections
 } from '../src/getData.js';
 
-(async () => {
 const language = process.argv.includes('fa') ? 'fa' : 'en';
 const mainCollections = process.argv.includes('mainCollections')
   ? await downloadAndSaveMainCollections(language)
@@ -40,4 +39,3 @@ const amendedSections = process.argv.includes('amendedSections')
 if (process.argv.includes('paragraphIdInfo')) {
   await downloadAndSaveParagraphIdInfo(amendedSections, language);
 }
-})();

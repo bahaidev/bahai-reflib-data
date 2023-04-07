@@ -10,6 +10,7 @@ const range = (num) => {
   });
 };
 
+// eslint-disable-next-line unicorn/prefer-top-level-await -- Needed
 (async () => {
 const {
   getFullInfoForUrl,
@@ -476,7 +477,7 @@ describe('`getSectionNamesForWork`', function () {
     const sectionNames = await getSectionNamesForWork(
       'Additional Prayers Revealed by Bahá’u’lláh'
     );
-    expect(sectionNames).to.be.lengthOf(15);
+    expect(sectionNames).to.be.lengthOf(21);
     expect(sectionNames).to.contain(
       'Praise be to Thee, O my God, that Thou didst graciously ' +
         'remember me through Thy Most...'
@@ -508,12 +509,12 @@ describe('`getSectionInfoForWork`', function () {
     const sectionIDs = await getSectionInfoForWork(
       'Additional Prayers Revealed by Bahá’u’lláh'
     );
-    expect(sectionIDs).to.be.lengthOf(15);
+    expect(sectionIDs).to.be.lengthOf(21);
     expect(sectionIDs[0].id).to.equal(
-      '542155991'
+      '324741469'
     );
     expect(sectionIDs[1].id).to.equal(
-      '798565991'
+      '625753576'
     );
   });
   it('gets the section IDs for a work', async function () {
