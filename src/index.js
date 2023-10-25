@@ -37,7 +37,6 @@ async function getFullInfoForUrl (url, language) {
 
   const {
     groups: {baseURL, id}
-  // eslint-disable-next-line unicorn/no-unsafe-regex -- Todo
   } = url.match(/(?<baseURL>^.*\/\d+)#?(?<id>\d+)?$/u) || {groups: {}};
 
   let subSectionInfo, workSectionParagraph;

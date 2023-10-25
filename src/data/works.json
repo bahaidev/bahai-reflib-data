@@ -116,7 +116,7 @@
   },
   {
     "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/",
-    "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/tablet-august-forel/",
+    "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/tablet-auguste-forel/",
     "title": "Tablet to Dr. Auguste Forel"
   },
   {
@@ -386,6 +386,11 @@
   },
   {
     "parentUrl": "https://www.bahai.org/library/authoritative-texts/compilations/",
+    "url": "https://www.bahai.org/library/authoritative-texts/compilations/set-world-order/",
+    "title": "To Set the World in Order: Building and Preserving Strong Marriages"
+  },
+  {
+    "parentUrl": "https://www.bahai.org/library/authoritative-texts/compilations/",
     "url": "https://www.bahai.org/library/authoritative-texts/compilations/significance-formative-age-our-faith/",
     "title": "The Significance of the Formative Age of Our Faith"
   },
@@ -411,6 +416,11 @@
   },
   {
     "parentUrl": "https://www.bahai.org/library/other-literature/official-statements-commentaries/",
+    "url": "https://www.bahai.org/library/other-literature/official-statements-commentaries/bahaullah/",
+    "title": "Bahá’u’lláh"
+  },
+  {
+    "parentUrl": "https://www.bahai.org/library/other-literature/official-statements-commentaries/",
     "url": "https://www.bahai.org/library/other-literature/official-statements-commentaries/century-light/",
     "title": "Century of Light"
   },
@@ -421,13 +431,13 @@
   },
   {
     "parentUrl": "https://www.bahai.org/library/other-literature/official-statements-commentaries/",
-    "url": "https://www.bahai.org/library/other-literature/official-statements-commentaries/prosperity-humankind/",
-    "title": "The Prosperity of Humankind"
+    "url": "https://www.bahai.org/library/other-literature/official-statements-commentaries/aqdas-place-literature/",
+    "title": "The Kitáb-i-Aqdas: Its Place in Bahá’í Literature"
   },
   {
     "parentUrl": "https://www.bahai.org/library/other-literature/official-statements-commentaries/",
-    "url": "https://www.bahai.org/library/other-literature/official-statements-commentaries/bahaullah/",
-    "title": "Bahá’u’lláh"
+    "url": "https://www.bahai.org/library/other-literature/official-statements-commentaries/prosperity-humankind/",
+    "title": "The Prosperity of Humankind"
   },
   {
     "parentUrl": "https://www.bahai.org/library/other-literature/official-statements-commentaries/",

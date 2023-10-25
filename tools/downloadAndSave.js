@@ -9,7 +9,7 @@ import {
 } from '../src/pathInfo.js';
 
 const requestsPerSecond = 0.2;
-const doubleAngleQuotes = /»/gu;
+const doubleAngleQuotes = '»';
 const idFind = /#(?<id>\d+)$/u;
 
 const setWorksSectionsAndParagraphsToIds = (
@@ -86,7 +86,7 @@ async function downloadAndSaveMainCollections (language) {
     return {
       parentUrl,
       url: a.href,
-      title: a.textContent.replace(doubleAngleQuotes, '').trim()
+      title: a.textContent.replaceAll(doubleAngleQuotes, '').trim()
     };
   });
 
@@ -125,7 +125,7 @@ async function downloadAndSaveCollections (mainCollections, language) {
           return {
             parentUrl,
             url: a.href,
-            title: a.textContent.replace(doubleAngleQuotes, '').trim()
+            title: a.textContent.replaceAll(doubleAngleQuotes, '').trim()
           };
         });
       });
@@ -168,7 +168,7 @@ async function downloadAndSaveWorks (collections, language) {
         return {
           parentUrl,
           url: a.href,
-          title: a.textContent.replace(doubleAngleQuotes, '').trim()
+          title: a.textContent.replaceAll(doubleAngleQuotes, '').trim()
         };
       });
     });
@@ -228,7 +228,7 @@ async function downloadAndSaveSections (works, language) {
         return {
           parentUrl,
           url: a.href,
-          title: a.textContent.replace(doubleAngleQuotes, '').trim()
+          title: a.textContent.replaceAll(doubleAngleQuotes, '').trim()
         };
       });
 
@@ -255,7 +255,7 @@ async function downloadAndSaveSections (works, language) {
           parentUrl,
           id: idFind.exec(url).groups.id,
           url,
-          title: a.textContent.replace(doubleAngleQuotes, '').trim()
+          title: a.textContent.replaceAll(doubleAngleQuotes, '').trim()
         };
       }).filter(Boolean);
 
@@ -384,7 +384,7 @@ async function downloadAndSaveAmendedSections (
     });
 
     if (!noContinuation) {
-      const {idx, number, title} = numbers[numbers.length - 1];
+      const {idx, number, title} = numbers.at(-1);
       urlInfo.push({
         number,
         checkForContinuation: true,
