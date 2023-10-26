@@ -1,5 +1,10 @@
 # CHANGES for `bahai-reflib-data`
 
+## 0.14.0
+
+- chore: update data
+- chore: update devDeps.
+
 ## 0.13.0
 
 - fix(`downloadAndSave`): adjust changed CSS selector
