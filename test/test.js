@@ -448,14 +448,14 @@ describe('`getUrlForId`', function () {
 describe('`getWorkNames`', function () {
   it('gets the work names', async function () {
     const workNames = await getWorkNames();
-    expect(workNames).to.be.lengthOf(111);
+    expect(workNames).to.be.lengthOf(113);
     expect(workNames).to.contain('The Call of the Divine Beloved');
     expect(workNames).to.contain('Days of Remembrance');
   });
 
   it('gets the work names (English)', async function () {
     const workNames = await getWorkNames('en');
-    expect(workNames).to.be.lengthOf(85);
+    expect(workNames).to.be.lengthOf(87);
     expect(workNames).to.contain('The Call of the Divine Beloved');
     expect(workNames).to.contain('Days of Remembrance');
   });
@@ -477,7 +477,7 @@ describe('`getSectionNamesForWork`', function () {
     const sectionNames = await getSectionNamesForWork(
       'Additional Prayers Revealed by Bahá’u’lláh'
     );
-    expect(sectionNames).to.be.lengthOf(21);
+    expect(sectionNames).to.be.lengthOf(22);
     expect(sectionNames).to.contain(
       'Praise be to Thee, O my God, that Thou didst graciously ' +
         'remember me through Thy Most...'
@@ -509,12 +509,12 @@ describe('`getSectionInfoForWork`', function () {
     const sectionIDs = await getSectionInfoForWork(
       'Additional Prayers Revealed by Bahá’u’lláh'
     );
-    expect(sectionIDs).to.be.lengthOf(21);
+    expect(sectionIDs).to.be.lengthOf(22);
     expect(sectionIDs[0].id).to.equal(
-      '324741469'
+      '638416360'
     );
     expect(sectionIDs[1].id).to.equal(
-      '625753576'
+      '324741469'
     );
   });
   it('gets the section IDs for a work', async function () {
