@@ -231,11 +231,6 @@
   },
   {
     "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/",
-    "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/#20020401_001",
-    "title": "Letter to the World’s Religious Leaders"
-  },
-  {
-    "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/",
     "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/#19851001_001",
     "title": "The Promise of World Peace"
   },
@@ -243,6 +238,16 @@
     "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/",
     "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/the-institution-of-the-counsellors/",
     "title": "The Institution of the Counsellors: A Document Prepared by the Universal House of Justice"
+  },
+  {
+    "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/",
+    "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/#20020401_001",
+    "title": "Letter to the World’s Religious Leaders"
+  },
+  {
+    "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/",
+    "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/#20231128_001",
+    "title": "Reflections on the First Century of the Formative Age"
   },
   {
     "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/",
@@ -358,6 +363,11 @@
     "parentUrl": "https://www.bahai.org/library/authoritative-texts/compilations/",
     "url": "https://www.bahai.org/library/authoritative-texts/compilations/music/",
     "title": "Music"
+  },
+  {
+    "parentUrl": "https://www.bahai.org/library/authoritative-texts/compilations/",
+    "url": "https://www.bahai.org/library/authoritative-texts/compilations/national-spiritual-assembly/",
+    "title": "The National Spiritual Assembly"
   },
   {
     "parentUrl": "https://www.bahai.org/library/authoritative-texts/compilations/",
