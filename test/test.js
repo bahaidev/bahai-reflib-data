@@ -344,6 +344,17 @@ describe('`getParagraphsForSectionId`', function () {
     );
     expect(paragraphs).to.equal(undefined);
   });
+
+  it(
+    'returns undefined for a (main) section ID without paragraphs',
+    async function () {
+      const paragraphs = await getParagraphsForSectionId(
+        '959114648'
+      );
+      const expected = undefined;
+      expect(paragraphs).to.deep.equal(expected);
+    }
+  );
 });
 
 describe('`getIdForUrl`', function () {
@@ -448,14 +459,14 @@ describe('`getUrlForId`', function () {
 describe('`getWorkNames`', function () {
   it('gets the work names', async function () {
     const workNames = await getWorkNames();
-    expect(workNames).to.be.lengthOf(113);
+    expect(workNames).to.be.lengthOf(115);
     expect(workNames).to.contain('The Call of the Divine Beloved');
     expect(workNames).to.contain('Days of Remembrance');
   });
 
   it('gets the work names (English)', async function () {
     const workNames = await getWorkNames('en');
-    expect(workNames).to.be.lengthOf(87);
+    expect(workNames).to.be.lengthOf(89);
     expect(workNames).to.contain('The Call of the Divine Beloved');
     expect(workNames).to.contain('Days of Remembrance');
   });
@@ -483,7 +494,8 @@ describe('`getSectionNamesForWork`', function () {
         'remember me through Thy Most...'
     );
     expect(sectionNames).to.contain(
-      'He is the Ever-Abiding, the Almighty, the Most High...'
+      // eslint-disable-next-line @stylistic/max-len -- Long
+      'O Thou by Whose name the sea of joy moveth and the fragrance of happiness is...'
     );
   });
   it('gets the section names for a work', async function () {
@@ -561,10 +573,11 @@ describe('`getUrlForWorkAndSection`', function () {
   it('gets the paragraphs for a work and first line', async function () {
     const url = await getUrlForWorkAndSection(
       'Additional Prayers Revealed by Bahá’u’lláh',
-      'He is the Ever-Abiding, the Almighty, the Most High...'
+      // eslint-disable-next-line @stylistic/max-len -- Long
+      'O Thou Who holdest within Thy grasp the Kingdom of names and the Empire of all things...'
     );
     expect(url).to.equal(
-      'https://www.bahai.org/library/authoritative-texts/bahaullah/additional-prayers-revealed-bahaullah/639512070/1'
+      'https://www.bahai.org/library/authoritative-texts/bahaullah/additional-prayers-revealed-bahaullah/449222680/1'
     );
   });
 
