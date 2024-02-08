@@ -49,13 +49,17 @@ export function isObject (item) {
  * @see https://stackoverflow.com/a/34749873/271577
  */
 export function mergeDeep (target, ...sources) {
-  if (!sources.length) return target;
+  if (!sources.length) {
+    return target;
+  }
   const source = sources.shift();
 
   if (isObject(target) && isObject(source)) {
     for (const key in source) {
       if (isObject(source[key])) {
-        if (!target[key]) Object.assign(target, {[key]: {}});
+        if (!target[key]) {
+          Object.assign(target, {[key]: {}});
+        }
         mergeDeep(target[key], source[key]);
       } else if (Array.isArray(target[key])) {
         target[key].push(...source[key]);

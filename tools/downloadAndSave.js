@@ -397,7 +397,7 @@ async function downloadAndSaveAmendedSections (
   });
 
   const doms = (await Promise.all(urlInfo.map(async ({
-    baseURL, title, spliceIndex, parentUrl, checkForContinuation, number
+    baseURL, title, spliceIndex, parentUrl, checkForContinuation // , number
   }) => {
     if (checkForContinuation) {
       const hrefs = [];
@@ -405,7 +405,7 @@ async function downloadAndSaveAmendedSections (
       let href = baseURL;
       let ct = 2;
       while (href) {
-        // eslint-disable-next-line max-len -- Too long
+        // eslint-disable-next-line @stylistic/max-len -- Too long
         // eslint-disable-next-line no-await-in-loop, no-loop-func -- Has to be sequential
         href = await promiseThrottle.add(async () => {
           // eslint-disable-next-line no-console -- Info
@@ -463,7 +463,8 @@ async function downloadAndSaveAmendedSections (
   }))).filter(Boolean).flat();
 
   doms.forEach(({
-    spliceIndex, $, title, id, url, parentUrl
+    spliceIndex, // $,
+    title, id, url, parentUrl
   }, i) => {
     subSections.splice(spliceIndex + i, 0, {
       parentUrl,

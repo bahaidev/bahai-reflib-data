@@ -45,13 +45,14 @@ async function getFullInfoForUrl (url, language) {
 
     subSectionInfo = workSectionParagraph
       ? sections.subSections.find(({
-        url: subSectionUrl, parentUrl, title: sectionTitle
+        url: subSectionUrl, // parentUrl,
+        title: sectionTitle
       }) => {
         return subSectionUrl.includes(baseURL) &&
           sectionTitle === workSectionParagraph.section;
       })
       : sections.subSections.find(({
-        url: subSectionUrl, parentUrl, title: sectionTitle
+        url: subSectionUrl // , parentUrl, title: sectionTitle
       }) => {
         return subSectionUrl.includes(baseURL);
       });
