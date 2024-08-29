@@ -1,5 +1,6 @@
 tools
 .idea
+eslint.config.js
 coverage
 test
 pnpm-lock.yaml

@@ -1,13 +1,13 @@
 import JSDOM from 'jsdom';
 
-import fetch from 'node-fetch';
+import _fetch from 'node-fetch';
 
 /**
  * @param {string} url
  * @returns {Promise<string>}
  */
 async function fetchHtml (url) {
-  const resp = await fetch(url);
+  const resp = await _fetch(url);
   return await resp.text();
 }
 

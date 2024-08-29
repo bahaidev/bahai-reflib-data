@@ -2,6 +2,5 @@
 
 module.exports = {
   reject: [
-    'eslint-plugin-array-func'
   ]
 };

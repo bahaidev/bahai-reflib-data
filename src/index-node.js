@@ -2,7 +2,7 @@
 import {join, dirname} from 'path';
 import {fileURLToPath} from 'url';
 
-import fetch from 'file-fetch';
+import _fetch from 'file-fetch';
 import {setJoin, setFetch} from './getData.js';
 import {setDataDir} from './pathInfo.js';
 
@@ -11,6 +11,6 @@ const dataDir = join(__dirname, 'data');
 
 setDataDir(dataDir);
 setJoin(join);
-setFetch(fetch);
+setFetch(_fetch);
 
 export * from './index.js';

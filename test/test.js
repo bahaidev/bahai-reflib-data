@@ -1,3 +1,5 @@
+import {expect} from 'chai';
+
 import {
   getMainCollections, getCollections, getWorks, getSections
 } from '../src/getData.js';
@@ -20,7 +22,7 @@ const {
   getSubsectionUrlForWork, getUrlForWorkAndSection,
   getParagraphsForWorkAndSection,
   getParagraphsForSectionId
-// eslint-disable-next-line no-unsanitized/method -- Testing
+// // eslint-disable-next-line no-unsanitized/method -- Testing
 } = await import(
   typeof window !== 'undefined'
     ? '../src/index-browser.js'
@@ -330,7 +332,7 @@ describe('`getParagraphsForSectionId`', function () {
     expect(paragraphs).to.deep.equal(expected);
   });
 
-  it('gets the paragraphs for a section ID', async function () {
+  it('also gets the paragraphs for a section ID', async function () {
     const paragraphs = await getParagraphsForSectionId(
       '366312870'
     );

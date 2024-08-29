@@ -5,9 +5,9 @@ const setJoin = (_join) => {
   join = _join;
 };
 
-let fetch;
+let __fetch;
 const setFetch = (_fetch) => {
-  fetch = _fetch;
+  __fetch = _fetch;
 };
 
 const allLanguages = ['en', 'fa'];
@@ -95,7 +95,7 @@ const mergeArrayOfObjects = (objs) => {
 const getMergedLanguageObject = async (langs, converter) => {
   const jsons = await Promise.all(langs.map(async (lang) => {
     return await (
-      await fetch(join(getDataDir(), converter(lang)))
+      await __fetch(join(getDataDir(), converter(lang)))
     ).json();
   }));
   return mergeArrayOfObjects(jsons);
