@@ -1,10 +1,11 @@
 # CHANGES for `bahai-reflib-data`
 
-## 0.16.0 (unreleased)
+## 0.16.0
 
 BREAKING CHANGES:
 - Requires Node 18+; browser targets now: defaults, not op_mini all
 
+- feat: update data
 - chore: update devDeps.
 
 ## 0.15.0
