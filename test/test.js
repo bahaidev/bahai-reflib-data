@@ -171,11 +171,11 @@ describe('`getFullInfoForUrl`', function () {
       mainSectionTitle: 'Days of Remembrance',
       mainSectionUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/days-remembrance/1',
       paragraph: 5,
-      section: '“He is the Ever-Abiding, the Most Exalted, the Most Great…”',
+      section: '“He is the Ever-Abiding, the Most Exalted, the Most Great …”',
       subSectionId: '396118651',
       subSectionParentUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/days-remembrance/',
       subSectionTitle:
-        '“He is the Ever-Abiding, the Most Exalted, the Most Great…”',
+        '“He is the Ever-Abiding, the Most Exalted, the Most Great …”',
       subSectionUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/days-remembrance/5#396118651',
       work: 'Days of Remembrance',
       workParentUrl: 'https://www.bahai.org/library/authoritative-texts/bahaullah/',
@@ -283,7 +283,7 @@ describe('`getParagraphsForWorkAndSection`', function () {
   it('gets the paragraphs for a work and section', async function () {
     const paragraphs = await getParagraphsForWorkAndSection(
       'Days of Remembrance',
-      '“He it is Who is established upon this luminous Throne…”'
+      '“He it is Who is established upon this luminous Throne …”'
     );
     const expected = range(34);
     expect(paragraphs).to.deep.equal(expected);
@@ -490,7 +490,7 @@ describe('`getSectionNamesForWork`', function () {
     const sectionNames = await getSectionNamesForWork(
       'Additional Prayers Revealed by Bahá’u’lláh'
     );
-    expect(sectionNames).to.be.lengthOf(22);
+    expect(sectionNames).to.be.lengthOf(23);
     expect(sectionNames).to.contain(
       'Praise be to Thee, O my God, that Thou didst graciously ' +
         'remember me through Thy Most...'
@@ -523,12 +523,12 @@ describe('`getSectionInfoForWork`', function () {
     const sectionIDs = await getSectionInfoForWork(
       'Additional Prayers Revealed by Bahá’u’lláh'
     );
-    expect(sectionIDs).to.be.lengthOf(22);
+    expect(sectionIDs).to.be.lengthOf(23);
     expect(sectionIDs[0].id).to.equal(
-      '638416360'
+      '575481039'
     );
     expect(sectionIDs[1].id).to.equal(
-      '324741469'
+      '638416360'
     );
   });
   it('gets the section IDs for a work', async function () {
