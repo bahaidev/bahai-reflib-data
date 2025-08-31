@@ -19,5 +19,10 @@ export default [
       files: ['src/index-browser.js'],
       ...cfg
     };
-  })
+  }),
+  {
+    rules: {
+      'unicorn/prefer-global-this': 'off'
+    }
+  }
 ];
