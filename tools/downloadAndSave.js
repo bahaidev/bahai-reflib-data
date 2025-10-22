@@ -8,7 +8,7 @@ import {
   getDataDir, getLanguageSuffix, getLanguagePrefix
 } from '../src/pathInfo.js';
 
-const requestsPerSecond = 0.2;
+const requestsPerSecond = 0.5;
 const doubleAngleQuotes = '»';
 const idFind = /#(?<id>\d+)$/v;
 

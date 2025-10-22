@@ -3,10 +3,10 @@
 ## ?
 
 BREAKING CHANGES:
-
 - Requires Node 22.16.0+
 
 - chore: update file-fetch and devDeps.
+- fix: bump `requestsPerSecond`
 
 ## 0.16.0
 
