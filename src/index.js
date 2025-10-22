@@ -37,7 +37,7 @@ async function getFullInfoForUrl (url, language) {
 
   const {
     groups: {baseURL, id}
-  } = url.match(/(?<baseURL>^.*\/\d+)#?(?<id>\d+)?$/u) || {groups: {}};
+  } = url.match(/(?<baseURL>^.*\/\d+)#?(?<id>\d+)?$/v) || {groups: {}};
 
   let subSectionInfo, workSectionParagraph;
   if (id) {

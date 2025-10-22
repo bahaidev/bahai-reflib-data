@@ -10,7 +10,7 @@ import {
 
 const requestsPerSecond = 0.2;
 const doubleAngleQuotes = '»';
-const idFind = /#(?<id>\d+)$/u;
+const idFind = /#(?<id>\d+)$/v;
 
 const setWorksSectionsAndParagraphsToIds = (
   obj, mainSectionTitle, title, idElem
@@ -245,7 +245,7 @@ async function downloadAndSaveSections (works, language) {
         // 5. Turning Point For All Nations: This empty item: https://www.bahai.org/library/other-literature/official-statements-commentaries/turning-point-all-nations/#tpan_en-tp
         const {
           groups: {number}
-        } = (/(?<number>\d+)#/u).exec(url) || {groups: {}};
+        } = (/(?<number>\d+)#/v).exec(url) || {groups: {}};
 
         if (!number) {
           return null;
@@ -346,7 +346,7 @@ async function downloadAndSaveAmendedSections (
     }
     const {
       groups: {number}
-    } = (/(?<number>\d+)#/u).exec(url);
+    } = (/(?<number>\d+)#/v).exec(url);
 
     urlToSubsectionNumberMap[parentUrl].push({
       idx,

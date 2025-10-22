@@ -2,6 +2,10 @@
 
 ## ?
 
+BREAKING CHANGES:
+
+- Requires Node 22.16.0+
+
 - chore: update file-fetch and devDeps.
 
 ## 0.16.0
