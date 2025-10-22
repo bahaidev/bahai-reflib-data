@@ -1,6 +1,12 @@
 {
   "mainSections": [
     {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/1",
+      "title": "Bahá’í Sacred Writings",
+      "id": "647533678"
+    },
+    {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/",
       "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/1",
       "title": "The Call of the Divine Beloved",
@@ -71,12 +77,6 @@
       "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/tablets-bahaullah/1",
       "title": "Tablets of Bahá’u’lláh",
       "id": "030537471"
-    },
-    {
-      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/additional-prayers-revealed-bahaullah/",
-      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/additional-prayers-revealed-bahaullah/359396045/1",
-      "title": "O Lord, my God! O Thou the Most Lauded, the Most Holy, the Most Tender, the Most Bountiful! Remove...",
-      "id": "575481039"
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/additional-prayers-revealed-bahaullah/",
@@ -212,9 +212,9 @@
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/additional-tablets-extracts-from-tablets-revealed-bahaullah/",
-      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/additional-tablets-extracts-from-tablets-revealed-bahaullah/763334570/1",
-      "title": "Thy sealed letter hath reached the presence of this Wronged One, and from it...",
-      "id": "569970643"
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/additional-tablets-extracts-from-tablets-revealed-bahaullah/759384523/1",
+      "title": "A praise which is sanctified above every utterance and understanding beseemeth...",
+      "id": "431216919"
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/additional-tablets-extracts-from-tablets-revealed-bahaullah/",
@@ -285,7 +285,7 @@
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/additional-tablets-extracts-from-tablets-revealed-bahaullah/",
       "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/additional-tablets-extracts-from-tablets-revealed-bahaullah/154099895/1",
-      "title": "Wealth and children are the adornment of this present life; but good...",
+      "title": "Ḥusayn, son of ‘Ayn Wealth and children are the adornment of this present life; but good...",
       "id": "576544649"
     },
     {
@@ -441,7 +441,7 @@
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/additional-tablets-extracts-from-tablets-revealed-bahaullah/",
       "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/additional-tablets-extracts-from-tablets-revealed-bahaullah/548715723/1",
-      "title": "Thy letter hath come into the presence of God, and attained unto the...",
+      "title": "O K̲h̲urs̲h̲íd! Thy letter hath come into the presence of God, and attained unto the...",
       "id": "404852139"
     },
     {
@@ -711,7 +711,7 @@
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/additional-tablets-extracts-from-tablets-revealed-bahaullah/",
       "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/additional-tablets-extracts-from-tablets-revealed-bahaullah/731356279/1",
-      "title": "O thou who art the manifestation of My truth!...",
+      "title": "O thou who art the manifestation of My...",
       "id": "114208718"
     },
     {
@@ -795,7 +795,7 @@
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/twelve-table-talks-abdul-baha/",
       "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/twelve-table-talks-abdul-baha/1",
-      "title": "Twelve Table Talks given by ‘Abdu’l‑Bahá in ‘Akká",
+      "title": "Twelve Table Talks Given by ‘Abdu’l‑Bahá in ‘Akká",
       "id": "811617070"
     },
     {
@@ -961,10 +961,208 @@
       "id": "885686074"
     },
     {
-      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/prayers-abdul-baha/",
-      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/prayers-abdul-baha/1",
-      "title": "Prayers of ‘Abdu’l-Bahá",
-      "id": "489542456"
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477455/1",
+      "title": "O thou who circlest in adoration about the Spot round which circle...",
+      "id": "874196702"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477475/1",
+      "title": "O Thou unseen Friend! O Desire of all in this world and the world to come! O Thou...",
+      "id": "874596004"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477469/1",
+      "title": "O Thou peerless and loving Lord! Though capacity and worthiness are lacking, and it is infinitely...",
+      "id": "874596006"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477443/1",
+      "title": "O my eternal Beloved and my adored Friend! How long shall I remain bereft of...",
+      "id": "874596009"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477446/1",
+      "title": "O Thou kind Lord! These souls are Thy friends who are gathered together and...",
+      "id": "874596012"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477472/1",
+      "title": "O Divine Providence! Perplexing difficulties have arisen and formidable obstacles have appeared. O Lord! Remove...",
+      "id": "874596017"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477466/1",
+      "title": "O God of Mercy! O Thou Omnipotent One! I am but a feeble servant, weak and helpless, but I...",
+      "id": "874596019"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477478/1",
+      "title": "O Divine Providence! Awaken me and make me conscious. Cause me to be detached from...",
+      "id": "874596022"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477453/1",
+      "title": "O God, my God! I have set my face towards Thee, and...",
+      "id": "874596025"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477451/1",
+      "title": "O Lord! Grant me a measure of Thy grace and loving-kindness, Thy care and protection, Thy shelter and...",
+      "id": "874596029"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477449/1",
+      "title": "O Thou Provider, O Thou Forgiver! A noble soul hath ascended unto the Kingdom of reality, and hastened...",
+      "id": "874596030"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477474/1",
+      "title": "O Thou forgiving Lord! These servants were noble souls, and these...",
+      "id": "874596033"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477447/1",
+      "title": "O Divine Providence! Immerse the father and mother of this servant of...",
+      "id": "874596036"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477473/1",
+      "title": "O Thou kind Lord! Sanctify my heart from all attachment, and gladden...",
+      "id": "874596038"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477471/1",
+      "title": "O Lord! What an outpouring of bounty Thou hast vouchsafed, and what a flood of abounding grace...",
+      "id": "874596040"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477445/1",
+      "title": "O Thou Omnipotent Lord! We are all held within the mighty grasp of Thy power. Thou art our...",
+      "id": "874596043"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477470/1",
+      "title": "O Lord my God, my Haven and my Refuge! How can I befittingly make mention of Thee, even with...",
+      "id": "874596045"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477450/1",
+      "title": "O Lord, our God! We are helpless; Thou art the Lord of strength and...",
+      "id": "874596050"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477454/1",
+      "title": "O Thou kind and beloved Lord! These friends are...",
+      "id": "874596053"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477452/1",
+      "title": "O my Lord, my King, my Ruler, and my Sovereign! I call upon Thee with...",
+      "id": "874596057"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477444/1",
+      "title": "O my kind Lord, O Thou the desire of my heart and soul! Bestow upon Thy friends...",
+      "id": "874596060"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477477/1",
+      "title": "O Divine Providence, O forgiving Lord! How can I ever befittingly sing Thy praise or...",
+      "id": "874596063"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/307167085/1",
+      "title": "O Divine Providence, Thou art the Ever-Forgiving! O Thou Almighty God, Thou art...",
+      "id": "874596066"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477448/1",
+      "title": "O Thou incomparable God! We are Thy humble servants, and Thou art the...",
+      "id": "874596068"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/170477476/1",
+      "title": "O God, my God! With utter lowliness and fervour, humility and devotion, I implore...",
+      "id": "874596070"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-prayers-revealed-abdul-baha/484530504/1",
+      "title": "O Lord so rich in bounty, so replete with...",
+      "id": "874596075"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/980592679/1",
+      "title": "O God, O Thou Who hast cast Thy splendour over the luminous realities of men, shedding...",
+      "id": "147876001"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/232607462/1",
+      "title": "This is the Covenant and Testament which the Blessed Beauty established...",
+      "id": "809347199"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/776375620/1",
+      "title": "Consider that if the mother is a believer, the children will become believers too, even if the father...",
+      "id": "940000847"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/895799930/1",
+      "title": "These are the Tablets of the Kingdom written by the Supreme Pen in the Preserved Tablet. Such...",
+      "id": "246582826"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/931855142/1",
+      "title": "This great name is the Greatest Name. The Blessed Beauty is...",
+      "id": "456064584"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/979004244/1",
+      "title": "This is what is worthy of the Bahá’ís: that they be...",
+      "id": "028812598"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/762206527/1",
+      "title": "O thou who rejoicest in the glad-tidings of God! That home which turneth into...",
+      "id": "155506875"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/",
+      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/065597481/1",
+      "title": "Were not the mighty stronghold of the Cause of God to remain protected by the power of...",
+      "id": "410921828"
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/",
@@ -2168,12 +2366,6 @@
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/",
-      "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/333345301/1",
-      "title": "The Ancient Beauty — may my life be offered up for His loved ones...",
-      "id": "375758597"
-    },
-    {
-      "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/",
       "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/additional-tablets-extracts-talks/203399238/1",
       "title": "Praise be to God that ye are present in this radiant assemblage...",
       "id": "094581343"
@@ -2276,6 +2468,42 @@
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20250420_001/1",
+      "title": "Riḍván 2025",
+      "id": "400678032"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20250408_001/1",
+      "title": "8 April 2025",
+      "id": "076310178"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20250320_001/1",
+      "title": "Naw-Rúz 182",
+      "id": "127705254"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20250319_001/1",
+      "title": "19 March 2025",
+      "id": "186716982"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20241016_001/1",
+      "title": "16 October 2024",
+      "id": "923289938"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20241006_001/1",
+      "title": "6 October 2024",
+      "id": "616014202"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
       "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20240726_001/1",
       "title": "26 July 2024",
       "id": "793614010"
@@ -2300,6 +2528,12 @@
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20240320_001/1",
+      "title": "Naw-Rúz 181",
+      "id": "230816509"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
       "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20231128_001/1",
       "title": "28 November 2023",
       "id": "973422615"
@@ -2309,6 +2543,12 @@
       "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20230430_001/1",
       "title": "Riḍván 2023",
       "id": "483430111"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20230321_001/1",
+      "title": "Naw-Rúz 180",
+      "id": "224957644"
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
@@ -2324,6 +2564,12 @@
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20220823_001/1",
+      "title": "23 August 2022",
+      "id": "397428301"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
       "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20220704_001/1",
       "title": "4 July 2022",
       "id": "846512238"
@@ -2333,6 +2579,12 @@
       "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20220421_001/1",
       "title": "Riḍván 2022",
       "id": "750967520"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20220321_001/1",
+      "title": "Naw-Rúz 179",
+      "id": "174123498"
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
@@ -2414,6 +2666,12 @@
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20210320_001/1",
+      "title": "Naw-Rúz 178",
+      "id": "353226348"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
       "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20210402_001/1",
       "title": "2 April 2021",
       "id": "633601040"
@@ -2438,6 +2696,12 @@
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20200320_001/1",
+      "title": "Naw-Rúz 177",
+      "id": "607030697"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
       "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20200319_001/1",
       "title": "Naw-Rúz 177",
       "id": "610273755"
@@ -2453,6 +2717,12 @@
       "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20191108_001/1",
       "title": "8 November 2019",
       "id": "890950841"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20191024_001/1",
+      "title": "24 October 2019",
+      "id": "504048999"
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
@@ -2492,6 +2762,12 @@
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20181024_001/1",
+      "title": "24 October 2018",
+      "id": "043732744"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
       "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20180722_001/1",
       "title": "22 July 2018",
       "id": "071142084"
@@ -2519,6 +2795,12 @@
       "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20171031_001/1",
       "title": "31 October 2017",
       "id": "536017060"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20171017_001/1",
+      "title": "17 October 2017",
+      "id": "126858239"
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
@@ -2555,6 +2837,18 @@
       "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20161125_001/1",
       "title": "25 November 2016",
       "id": "033448033"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20161019_001/1",
+      "title": "19 October 2016",
+      "id": "493492590"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20161015_001/1",
+      "title": "15 October 2016",
+      "id": "003847312"
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
@@ -2612,6 +2906,18 @@
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20141218_001/1",
+      "title": "18 December 2014",
+      "id": "424092591"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20141001_001/1",
+      "title": "1 October 2014",
+      "id": "326679662"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
       "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20140801_001/1",
       "title": "1 August 2014",
       "id": "980781985"
@@ -2627,6 +2933,18 @@
       "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20140421_001/1",
       "title": "Riḍván 2014",
       "id": "868741220"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20140129_001/1",
+      "title": "29 January 2014",
+      "id": "300809669"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20131222_001/1",
+      "title": "22 December 2013",
+      "id": "512526937"
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
@@ -2684,12 +3002,6 @@
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
-      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20130321_001/1",
-      "title": "Naw-Rúz 2013",
-      "id": "217497542"
-    },
-    {
-      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
       "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20130302_001/1",
       "title": "2 March 2013",
       "id": "063389421"
@@ -2729,18 +3041,6 @@
       "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20120421_001/1",
       "title": "Riḍván 2012",
       "id": "418566551"
-    },
-    {
-      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
-      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20120321_001/1",
-      "title": "Naw-Rúz 2012",
-      "id": "415483361"
-    },
-    {
-      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
-      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20120301_001/1",
-      "title": "1 March 2012",
-      "id": "599810345"
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
@@ -2957,6 +3257,12 @@
       "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20080421_001/1",
       "title": "Riḍván 2008",
       "id": "581201569"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
+      "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/20080218_001/1",
+      "title": "18 February 2008",
+      "id": "152637104"
     },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/messages/",
@@ -5456,6 +5762,912 @@
     }
   ],
   "subSections": [
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "856234306",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/2#856234306",
+      "title": "Preface"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "455453274",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#455453274",
+      "title": "I. Selections from the Writings of Bahá’u’lláh"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "266535364",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#266535364",
+      "title": "1 God and His Manifestations"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "412112795",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#412112795",
+      "title": "God’s Unknowable Essence"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "464080298",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#464080298",
+      "title": "The Relationship Between God and His Manifestations"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "607762984",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#607762984",
+      "title": "The Oneness of the Manifestations of God"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "237204199",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#237204199",
+      "title": "The Purpose of God’s Manifestations"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "680180761",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#680180761",
+      "title": "Why the People Reject God’s Manifestation"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "333638066",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#333638066",
+      "title": "The Oneness of Religion"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "049141713",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#049141713",
+      "title": "The Word of God"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "773571128",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#773571128",
+      "title": "2 God and Humanity"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "195614510",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#195614510",
+      "title": "The Love of God"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "555222985",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#555222985",
+      "title": "God’s Purpose for Humanity"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "814891707",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#814891707",
+      "title": "Human Nature"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "702247579",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#702247579",
+      "title": "The Twin Duties"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "694938794",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#694938794",
+      "title": "The Bond of Human Beings with the Creator"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "656693141",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#656693141",
+      "title": "Obstacles to Recognition"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "758006130",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#758006130",
+      "title": "The True Seeker"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "765766313",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#765766313",
+      "title": "The True Believer"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "625186172",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#625186172",
+      "title": "3 The Coming of Bahá’u’lláh"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "768128914",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#768128914",
+      "title": "The Day of God"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "467923084",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#467923084",
+      "title": "The Promised One Has Come"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "705187410",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#705187410",
+      "title": "The Divine Physician"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "038484775",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#038484775",
+      "title": "The Duty of Human Beings in This Day"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "056169817",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#056169817",
+      "title": "Episodes in the Life of Bahá’u’lláh"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "825329824",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#825329824",
+      "title": "4 Spiritual Reality and the Life of the Soul"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "791241828",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#791241828",
+      "title": "God and Creation"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "368900706",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#368900706",
+      "title": "Gifts of God to Humanity"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "787616500",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#787616500",
+      "title": "The Nature of the Soul"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "122800713",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#122800713",
+      "title": "Achieving Spiritual Distinction"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "332558131",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#332558131",
+      "title": "Persevering in the Path of Virtue and Service"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "718309674",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#718309674",
+      "title": "Life after Death"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "791835585",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#791835585",
+      "title": "5 Responding to the Call of Bahá’u’lláh"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "061197590",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#061197590",
+      "title": "A New Life Is Stirring"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "436471966",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#436471966",
+      "title": "Arise to Aid His Cause"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "077014588",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#077014588",
+      "title": "Cultivating Spiritual Capacities"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "485449468",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#485449468",
+      "title": "Human Utterance"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "668071300",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#668071300",
+      "title": "Teaching the Cause"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "355845244",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#355845244",
+      "title": "Raising Divine Institutions"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "752116575",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#752116575",
+      "title": "Treading the Path of Righteousness"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "415411760",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#415411760",
+      "title": "6 Developing Spiritual Qualities"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "260951406",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#260951406",
+      "title": "The Purpose of Divine Laws and Exhortations"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "769454701",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#769454701",
+      "title": "Excerpts from the Kitáb-i-Aqdas"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "043829753",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#043829753",
+      "title": "Excerpt from Ṭarázát"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "927415114",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#927415114",
+      "title": "Words of Wisdom"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "357313757",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#357313757",
+      "title": "Excerpts from the Hidden Words"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "705259961",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#705259961",
+      "title": "Additional Exhortations"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "829323037",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#829323037",
+      "title": "7 Attaining Social Progress and Well-Being"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "598395740",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#598395740",
+      "title": "The Purpose of Religion Is Unity"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "404146888",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#404146888",
+      "title": "Education and the Acquisition of Knowledge"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "282479422",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#282479422",
+      "title": "The Equality of Women and Men"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "657624096",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#657624096",
+      "title": "Marriage and Family Life"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "745768694",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#745768694",
+      "title": "Work and Craftsmanship"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "370837312",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#370837312",
+      "title": "Attitude Towards Material Possessions"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "400882143",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#400882143",
+      "title": "Excerpt from Glad-Tidings"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "954252356",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#954252356",
+      "title": "Excerpt from Ishráqát"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "233847634",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#233847634",
+      "title": "Excerpts from Words of Paradise"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "924897312",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#924897312",
+      "title": "8 Securing World Peace and Prosperity"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "058143568",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#058143568",
+      "title": "An Ever-Advancing Civilization"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "377731477",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#377731477",
+      "title": "Excerpts from the Tablet of the World"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "862362329",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#862362329",
+      "title": "The Peace and Tranquillity of the World"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "351390319",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#351390319",
+      "title": "To the Kings and Rulers"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "234037024",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#234037024",
+      "title": "To the Leaders of Religion"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "167515005",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#167515005",
+      "title": "9 The Covenant of Bahá’u’lláh"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "682023159",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#682023159",
+      "title": "Counsels Concerning the Passing of Bahá’u’lláh"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "187111713",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#187111713",
+      "title": "Turn to ‘Abdu’l-Bahá"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "089581856",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#089581856",
+      "title": "Tablet of the Branch"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "947844020",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#947844020",
+      "title": "Book of the Covenant"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "523886768",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/3#523886768",
+      "title": "The Universal House of Justice"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "904386709",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#904386709",
+      "title": "II. Selections from the Writings of ‘Abdu’l-Bahá"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "173528259",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#173528259",
+      "title": "10 The Manifestations of God"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "733050163",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#733050163",
+      "title": "Attaining Knowledge of God"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "041215346",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#041215346",
+      "title": "True Religion"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "419341900",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#419341900",
+      "title": "The Need for a Divine Educator"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "116412359",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#116412359",
+      "title": "The Power and Perfections of the Divine Manifestations"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "601011833",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#601011833",
+      "title": "11 The Báb and Bahá’u’lláh"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "250949870",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#250949870",
+      "title": "The Ministry of the Báb"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "493998682",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#493998682",
+      "title": "The Life of Bahá’u’lláh"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "307364743",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#307364743",
+      "title": "The Mission of Bahá’u’lláh"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "842656689",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#842656689",
+      "title": "The Suffering of Bahá’u’lláh"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "487767767",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#487767767",
+      "title": "The Proofs of Bahá’u’lláh’s Mission"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "047849593",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#047849593",
+      "title": "12 The Teachings of Bahá’u’lláh"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "994294419",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#994294419",
+      "title": "Teachings for the Maturity of the Human Race"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "686382905",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#686382905",
+      "title": "Promulgating Bahá’u’lláh’s Teachings"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "860148498",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#860148498",
+      "title": "Religion Is One"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "006126932",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#006126932",
+      "title": "Humanity Is One"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "516446387",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#516446387",
+      "title": "Women and Men Are Equal"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "587341211",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#587341211",
+      "title": "The Elimination of Prejudices"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "334602164",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#334602164",
+      "title": "The Independent Investigation of Truth"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "384121344",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#384121344",
+      "title": "The Harmony of Science and Religion"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "440954289",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#440954289",
+      "title": "13 The Material World"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "862463697",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#862463697",
+      "title": "Nature"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "364225857",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#364225857",
+      "title": "Creation and the Appearance of Humanity"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "998570372",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#998570372",
+      "title": "The Nature of the Human Being"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "213499773",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#213499773",
+      "title": "Human Knowledge"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "387739366",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#387739366",
+      "title": "Progress in the Material World"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "547268973",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#547268973",
+      "title": "Tests and Afflictions"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "840262943",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#840262943",
+      "title": "Evil"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "394808869",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#394808869",
+      "title": "Cooperation and Reciprocity"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "068098638",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#068098638",
+      "title": "14 The Life of the Spirit"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "932950638",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#932950638",
+      "title": "The Difference Between Human and Animal"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "949820945",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#949820945",
+      "title": "Five Kinds of Spirit"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "182958045",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#182958045",
+      "title": "Mind, Spirit, and Soul"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "139163996",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#139163996",
+      "title": "Spiritual Enkindlement"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "096103438",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#096103438",
+      "title": "Love"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "683754086",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#683754086",
+      "title": "Free Will"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "081429012",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#081429012",
+      "title": "Faith and Deeds"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "175890265",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#175890265",
+      "title": "Striving for Spiritual Perfections"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "971700009",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#971700009",
+      "title": "The Progress of the Soul after Death"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "515648813",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#515648813",
+      "title": "15 The Bahá’í Life"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "980640360",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#980640360",
+      "title": "The Nature and Disposition of the People of Bahá"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "014683673",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#014683673",
+      "title": "Living a Bahá’í Life"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "443543615",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#443543615",
+      "title": "Holy Souls Will Arise"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "627300108",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#627300108",
+      "title": "Relationship with God"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "923254332",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#923254332",
+      "title": "Prayer and Devotions"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "380765792",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#380765792",
+      "title": "Acquiring Divine Virtues"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "040660559",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#040660559",
+      "title": "The Law of God"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "493482148",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#493482148",
+      "title": "Detachment and Sacrifice"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "532113514",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#532113514",
+      "title": "Striving for Spiritual Union"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "332389540",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#332389540",
+      "title": "Creating Unity Among Humanity"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "145724199",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#145724199",
+      "title": "Work, Crafts, and Music"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "310027027",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#310027027",
+      "title": "Follow the Example of ‘Abdu’l-Bahá"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "366889539",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#366889539",
+      "title": "16 The Bahá’í Community"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "929047674",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#929047674",
+      "title": "The Mission of the Bahá’í Community"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "639057200",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#639057200",
+      "title": "Unity Among the Believers"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "095437417",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#095437417",
+      "title": "Characteristics That Should Distinguish the People of Bahá"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "649227796",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#649227796",
+      "title": "Effort Is Needed"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "312972341",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#312972341",
+      "title": "Acquiring Spiritual and Material Knowledge"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "621449230",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#621449230",
+      "title": "Family Life"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "854318339",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#854318339",
+      "title": "The Education of Children"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "658745327",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#658745327",
+      "title": "Feasts and Holy Days"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "327294229",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#327294229",
+      "title": "Spiritual Assemblies"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "832854940",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#832854940",
+      "title": "Consultation"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "648892394",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#648892394",
+      "title": "The Mashriqu’l-Adhkár"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "640881529",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#640881529",
+      "title": "17 Teaching the Faith"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "074768700",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#074768700",
+      "title": "Excerpts from the Tablets of the Divine Plan"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "077710348",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#077710348",
+      "title": "Arise to Teach"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "527543102",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#527543102",
+      "title": "18 The Advancement of Civilization"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "011571534",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#011571534",
+      "title": "Working for the Betterment of the World"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "962213751",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#962213751",
+      "title": "Material and Spiritual Civilization"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "584452943",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#584452943",
+      "title": "Two Calls to Success and Prosperity"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "785837105",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#785837105",
+      "title": "Material Prosperity"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "156768795",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#156768795",
+      "title": "Eliminating Extremes of Wealth and Poverty"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "035627909",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#035627909",
+      "title": "Contributing to Social Progress"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "480115895",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#480115895",
+      "title": "Attitude Towards Government and Politics"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "968291437",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#968291437",
+      "title": "19 The Covenant and Administration"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "147386997",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#147386997",
+      "title": "The Covenant"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "831963600",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#831963600",
+      "title": "Firmness in the Covenant"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "332389038",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#332389038",
+      "title": "Excerpts from the Will and Testament of ‘Abdu’l-Bahá"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "102550647",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#102550647",
+      "title": "Turn to the Universal House of Justice"
+    },
+    {
+      "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+      "id": "689402491",
+      "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/4#689402491",
+      "title": "The Sure Handle"
+    },
     {
       "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/",
       "id": "026070931",

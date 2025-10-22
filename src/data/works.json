@@ -1,6 +1,11 @@
 [
   {
     "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/",
+    "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+    "title": "Bahá’í Sacred Writings"
+  },
+  {
+    "parentUrl": "https://www.bahai.org/library/authoritative-texts/bahaullah/",
     "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/call-divine-beloved/",
     "title": "The Call of the Divine Beloved"
   },
@@ -81,6 +86,11 @@
   },
   {
     "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/",
+    "url": "https://www.bahai.org/library/authoritative-texts/bahaullah/bahai-sacred-writings/",
+    "title": "Bahá’í Sacred Writings"
+  },
+  {
+    "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/",
     "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/light-of-the-world/",
     "title": "Light of the World: Selected Tablets of ‘Abdu’l‑Bahá"
   },
@@ -137,7 +147,7 @@
   {
     "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/",
     "url": "https://www.bahai.org/library/authoritative-texts/abdul-baha/twelve-table-talks-abdul-baha/",
-    "title": "Twelve Table Talks given by ‘Abdu’l‑Bahá in ‘Akká"
+    "title": "Twelve Table Talks Given by ‘Abdu’l‑Bahá in ‘Akká"
   },
   {
     "parentUrl": "https://www.bahai.org/library/authoritative-texts/abdul-baha/",
@@ -258,6 +268,11 @@
     "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/",
     "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/muhj-1986-2001/",
     "title": "Messages from the Universal House of Justice: 1986–2001, The Fourth Epoch of the Formative Age"
+  },
+  {
+    "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/",
+    "url": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/muhj-2001-2022/",
+    "title": "Messages from the Universal House of Justice: 2001–2022, The Fifth Epoch of the Formative Age"
   },
   {
     "parentUrl": "https://www.bahai.org/library/authoritative-texts/the-universal-house-of-justice/",

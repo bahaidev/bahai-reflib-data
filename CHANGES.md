@@ -1,12 +1,13 @@
 # CHANGES for `bahai-reflib-data`
 
-## ?
+## 0.17.0
 
 BREAKING CHANGES:
 - Requires Node 22.16.0+
 
 - chore: update file-fetch and devDeps.
 - fix: bump `requestsPerSecond`
+- chore: update data
 
 ## 0.16.0
 
